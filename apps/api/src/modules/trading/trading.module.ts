@@ -8,6 +8,7 @@ import { TradingGateway } from './trading.gateway';
 import { AssetsModule } from '@modules/assets/assets.module';
 import { PortfolioModule } from '@modules/portfolio/portfolio.module';
 import { UsersModule } from '@modules/users/users.module';
+import { AuthModule } from '@modules/auth/auth.module';
 
 @Module({
   imports: [
@@ -15,6 +16,7 @@ import { UsersModule } from '@modules/users/users.module';
     AssetsModule,
     PortfolioModule,
     UsersModule,
+    AuthModule,
   ],
   providers: [TradingService, TradingGateway],
   controllers: [TradingController],
