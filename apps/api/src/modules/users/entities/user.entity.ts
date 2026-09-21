@@ -26,6 +26,12 @@ export enum KycStatus {
   REJECTED = 'rejected',
 }
 
+export enum UserRole {
+  USER = 'user',
+  ADMIN = 'admin',
+  SUPER_ADMIN = 'super_admin',
+}
+
 @Entity('users')
 @Index(['email'], { unique: true })
 @Index(['memberId'], { unique: true })
@@ -44,6 +50,13 @@ export class User {
   @Exclude()
   @Column({ name: 'password_hash', type: 'text' })
   passwordHash: string;
+
+  @Column({
+    type: 'enum',
+    enum: UserRole,
+    default: UserRole.USER,
+  })
+  role: UserRole;
 
   @Column({ name: 'full_name', length: 255 })
   fullName: string;
