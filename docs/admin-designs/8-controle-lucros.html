@@ -1,586 +1,872 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary": "#68001a", "secondary-container": "#cc003c", "on-secondary-container": "#ffdcdc", "on-error-container": "#ffdad6", "on-primary-fixed": "#241a00", "outline": "#99907c", "primary-fixed-dim": "#e9c349", "primary-fixed": "#ffe088", "surface-bright": "#37393f", "surface-container-lowest": "#0c0e13", "on-background": "#e2e2e9", "secondary-fixed": "#ffdada", "surface-container": "#1e2025", "on-primary": "#3c2f00", "on-error": "#690005", "on-tertiary-fixed-variant": "#653e00", "on-secondary-fixed-variant": "#920028", "tertiary-container": "#f7a00f", "on-secondary-fixed": "#40000c", "outline-variant": "#4d4635", "inverse-on-surface": "#2e3036", "surface-variant": "#33353a", "tertiary-fixed-dim": "#ffb95f", "on-tertiary-container": "#633d00", "on-primary-container": "#554300", "primary-container": "#d4af37", "surface": "#111318", "on-tertiary-fixed": "#2a1700", "background": "#111318", "inverse-primary": "#735c00", "surface-tint": "#e9c349", "error": "#ffb4ab", "on-tertiary": "#472a00", "secondary-fixed-dim": "#ffb3b6", "inverse-surface": "#e2e2e9", "on-surface": "#e2e2e9", "error-container": "#93000a", "secondary": "#ffb3b6", "surface-dim": "#111318", "tertiary": "#ffc37b", "tertiary-fixed": "#ffddb8", "primary": "#f2ca50", "surface-container-highest": "#33353a", "on-surface-variant": "#d0c5af", "surface-container-high": "#282a2f", "on-primary-fixed-variant": "#574500", "surface-container-low": "#1a1b21" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1.25rem", "margin": "1.5rem", "gutter-desktop": "2rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-md": "1rem", "margin-desktop": "3rem" }, "fontFamily": { "headline-sm": ["Chivo"], "headline-lg": ["Chivo"], "label-caps": ["JetBrains Mono"], "body-md": ["Plus Jakarta Sans"], "display-lg-mobile": ["Chivo"], "ticker-lg": ["JetBrains Mono"], "body-lg": ["Plus Jakarta Sans"], "headline-md": ["Chivo"], "ticker-md": ["JetBrains Mono"], "body-sm": ["Plus Jakarta Sans"], "display-lg": ["Chivo"], "headline-lg-mobile": ["Chivo"] }, "fontSize": { "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }], "display-lg-mobile": ["34px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "ticker-lg": ["24px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "ticker-md": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-lg-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between border-r border-outline-variant/30 shadow-[0_12px_32px_-4px_rgba(0,0,0,0.7)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm border-b border-outline-variant/20 bg-surface-container-low/40"><img alt="Monza Apex Capital" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VR9Pr18peqmftIX-nbOUsaQMtux65iPuTXbvnVtaKfLtIU2UPnUHtuzX-qTphrRXQt2gN6hbx1gHxE8qVMMAfL-V9PqWaZmw81HUB9TOoYwTv15bw15auF-5nzXnYVeQvmxThJC_gE6UpBhDYbW3YCLSAwn2iYDEXtRaObjtnqMr0yR8UHwCzjOUCvi0l8Wlmb0Tge4Fuzov_71YWDT8EgrAVyh7Ky_CRujpBONoldMok2GwKq3bgqGSXP"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none uppercase">Monza Apex</span><span class="font-label-caps text-label-caps text-on-surface-variant tracking-wider">FIDUCIARY TERMINAL</span></div></div><div class="px-space-md py-space-sm bg-surface-container/60 border-b border-outline-variant/20 flex items-center justify-between"><span class="font-label-caps text-label-caps text-on-surface-variant">NÍVEL DE ACESSO</span><span class="font-label-caps text-label-caps text-primary bg-primary-container/20 px-space-xs py-0.5 rounded border border-primary-container/40">SUPERADMIN ROOT</span></div><nav class="flex flex-col py-space-sm overflow-y-auto max-h-[calc(100vh-210px)]" data-active-classes="bg-surface-container text-primary font-bold border-l-2 border-primary"><div class="px-space-md pt-space-sm pb-space-xs font-label-caps text-label-caps text-outline uppercase tracking-wider">1. Núcleo Master</div><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors" data-path="painel-master-geral" href="#"><span class="font-body-md text-body-md">Painel Master Geral</span><span class="font-label-caps text-label-caps text-outline">ROOT</span></a><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors" data-path="gestao-de-usuarios-e-acessos" href="#"><span class="font-body-md text-body-md">Gestão de Usuários &amp; Acessos</span><span class="font-label-caps text-label-caps text-outline">RBAC</span></a><div class="px-space-md pt-space-md pb-space-xs font-label-caps text-label-caps text-outline uppercase tracking-wider">2. Ativos &amp; Veículos</div><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors" data-path="catalogo-e-gestao-de-carros" href="#"><span class="font-body-md text-body-md">Catálogo &amp; Gestão de Carros</span><span class="font-label-caps text-label-caps text-outline">VAULT</span></a><div class="px-space-md pt-space-md pb-space-xs font-label-caps text-label-caps text-outline uppercase tracking-wider">3. Tesouraria &amp; Lucros</div><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors" data-path="controle-de-lucros-e-taxas" href="#"><span class="font-body-md text-body-md">Controle de Lucros &amp; Taxas</span><span class="font-label-caps text-label-caps text-outline">DRE</span></a><div class="px-space-md pt-space-md pb-space-xs font-label-caps text-label-caps text-outline uppercase tracking-wider">4. Governança &amp; Segurança</div><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors" data-path="auditoria-de-acoes-master" href="#"><span class="font-body-md text-body-md">Auditoria de Ações Master</span><span class="font-label-caps text-label-caps text-outline">LOGS</span></a><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors" data-path="configuracoes-globais-e-cvm" href="#"><span class="font-body-md text-body-md">Configurações Globais &amp; CVM</span><span class="font-label-caps text-label-caps text-outline">POL</span></a></nav></div><div class="p-space-sm bg-surface-container-low/80 border-t border-outline-variant/30"><div class="flex flex-col gap-1 p-space-xs bg-surface-container-lowest/90 border border-outline-variant/20 rounded"><div class="flex items-center justify-between"><span class="font-label-caps text-label-caps text-on-surface-variant">HARDWARE SECURITY</span><span class="font-label-caps text-label-caps text-primary">HSM LVL 5</span></div><div class="flex items-center justify-between"><span class="font-label-caps text-label-caps text-outline">SIGNATURE CORE</span><span class="font-label-caps text-label-caps text-on-surface">P-256 ACTIVE</span></div><div class="flex items-center justify-between pt-0.5 border-t border-outline-variant/20"><span class="font-label-caps text-label-caps text-outline">BUILD</span><span class="font-label-caps text-label-caps text-on-surface-variant">v4.20.0-PROD</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_12px_32px_-4px_rgba(0,0,0,0.7)] z-40 flex items-center justify-between px-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><span class="font-label-caps text-label-caps text-primary">ROOT ACCESS</span><span class="font-label-caps text-label-caps text-outline">//</span><span class="font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase">MASTER CONSOLE TERMINAL</span></div><div class="hidden xl:flex items-center gap-space-xs pl-space-sm border-l border-outline-variant/40"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/40 font-label-caps text-label-caps text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>CVM 175 COMPLIANT</span><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/40 font-label-caps text-label-caps text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>HSM MASTER KEY ACTIVE</span><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/40 font-label-caps text-label-caps text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>SYSTEM INTEGRITY 100%</span></div></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-1 px-3 py-1.5 rounded bg-secondary-container/20 border border-secondary-container/50 text-secondary hover:bg-secondary-container hover:text-on-secondary-container transition-colors shadow-[0_0_16px_-4px_rgba(225,29,72,0.4)]" type="button"><span class="material-symbols-outlined text-sm leading-none">bolt</span><span class="font-label-caps text-label-caps tracking-wider">CIRCUIT BREAKER</span></button><div class="flex items-center gap-space-sm pl-space-sm border-l border-outline-variant/30"><div class="text-right hidden sm:flex flex-col"><span class="font-body-sm text-body-sm text-on-surface font-semibold leading-none">Dr. Alexandre Vance</span><span class="font-label-caps text-label-caps text-primary leading-none mt-1">CHIEF ADMINISTRATOR / MASTER ROOT</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-primary/40 shadow-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1XX39PukV7vCaRFUL3JIM8CMKOqfU5fbd0Fi8WVvSKOBCLSRaic7uhj7rnVbdQui5FupQOcBuMDxAZ-_T6oSsQ89Z8b0gwx5XwNBjJUMfhCQ9iNqbbM2G7ZjkTMx27rdhM7UloIVtaha-5-jMN133Ruoi2X42asGrNrLfVMYpgttZPhLMABz_aiY_vkyZ__Y8UzU2X1-sz3PChT32HmF0gl_xTMFqCkgOdCi4Bbq7fQ_6jkO4QXFPj86oI"/></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-space-md py-space-md"><div class="flex flex-col w-full space-y-space-lg">
-<!-- TOP HEADER & FIDUCIARY MASTER DISPATCH BAR -->
-<section class="relative w-full rounded-xl bg-surface-container-low p-space-lg shadow-xl overflow-hidden">
-<div class="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
-<div class="flex flex-col xl:flex-row items-start xl:items-center justify-between gap-space-lg relative z-10">
-<div class="flex flex-col space-y-space-xs max-w-4xl">
-<div class="flex items-center gap-space-xs">
-<span class="font-label-caps text-label-caps text-primary uppercase">Módulo 03 // Fiduciary Reserve</span>
-<span class="font-label-caps text-label-caps text-outline">/</span>
-<span class="font-label-caps text-label-caps text-on-surface-variant">CVM 175 ANBIMA COMPLIANT</span>
-</div>
-<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight uppercase">
-          Tesouraria Master <span class="text-primary">//</span> Controle de Lucros, Taxas &amp; Repasse Fiduciário
-        </h1>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-          Controle financeiro centralizado: gestão de fluxos de receitas da plataforma, taxas de estruturação de SPEs, custódia balística, spreads em mercado secundário e governança do pool de dividendos aos cotistas qualificados.
-        </p>
-</div>
-<!-- Quick Actions Group -->
-<div class="grid grid-cols-2 sm:flex sm:flex-wrap items-center gap-space-sm w-full xl:w-auto">
-<button class="group flex items-center justify-center gap-space-xs px-4 py-2.5 rounded bg-primary text-on-primary hover:bg-primary-fixed-dim transition-all shadow-[0_12px_24px_-8px_rgba(212,175,55,0.4)]" id="btn-distribute-dividend" type="button">
-<span class="material-symbols-outlined text-sm font-bold">bolt</span>
-<span class="font-label-caps text-label-caps font-bold">DISTRIBUIR DIVIDENDOS (SMART CONTRACT)</span>
-</button>
-<button class="flex items-center justify-center gap-space-xs px-3.5 py-2.5 rounded bg-surface-container-high text-on-surface hover:bg-surface-bright transition-colors shadow-sm" type="button">
-<span class="material-symbols-outlined text-sm text-primary">tune</span>
-<span class="font-label-caps text-label-caps">EDITAR TABELA DE TAXAS</span>
-</button>
-<button class="flex items-center justify-center gap-space-xs px-3.5 py-2.5 rounded bg-surface-container-high text-on-surface hover:bg-surface-bright transition-colors shadow-sm" type="button">
-<span class="material-symbols-outlined text-sm text-tertiary">account_balance</span>
-<span class="font-label-caps text-label-caps">RECOLHER TAXAS MASTER</span>
-</button>
-<button class="flex items-center justify-center gap-space-xs px-3.5 py-2.5 rounded bg-surface-container-high text-on-surface hover:bg-surface-bright transition-colors shadow-sm" type="button">
-<span class="material-symbols-outlined text-sm text-outline">description</span>
-<span class="font-label-caps text-label-caps">GERAR DRE AUDITADO</span>
-</button>
-</div>
-</div>
-</section>
-<!-- 4 MASTER KPI CARDS -->
-<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
-<!-- KPI 1 -->
-<div class="relative flex flex-col justify-between p-space-md rounded-xl bg-surface-container-low shadow-md overflow-hidden">
-<div class="flex items-start justify-between">
-<div class="flex flex-col space-y-space-xs">
-<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">LUCRO BRUTO DA PLATAFORMA (YTD)</span>
-<span class="font-ticker-lg text-ticker-lg text-primary">R$ 12.840.500,00</span>
-</div>
-<div class="p-2 rounded bg-primary/10 text-primary">
-<span class="material-symbols-outlined text-lg">monetization_on</span>
-</div>
-</div>
-<div class="mt-space-md flex items-center justify-between pt-space-xs">
-<span class="font-label-caps text-label-caps text-primary bg-primary/10 px-2 py-0.5 rounded">+26.8% vs ano anterior</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Margem EBITDA: <strong class="text-on-surface">68.2%</strong></span>
-</div>
-<!-- Progress Track -->
-<div class="w-full bg-surface-container-highest h-1 mt-space-sm rounded-full overflow-hidden">
-<div class="bg-primary h-full rounded-full" style="width: 68.2%;"></div>
-</div>
-</div>
-<!-- KPI 2 -->
-<div class="relative flex flex-col justify-between p-space-md rounded-xl bg-surface-container-low shadow-md overflow-hidden">
-<div class="flex items-start justify-between">
-<div class="flex flex-col space-y-space-xs">
-<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">TAXAS DE ESTRUTURAÇÃO (DROPS)</span>
-<span class="font-ticker-lg text-ticker-lg text-on-surface">R$ 4.850.000,00</span>
-</div>
-<div class="p-2 rounded bg-surface-container text-tertiary">
-<span class="material-symbols-outlined text-lg">token</span>
-</div>
-</div>
-<div class="mt-space-md flex items-center justify-between pt-space-xs">
-<span class="font-label-caps text-label-caps text-on-surface-variant">Taxa Fixa SPE: 2,5%</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">R$ 84.5M em Primárias</span>
-</div>
-<div class="w-full bg-surface-container-highest h-1 mt-space-sm rounded-full overflow-hidden">
-<div class="bg-tertiary h-full rounded-full" style="width: 74%;"></div>
-</div>
-</div>
-<!-- KPI 3 -->
-<div class="relative flex flex-col justify-between p-space-md rounded-xl bg-surface-container-low shadow-md overflow-hidden">
-<div class="flex items-start justify-between">
-<div class="flex flex-col space-y-space-xs">
-<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">MERCADO SECUNDÁRIO &amp; SPREAD</span>
-<span class="font-ticker-lg text-ticker-lg text-on-surface">R$ 3.240.500,00</span>
-</div>
-<div class="p-2 rounded bg-surface-container text-secondary">
-<span class="material-symbols-outlined text-lg">swap_horiz</span>
-</div>
-</div>
-<div class="mt-space-md flex items-center justify-between pt-space-xs">
-<span class="font-label-caps text-label-caps text-on-surface-variant">0,2% P2P + Liquidação</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">3.412 ordens/mês</span>
-</div>
-<div class="w-full bg-surface-container-highest h-1 mt-space-sm rounded-full overflow-hidden">
-<div class="bg-secondary h-full rounded-full" style="width: 48%;"></div>
-</div>
-</div>
-<!-- KPI 4 -->
-<div class="relative flex flex-col justify-between p-space-md rounded-xl bg-surface-container-low shadow-md overflow-hidden">
-<div class="flex items-start justify-between">
-<div class="flex flex-col space-y-space-xs">
-<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">TAXAS DE CUSTÓDIA &amp; CONCIERGE</span>
-<span class="font-ticker-lg text-ticker-lg text-on-surface">R$ 4.750.000,00</span>
-</div>
-<div class="p-2 rounded bg-surface-container text-primary-fixed-dim">
-<span class="material-symbols-outlined text-lg">shield</span>
-</div>
-</div>
-<div class="mt-space-md flex items-center justify-between pt-space-xs">
-<span class="font-label-caps text-label-caps text-on-surface-variant">0,95% a.a. em Cofre</span>
-<span class="font-body-sm text-body-sm text-primary">98 Cotas Isentas Black</span>
-</div>
-<div class="w-full bg-surface-container-highest h-1 mt-space-sm rounded-full overflow-hidden">
-<div class="bg-primary-container h-full rounded-full" style="width: 82%;"></div>
-</div>
-</div>
-</section>
-<!-- SPLIT SECTION: SIMULATOR & CONTROL vs INTERNATIONAL RESERVE VAULTS -->
-<section class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg">
-<!-- SECTION A: SIMULADOR & EDITOR DE TAXAS DA PLATAFORMA (7 cols) -->
-<div class="xl:col-span-7 flex flex-col space-y-space-md p-space-lg rounded-xl bg-surface-container-low shadow-xl">
-<div class="flex items-center justify-between">
-<div class="flex flex-col">
-<div class="flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-primary text-sm">settings_suggest</span>
-<span class="font-label-caps text-label-caps text-primary tracking-wider uppercase">Seção A // Master Configurator</span>
-</div>
-<h2 class="font-headline-md text-headline-md text-on-surface font-bold uppercase tracking-tight">Simulador &amp; Editor de Taxas da Plataforma</h2>
-</div>
-<span class="font-label-caps text-label-caps px-2 py-1 rounded bg-surface-container-high text-on-surface-variant">REGIME FISCAL ATUAL: SPE FIDC</span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant">
-        Ajustes em tempo real incidentes sobre smart contracts da rede privada Monza Apex. Parâmetros alterados demandam assinatura HSM nível 5 para propagação em mainnet.
-      </p>
-<div class="flex flex-col space-y-space-md pt-space-xs">
-<!-- Taxa 1 -->
-<div class="p-space-md rounded bg-surface-container flex flex-col space-y-space-xs">
-<div class="flex items-center justify-between">
-<label class="font-body-sm text-body-sm text-on-surface font-semibold">Taxa de Estruturação SPE (Drops Primários)</label>
-<div class="flex items-center gap-space-xs">
-<span class="font-ticker-md text-ticker-md text-primary" id="label-taxa-drops">2.5%</span>
-<span class="font-label-caps text-label-caps text-outline">TAM Médio R$ 85M</span>
-</div>
-</div>
-<input class="w-full h-1 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary" id="slider-taxa-drops" max="5.0" min="1.0" step="0.1" type="range" value="2.5"/>
-<div class="flex justify-between font-label-caps text-label-caps text-outline">
-<span>Min: 1.0%</span>
-<span>Default Regulatório CVM: 2.5%</span>
-<span>Max Teto: 5.0%</span>
-</div>
-</div>
-<!-- Taxa 2 -->
-<div class="p-space-md rounded bg-surface-container flex flex-col space-y-space-xs">
-<div class="flex items-center justify-between">
-<label class="font-body-sm text-body-sm text-on-surface font-semibold">Taxa de Negociação Secundária (P2P Book Order)</label>
-<div class="flex items-center gap-space-xs">
-<span class="font-ticker-md text-ticker-md text-primary" id="label-taxa-p2p">0.20%</span>
-<span class="font-label-caps text-label-caps text-outline">Maker / Taker</span>
-</div>
-</div>
-<input class="w-full h-1 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary" id="slider-taxa-p2p" max="1.00" min="0.05" step="0.05" type="range" value="0.20"/>
-<div class="flex justify-between font-label-caps text-label-caps text-outline">
-<span>Alta Liquidez: 0.05%</span>
-<span>Parâmetro Operacional: 0.20%</span>
-<span>Spread Crítico: 1.00%</span>
-</div>
-</div>
-<!-- Taxa 3 e Taxa 4 em Split 2 Cols -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
-<div class="p-space-md rounded bg-surface-container flex flex-col space-y-space-xs">
-<div class="flex items-center justify-between">
-<label class="font-body-sm text-body-sm text-on-surface font-semibold">Custódia Balística / Ano</label>
-<span class="font-ticker-md text-ticker-md text-primary">0.95% a.a.</span>
-</div>
-<p class="font-label-caps text-label-caps text-outline">Incidente sobre valuation Laudo PwC em bunker SP/Genebra.</p>
-<div class="flex items-center gap-space-xs pt-space-xs">
-<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-caps text-label-caps text-on-surface-variant">Isento: Apex Black tier</span>
-</div>
-</div>
-<div class="p-space-md rounded bg-surface-container flex flex-col space-y-space-xs">
-<div class="flex items-center justify-between">
-<label class="font-body-sm text-body-sm text-on-surface font-semibold">Performance Realizada</label>
-<span class="font-ticker-md text-ticker-md text-primary">15.0%</span>
-</div>
-<p class="font-label-caps text-label-caps text-outline">Benchmark fiduciário de superação: IPCA + 6,00% a.a.</p>
-<div class="flex items-center gap-space-xs pt-space-xs">
-<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-caps text-label-caps text-on-surface-variant">Watermark Perpétuo</span>
-</div>
-</div>
-</div>
-<!-- Taxa 5 -->
-<div class="p-space-md rounded bg-surface-container flex items-center justify-between">
-<div class="flex flex-col">
-<span class="font-body-sm text-body-sm text-on-surface font-semibold">Spread Câmbio Offshore (Genebra / Miami Settlement)</span>
-<span class="font-label-caps text-label-caps text-outline">Remessas diretas em CHF e USD para arremate em leilão RM Sotheby's</span>
-</div>
-<div class="flex items-center gap-space-sm">
-<span class="font-ticker-md text-ticker-md text-primary">0.35%</span>
-<button class="px-3 py-1.5 rounded bg-surface-container-high text-on-surface text-label-caps font-label-caps hover:bg-surface-bright transition-colors" type="button">
-              MODIFICAR SPREAD
-            </button>
-</div>
-</div>
-<!-- Action Button -->
-<div class="flex items-center justify-end gap-space-sm pt-space-xs">
-<button class="px-4 py-2 rounded bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface" type="button">REDEFINIR PADRÕES</button>
-<button class="flex items-center gap-space-xs px-5 py-2 rounded bg-primary text-on-primary font-label-caps text-label-caps font-bold hover:bg-primary-fixed-dim transition-all" id="btn-save-rates" type="button">
-<span class="material-symbols-outlined text-sm font-bold">verified_user</span>
-            SALVAR E APLICAR PARÂMETROS GLOBAIS
-          </button>
-</div>
-</div>
-</div>
-<!-- BANK ACCOUNTS & RESERVE VAULT BALANCES (5 cols) -->
-<div class="xl:col-span-5 flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-low shadow-xl">
-<div class="flex flex-col space-y-space-xs">
-<div class="flex items-center justify-between">
-<span class="font-label-caps text-label-caps text-primary uppercase tracking-wider">CUSTÓDIA &amp; CONTAS DE RESERVA MASTER</span>
-<span class="inline-flex items-center gap-1 font-label-caps text-label-caps text-primary">
-<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span> CONCILIADO AGORA
-          </span>
-</div>
-<h2 class="font-headline-md text-headline-md text-on-surface font-bold uppercase tracking-tight">Saldos Fiduciários Segregados</h2>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Patrimônio de afetação legalmente isolado das operações corporativas gerais.</p>
-</div>
-<!-- Account cards stack -->
-<div class="flex flex-col space-y-space-sm my-space-md">
-<!-- Account 1: Itaú BBA -->
-<div class="p-space-md rounded bg-surface-container flex flex-col space-y-space-xs">
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-primary text-base">verified</span>
-<span class="font-body-sm text-body-sm text-on-surface font-semibold">Itaú BBA // Conta Reserva de Contingência</span>
-</div>
-<span class="font-label-caps text-label-caps px-2 py-0.5 rounded bg-primary/10 text-primary">CVM 175</span>
-</div>
-<span class="font-ticker-lg text-ticker-lg text-primary">R$ 25.000.000,00</span>
-<div class="flex items-center justify-between font-label-caps text-label-caps text-outline pt-space-xs">
-<span>Garantia de Liquidação Instantânea</span>
-<span>CDI + 1.25%</span>
-</div>
-</div>
-<!-- Account 2: UBS Genebra -->
-<div class="p-space-md rounded bg-surface-container flex flex-col space-y-space-xs">
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-tertiary text-base">public</span>
-<span class="font-body-sm text-body-sm text-on-surface font-semibold">UBS Switzerland AG (Genebra)</span>
-</div>
-<span class="font-label-caps text-label-caps px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">SUÍÇA // CHF</span>
-</div>
-<span class="font-ticker-lg text-ticker-lg text-on-surface">CHF 4.200.000,00</span>
-<div class="flex items-center justify-between font-label-caps text-label-caps text-outline pt-space-xs">
-<span>Câmbio Referencial: R$ 6,38</span>
-<span>Aporte Reserva Veículos Europa</span>
-</div>
-</div>
-<!-- Account 3: JPMorgan Chase Miami -->
-<div class="p-space-md rounded bg-surface-container flex flex-col space-y-space-xs">
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-secondary text-base">account_balance_wallet</span>
-<span class="font-body-sm text-body-sm text-on-surface font-semibold">JPMorgan Chase Bank (Miami, Private Bank)</span>
-</div>
-<span class="font-label-caps text-label-caps px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">EUA // USD</span>
-</div>
-<span class="font-ticker-lg text-ticker-lg text-on-surface">USD 3.800.000,00</span>
-<div class="flex items-center justify-between font-label-caps text-label-caps text-outline pt-space-xs">
-<span>Câmbio Referencial: R$ 5,65</span>
-<span>Garantia de Arrematação RM Sotheby's</span>
-</div>
-</div>
-</div>
-<!-- Quick Transfer Footer -->
-<div class="flex items-center justify-between p-space-sm rounded bg-surface-container-high">
-<div class="flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-primary text-sm">lock</span>
-<span class="font-label-caps text-label-caps text-on-surface">CUSTÓDIA MULTI-SIG 3-OF-5 ATIVA</span>
-</div>
-<button class="font-label-caps text-label-caps text-primary hover:underline uppercase" type="button">Extrato Bancário Auditado →</button>
-</div>
-</div>
-</section>
-<!-- SECTION B: DEMONSTRATIVO DE RESULTADOS DO EXERCÍCIO (DRE FIDUCIÁRIO APEX MASTER) -->
-<section class="flex flex-col space-y-space-md p-space-lg rounded-xl bg-surface-container-low shadow-xl">
-<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
-<div class="flex flex-col space-y-space-xs">
-<div class="flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-primary text-sm">balance</span>
-<span class="font-label-caps text-label-caps text-primary tracking-wider uppercase">Seção B // Fiduciary Ledger &amp; Compliance</span>
-</div>
-<h2 class="font-headline-md text-headline-md text-on-surface font-bold uppercase tracking-tight">Demonstrativo de Resultados do Exercício (DRE Fiduciário Apex Master)</h2>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Exercício Consolidado YTD 2024 • Auditoria Independente PwC Brasil • Padrão Contábil IFRS 9 / NBC TG 48</span>
-</div>
-<div class="flex items-center gap-space-xs">
-<span class="px-3 py-1 rounded bg-surface-container-high font-label-caps text-label-caps text-primary">PERÍODO: JAN-DEZ VIGENTE</span>
-<button class="px-3 py-1.5 rounded bg-surface-container font-label-caps text-label-caps text-on-surface hover:bg-surface-bright flex items-center gap-1" type="button">
-<span class="material-symbols-outlined text-sm">download</span> EXPORTAR XLS/PDF
-        </button>
-</div>
-</div>
-<!-- Tabular Financial Ledger -->
-<div class="w-full overflow-x-auto">
-<table class="w-full text-left border-collapse">
-<thead>
-<tr class="bg-surface-container-high">
-<th class="py-space-sm px-space-md font-label-caps text-label-caps text-outline uppercase">Rubrica Contábil Fiduciária</th>
-<th class="py-space-sm px-space-md font-label-caps text-label-caps text-outline uppercase text-center">Classificação</th>
-<th class="py-space-sm px-space-md font-label-caps text-label-caps text-outline uppercase text-right">Volume (R$)</th>
-<th class="py-space-sm px-space-md font-label-caps text-label-caps text-outline uppercase text-right">% Receita Bruta</th>
-<th class="py-space-sm px-space-md font-label-caps text-label-caps text-outline uppercase text-center">Status Auditoria</th>
-</tr>
-</thead>
-<tbody class="divide-y divide-transparent">
-<!-- Line 1: Receita Bruta -->
-<tr class="bg-surface-container/60 hover:bg-surface-container transition-colors">
-<td class="py-space-sm px-space-md font-body-md text-body-md text-on-surface font-semibold flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-base">expand_less</span>
-              Receita Bruta de Operações Globais
-            </td>
-<td class="py-space-sm px-space-md font-label-caps text-label-caps text-center text-on-surface-variant">CREDIT REVENUE</td>
-<td class="py-space-sm px-space-md font-ticker-md text-ticker-md text-right text-on-surface font-bold">R$ 14.680.000,00</td>
-<td class="py-space-sm px-space-md font-ticker-md text-ticker-md text-right text-on-surface-variant">100.0%</td>
-<td class="py-space-sm px-space-md text-center">
-<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-caps text-label-caps">HOMOLOGADO</span>
-</td>
-</tr>
-<!-- Line 2: Deduções -->
-<tr class="bg-surface-container-low hover:bg-surface-container transition-colors">
-<td class="py-space-sm px-space-md font-body-md text-body-md text-secondary pl-8 flex items-center gap-2">
-<span class="material-symbols-outlined text-secondary text-sm">remove</span>
-              (-) Deduções Tributárias, ISS &amp; Taxa de Fiscalização CVM
-            </td>
-<td class="py-space-sm px-space-md font-label-caps text-label-caps text-center text-secondary">TAX DEDUCTION</td>
-<td class="py-space-sm px-space-md font-ticker-md text-ticker-md text-right text-secondary">- R$ 1.839.500,00</td>
-<td class="py-space-sm px-space-md font-ticker-md text-ticker-md text-right text-on-surface-variant">12.5%</td>
-<td class="py-space-sm px-space-md text-center">
-<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-caps text-label-caps">RETIDO NA FONTE</span>
-</td>
-</tr>
-<!-- Line 3: Receita Líquida -->
-<tr class="bg-surface-container-high/80 hover:bg-surface-container-high transition-colors">
-<td class="py-space-sm px-space-md font-body-md text-body-md text-primary font-bold">
-              (=) Receita Líquida Operacional Consolidada
-            </td>
-<td class="py-space-sm px-space-md font-label-caps text-label-caps text-center text-primary">NET REVENUE</td>
-<td class="py-space-sm px-space-md font-ticker-md text-ticker-md text-right text-primary font-bold">R$ 12.840.500,00</td>
-<td class="py-space-sm px-space-md font-ticker-md text-ticker-md text-right text-on-surface">87.5%</td>
-<td class="py-space-sm px-space-md text-center">
-<span class="px-2 py-0.5 rounded bg-primary/20 text-primary font-label-caps text-label-caps">AUDITADO PwC</span>
-</td>
-</tr>
-<!-- Line 4: Custos Operacionais e Bunker -->
-<tr class="bg-surface-container-low hover:bg-surface-container transition-colors">
-<td class="py-space-sm px-space-md font-body-md text-body-md text-secondary pl-8 flex items-center gap-2">
-<span class="material-symbols-outlined text-secondary text-sm">remove</span>
-              (-) Custos Operacionais de Bunkers, Seguro All-Risks Chubb &amp; Compliance
-            </td>
-<td class="py-space-sm px-space-md font-label-caps text-label-caps text-center text-secondary">OPEX BUNKERS</td>
-<td class="py-space-sm px-space-md font-ticker-md text-ticker-md text-right text-secondary">- R$ 3.419.700,00</td>
-<td class="py-space-sm px-space-md font-ticker-md text-ticker-md text-right text-on-surface-variant">23.3%</td>
-<td class="py-space-sm px-space-md text-center">
-<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-caps text-label-caps">APÓLICE ATIVA</span>
-</td>
-</tr>
-<!-- Line 5: Lucro Líquido Master -->
-<tr class="bg-surface-container-highest/90">
-<td class="py-space-md px-space-md font-body-lg text-body-lg text-primary font-bold flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-base">star</span>
-              (=) LUCRO LÍQUIDO MASTER DISPONÍVEL PARA A GESTORA
-            </td>
-<td class="py-space-md px-space-md font-label-caps text-label-caps text-center text-primary font-bold">MASTER PROFIT</td>
-<td class="py-space-md px-space-md font-ticker-lg text-ticker-lg text-right text-primary font-bold">R$ 9.420.800,00</td>
-<td class="py-space-md px-space-md font-ticker-md text-ticker-md text-right text-primary font-bold">64.2%</td>
-<td class="py-space-md px-space-md text-center">
-<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-caps text-label-caps font-bold">PRONTO P/ RECOLHIMENTO</span>
-</td>
-</tr>
-<!-- Line 6: Pool de Dividendos -->
-<tr class="bg-surface-container/90 hover:bg-surface-container">
-<td class="py-space-sm px-space-md font-body-md text-body-md text-on-surface font-semibold pl-8 flex items-center gap-2">
-<span class="material-symbols-outlined text-tertiary text-base">savings</span>
-              (+) Pool de Dividendos dos Cotistas Acumulado para Pagamento Imediato
-            </td>
-<td class="py-space-sm px-space-md font-label-caps text-label-caps text-center text-tertiary">DIVIDEND POOL</td>
-<td class="py-space-sm px-space-md font-ticker-md text-ticker-md text-right text-tertiary font-bold">R$ 1.840.000,00</td>
-<td class="py-space-sm px-space-md font-ticker-md text-ticker-md text-right text-tertiary">12.5%</td>
-<td class="py-space-sm px-space-md text-center">
-<span class="px-2 py-0.5 rounded bg-tertiary/20 text-tertiary font-label-caps text-label-caps">NAVALHA DE CORTE</span>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<!-- SECTION C: MESA DE PAGAMENTO DE DIVIDENDOS AOS INVESTIDORES -->
-<section class="flex flex-col space-y-space-md p-space-lg rounded-xl bg-surface-container-low shadow-xl">
-<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
-<div class="flex flex-col space-y-space-xs">
-<div class="flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-primary text-sm">payments</span>
-<span class="font-label-caps text-label-caps text-primary tracking-wider uppercase">Seção C // Investor Settlement Desk</span>
-</div>
-<h2 class="font-headline-md text-headline-md text-on-surface font-bold uppercase tracking-tight">Mesa de Pagamento de Dividendos aos Investidores</h2>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Execução orquestrada via smart contracts para liquidação instantânea via PIX / TED fiduciário nas contas cadastradas.</span>
-</div>
-<!-- Liquidation schedule alert -->
-<div class="flex items-center gap-space-md px-space-md py-space-sm rounded bg-surface-container">
-<div class="flex flex-col">
-<span class="font-label-caps text-label-caps text-outline">DATA DA LIQUIDAÇÃO AUTOMÁTICA</span>
-<span class="font-body-md text-body-md text-on-surface font-bold">15 do Mês Corrente (15:00 UTC-3)</span>
-</div>
-<span class="px-2.5 py-1 rounded bg-primary/10 text-primary font-label-caps text-label-caps">SMART CONTRACT AUDITADO</span>
-</div>
-</div>
-<!-- Active Distribution Events -->
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md pt-space-xs">
-<!-- Event 1: Goodwood / Concours Villa d'Este -->
-<div class="p-space-md rounded-xl bg-surface-container flex flex-col justify-between space-y-space-md shadow-md">
-<div class="flex items-start justify-between">
-<div class="flex flex-col space-y-space-xs">
-<span class="font-label-caps text-label-caps text-primary uppercase">Evento Concours &amp; Locação Exclusiva</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Goodwood Revival &amp; Concours Villa d'Este</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant">
-              Aluguel comercial e exposição histórica dos chassis: <strong class="text-on-surface">Ferrari F40 LM</strong> (#88521) e <strong class="text-on-surface">Aston Martin DB4 GT Zagato</strong>.
+<html class="dark" lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="web_dashboard" name="shell-type" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary": "#68001a", "secondary-container": "#cc003c", "on-secondary-container": "#ffdcdc", "on-error-container": "#ffdad6", "on-primary-fixed": "#241a00", "outline": "#99907c", "primary-fixed-dim": "#e9c349", "primary-fixed": "#ffe088", "surface-bright": "#37393f", "surface-container-lowest": "#0c0e13", "on-background": "#e2e2e9", "secondary-fixed": "#ffdada", "surface-container": "#1e2025", "on-primary": "#3c2f00", "on-error": "#690005", "on-tertiary-fixed-variant": "#653e00", "on-secondary-fixed-variant": "#920028", "tertiary-container": "#f7a00f", "on-secondary-fixed": "#40000c", "outline-variant": "#4d4635", "inverse-on-surface": "#2e3036", "surface-variant": "#33353a", "tertiary-fixed-dim": "#ffb95f", "on-tertiary-container": "#633d00", "on-primary-container": "#554300", "primary-container": "#d4af37", "surface": "#111318", "on-tertiary-fixed": "#2a1700", "background": "#111318", "inverse-primary": "#735c00", "surface-tint": "#e9c349", "error": "#ffb4ab", "on-tertiary": "#472a00", "secondary-fixed-dim": "#ffb3b6", "inverse-surface": "#e2e2e9", "on-surface": "#e2e2e9", "error-container": "#93000a", "secondary": "#ffb3b6", "surface-dim": "#111318", "tertiary": "#ffc37b", "tertiary-fixed": "#ffddb8", "primary": "#f2ca50", "surface-container-highest": "#33353a", "on-surface-variant": "#d0c5af", "surface-container-high": "#282a2f", "on-primary-fixed-variant": "#574500", "surface-container-low": "#1a1b21" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1.25rem", "margin": "1.5rem", "gutter-desktop": "2rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-md": "1rem", "margin-desktop": "3rem" }, "fontFamily": { "headline-sm": ["Chivo"], "headline-lg": ["Chivo"], "label-caps": ["JetBrains Mono"], "body-md": ["Plus Jakarta Sans"], "display-lg-mobile": ["Chivo"], "ticker-lg": ["JetBrains Mono"], "body-lg": ["Plus Jakarta Sans"], "headline-md": ["Chivo"], "ticker-md": ["JetBrains Mono"], "body-sm": ["Plus Jakarta Sans"], "display-lg": ["Chivo"], "headline-lg-mobile": ["Chivo"] }, "fontSize": { "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }], "display-lg-mobile": ["34px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "ticker-lg": ["24px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "ticker-md": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-lg-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }] } } } };</script>
+</head>
+
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased">
+  <aside
+    class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between border-r border-outline-variant/30 shadow-[0_12px_32px_-4px_rgba(0,0,0,0.7)]">
+    <div class="flex flex-col">
+      <div
+        class="h-16 px-space-md flex items-center gap-space-sm border-b border-outline-variant/20 bg-surface-container-low/40">
+        <img alt="Monza Apex Capital" class="h-8 w-auto object-contain"
+          src="https://lh3.googleusercontent.com/aida/AEtjO1VR9Pr18peqmftIX-nbOUsaQMtux65iPuTXbvnVtaKfLtIU2UPnUHtuzX-qTphrRXQt2gN6hbx1gHxE8qVMMAfL-V9PqWaZmw81HUB9TOoYwTv15bw15auF-5nzXnYVeQvmxThJC_gE6UpBhDYbW3YCLSAwn2iYDEXtRaObjtnqMr0yR8UHwCzjOUCvi0l8Wlmb0Tge4Fuzov_71YWDT8EgrAVyh7Ky_CRujpBONoldMok2GwKq3bgqGSXP" />
+        <div class="flex flex-col"><span
+            class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none uppercase">Monza
+            Apex</span><span class="font-label-caps text-label-caps text-on-surface-variant tracking-wider">FIDUCIARY
+            TERMINAL</span></div>
+      </div>
+      <div
+        class="px-space-md py-space-sm bg-surface-container/60 border-b border-outline-variant/20 flex items-center justify-between">
+        <span class="font-label-caps text-label-caps text-on-surface-variant">NÍVEL DE ACESSO</span><span
+          class="font-label-caps text-label-caps text-primary bg-primary-container/20 px-space-xs py-0.5 rounded border border-primary-container/40">SUPERADMIN
+          ROOT</span>
+      </div>
+      <nav class="flex flex-col py-space-sm overflow-y-auto max-h-[calc(100vh-210px)]"
+        data-active-classes="bg-surface-container text-primary font-bold border-l-2 border-primary">
+        <div
+          class="px-space-md pt-space-sm pb-space-xs font-label-caps text-label-caps text-outline uppercase tracking-wider">
+          1. Núcleo Master</div><a
+          class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors"
+          data-path="painel-master-geral" href="#"><span class="font-body-md text-body-md">Painel Master
+            Geral</span><span class="font-label-caps text-label-caps text-outline">ROOT</span></a><a
+          class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors"
+          data-path="gestao-de-usuarios-e-acessos" href="#"><span class="font-body-md text-body-md">Gestão de Usuários
+            &amp; Acessos</span><span class="font-label-caps text-label-caps text-outline">RBAC</span></a>
+        <div
+          class="px-space-md pt-space-md pb-space-xs font-label-caps text-label-caps text-outline uppercase tracking-wider">
+          2. Ativos &amp; Veículos</div><a
+          class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors"
+          data-path="catalogo-e-gestao-de-carros" href="#"><span class="font-body-md text-body-md">Catálogo &amp; Gestão
+            de Carros</span><span class="font-label-caps text-label-caps text-outline">VAULT</span></a>
+        <div
+          class="px-space-md pt-space-md pb-space-xs font-label-caps text-label-caps text-outline uppercase tracking-wider">
+          3. Tesouraria &amp; Lucros</div><a
+          class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors"
+          data-path="controle-de-lucros-e-taxas" href="#"><span class="font-body-md text-body-md">Controle de Lucros
+            &amp; Taxas</span><span class="font-label-caps text-label-caps text-outline">DRE</span></a>
+        <div
+          class="px-space-md pt-space-md pb-space-xs font-label-caps text-label-caps text-outline uppercase tracking-wider">
+          4. Governança &amp; Segurança</div><a
+          class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors"
+          data-path="auditoria-de-acoes-master" href="#"><span class="font-body-md text-body-md">Auditoria de Ações
+            Master</span><span class="font-label-caps text-label-caps text-outline">LOGS</span></a><a
+          class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors"
+          data-path="configuracoes-globais-e-cvm" href="#"><span class="font-body-md text-body-md">Configurações Globais
+            &amp; CVM</span><span class="font-label-caps text-label-caps text-outline">POL</span></a>
+      </nav>
+    </div>
+    <div class="p-space-sm bg-surface-container-low/80 border-t border-outline-variant/30">
+      <div
+        class="flex flex-col gap-1 p-space-xs bg-surface-container-lowest/90 border border-outline-variant/20 rounded">
+        <div class="flex items-center justify-between"><span
+            class="font-label-caps text-label-caps text-on-surface-variant">HARDWARE SECURITY</span><span
+            class="font-label-caps text-label-caps text-primary">HSM LVL 5</span></div>
+        <div class="flex items-center justify-between"><span
+            class="font-label-caps text-label-caps text-outline">SIGNATURE CORE</span><span
+            class="font-label-caps text-label-caps text-on-surface">P-256 ACTIVE</span></div>
+        <div class="flex items-center justify-between pt-0.5 border-t border-outline-variant/20"><span
+            class="font-label-caps text-label-caps text-outline">BUILD</span><span
+            class="font-label-caps text-label-caps text-on-surface-variant">v4.20.0-PROD</span></div>
+      </div>
+    </div>
+  </aside>
+  <div class="pl-72">
+    <header
+      class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_12px_32px_-4px_rgba(0,0,0,0.7)] z-40 flex items-center justify-between px-space-md">
+      <div class="flex items-center gap-space-md">
+        <div class="flex items-center gap-space-xs"><span class="font-label-caps text-label-caps text-primary">ROOT
+            ACCESS</span><span class="font-label-caps text-label-caps text-outline">//</span><span
+            class="font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase">MASTER CONSOLE
+            TERMINAL</span></div>
+        <div class="hidden xl:flex items-center gap-space-xs pl-space-sm border-l border-outline-variant/40"><span
+            class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/40 font-label-caps text-label-caps text-on-surface-variant"><span
+              class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>CVM 175 COMPLIANT</span><span
+            class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/40 font-label-caps text-label-caps text-on-surface-variant"><span
+              class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>HSM MASTER KEY ACTIVE</span><span
+            class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/40 font-label-caps text-label-caps text-on-surface-variant"><span
+              class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>SYSTEM INTEGRITY 100%</span></div>
+      </div>
+      <div class="flex items-center gap-space-md"><button
+          class="flex items-center gap-1 px-3 py-1.5 rounded bg-secondary-container/20 border border-secondary-container/50 text-secondary hover:bg-secondary-container hover:text-on-secondary-container transition-colors shadow-[0_0_16px_-4px_rgba(225,29,72,0.4)]"
+          type="button"><span class="material-symbols-outlined text-sm leading-none">bolt</span><span
+            class="font-label-caps text-label-caps tracking-wider">CIRCUIT BREAKER</span></button>
+        <div class="flex items-center gap-space-sm pl-space-sm border-l border-outline-variant/30">
+          <div class="text-right hidden sm:flex flex-col"><span
+              class="font-body-sm text-body-sm text-on-surface font-semibold leading-none">Dr. Alexandre
+              Vance</span><span class="font-label-caps text-label-caps text-primary leading-none mt-1">CHIEF
+              ADMINISTRATOR / MASTER ROOT</span></div><img alt="Profile"
+            class="w-8 h-8 rounded-full object-cover border border-primary/40 shadow-sm"
+            src="https://lh3.googleusercontent.com/aida/AEtjO1XX39PukV7vCaRFUL3JIM8CMKOqfU5fbd0Fi8WVvSKOBCLSRaic7uhj7rnVbdQui5FupQOcBuMDxAZ-_T6oSsQ89Z8b0gwx5XwNBjJUMfhCQ9iNqbbM2G7ZjkTMx27rdhM7UloIVtaha-5-jMN133Ruoi2X42asGrNrLfVMYpgttZPhLMABz_aiY_vkyZ__Y8UzU2X1-sz3PChT32HmF0gl_xTMFqCkgOdCi4Bbq7fQ_6jkO4QXFPj86oI" />
+        </div>
+      </div>
+    </header>
+    <main class="relative pt-16 bg-surface min-h-screen w-full px-space-md py-space-md">
+      <div class="flex flex-col w-full space-y-space-lg">
+        <!-- TOP HEADER & FIDUCIARY MASTER DISPATCH BAR -->
+        <section class="relative w-full rounded-xl bg-surface-container-low p-space-lg shadow-xl overflow-hidden">
+          <div class="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-primary/5 blur-3xl pointer-events-none">
+          </div>
+          <div class="flex flex-col xl:flex-row items-start xl:items-center justify-between gap-space-lg relative z-10">
+            <div class="flex flex-col space-y-space-xs max-w-4xl">
+              <div class="flex items-center gap-space-xs">
+                <span class="font-label-caps text-label-caps text-primary uppercase">Módulo 03 // Fiduciary
+                  Reserve</span>
+                <span class="font-label-caps text-label-caps text-outline">/</span>
+                <span class="font-label-caps text-label-caps text-on-surface-variant">CVM 175 ANBIMA COMPLIANT</span>
+              </div>
+              <h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight uppercase">
+                Tesouraria Master <span class="text-primary">//</span> Controle de Lucros, Taxas &amp; Repasse
+                Fiduciário
+              </h1>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Controle financeiro centralizado: gestão de fluxos de receitas da plataforma, taxas de estruturação de
+                SPEs, custódia balística, spreads em mercado secundário e governança do pool de dividendos aos cotistas
+                qualificados.
+              </p>
+            </div>
+            <!-- Quick Actions Group -->
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-center gap-space-sm w-full xl:w-auto">
+              <button
+                class="group flex items-center justify-center gap-space-xs px-4 py-2.5 rounded bg-primary text-on-primary hover:bg-primary-fixed-dim transition-all shadow-[0_12px_24px_-8px_rgba(212,175,55,0.4)]"
+                id="btn-distribute-dividend" type="button">
+                <span class="material-symbols-outlined text-sm font-bold">bolt</span>
+                <span class="font-label-caps text-label-caps font-bold">DISTRIBUIR DIVIDENDOS (SMART CONTRACT)</span>
+              </button>
+              <button
+                class="flex items-center justify-center gap-space-xs px-3.5 py-2.5 rounded bg-surface-container-high text-on-surface hover:bg-surface-bright transition-colors shadow-sm"
+                type="button">
+                <span class="material-symbols-outlined text-sm text-primary">tune</span>
+                <span class="font-label-caps text-label-caps">EDITAR TABELA DE TAXAS</span>
+              </button>
+              <button
+                class="flex items-center justify-center gap-space-xs px-3.5 py-2.5 rounded bg-surface-container-high text-on-surface hover:bg-surface-bright transition-colors shadow-sm"
+                type="button">
+                <span class="material-symbols-outlined text-sm text-tertiary">account_balance</span>
+                <span class="font-label-caps text-label-caps">RECOLHER TAXAS MASTER</span>
+              </button>
+              <button
+                class="flex items-center justify-center gap-space-xs px-3.5 py-2.5 rounded bg-surface-container-high text-on-surface hover:bg-surface-bright transition-colors shadow-sm"
+                type="button">
+                <span class="material-symbols-outlined text-sm text-outline">description</span>
+                <span class="font-label-caps text-label-caps">GERAR DRE AUDITADO</span>
+              </button>
+            </div>
+          </div>
+        </section>
+        <!-- 4 MASTER KPI CARDS -->
+        <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+          <!-- KPI 1 -->
+          <div
+            class="relative flex flex-col justify-between p-space-md rounded-xl bg-surface-container-low shadow-md overflow-hidden">
+            <div class="flex items-start justify-between">
+              <div class="flex flex-col space-y-space-xs">
+                <span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">LUCRO BRUTO DA
+                  PLATAFORMA (YTD)</span>
+                <span class="font-ticker-lg text-ticker-lg text-primary">R$ 12.840.500,00</span>
+              </div>
+              <div class="p-2 rounded bg-primary/10 text-primary">
+                <span class="material-symbols-outlined text-lg">monetization_on</span>
+              </div>
+            </div>
+            <div class="mt-space-md flex items-center justify-between pt-space-xs">
+              <span class="font-label-caps text-label-caps text-primary bg-primary/10 px-2 py-0.5 rounded">+26.8% vs ano
+                anterior</span>
+              <span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Margem EBITDA: <strong
+                  class="text-on-surface">68.2%</strong></span>
+            </div>
+            <!-- Progress Track -->
+            <div class="w-full bg-surface-container-highest h-1 mt-space-sm rounded-full overflow-hidden">
+              <div class="bg-primary h-full rounded-full" style="width: 68.2%;"></div>
+            </div>
+          </div>
+          <!-- KPI 2 -->
+          <div
+            class="relative flex flex-col justify-between p-space-md rounded-xl bg-surface-container-low shadow-md overflow-hidden">
+            <div class="flex items-start justify-between">
+              <div class="flex flex-col space-y-space-xs">
+                <span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">TAXAS DE
+                  ESTRUTURAÇÃO (DROPS)</span>
+                <span class="font-ticker-lg text-ticker-lg text-on-surface">R$ 4.850.000,00</span>
+              </div>
+              <div class="p-2 rounded bg-surface-container text-tertiary">
+                <span class="material-symbols-outlined text-lg">token</span>
+              </div>
+            </div>
+            <div class="mt-space-md flex items-center justify-between pt-space-xs">
+              <span class="font-label-caps text-label-caps text-on-surface-variant">Taxa Fixa SPE: 2,5%</span>
+              <span class="font-body-sm text-body-sm text-on-surface-variant">R$ 84.5M em Primárias</span>
+            </div>
+            <div class="w-full bg-surface-container-highest h-1 mt-space-sm rounded-full overflow-hidden">
+              <div class="bg-tertiary h-full rounded-full" style="width: 74%;"></div>
+            </div>
+          </div>
+          <!-- KPI 3 -->
+          <div
+            class="relative flex flex-col justify-between p-space-md rounded-xl bg-surface-container-low shadow-md overflow-hidden">
+            <div class="flex items-start justify-between">
+              <div class="flex flex-col space-y-space-xs">
+                <span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">MERCADO SECUNDÁRIO
+                  &amp; SPREAD</span>
+                <span class="font-ticker-lg text-ticker-lg text-on-surface">R$ 3.240.500,00</span>
+              </div>
+              <div class="p-2 rounded bg-surface-container text-secondary">
+                <span class="material-symbols-outlined text-lg">swap_horiz</span>
+              </div>
+            </div>
+            <div class="mt-space-md flex items-center justify-between pt-space-xs">
+              <span class="font-label-caps text-label-caps text-on-surface-variant">0,2% P2P + Liquidação</span>
+              <span class="font-body-sm text-body-sm text-on-surface-variant">3.412 ordens/mês</span>
+            </div>
+            <div class="w-full bg-surface-container-highest h-1 mt-space-sm rounded-full overflow-hidden">
+              <div class="bg-secondary h-full rounded-full" style="width: 48%;"></div>
+            </div>
+          </div>
+          <!-- KPI 4 -->
+          <div
+            class="relative flex flex-col justify-between p-space-md rounded-xl bg-surface-container-low shadow-md overflow-hidden">
+            <div class="flex items-start justify-between">
+              <div class="flex flex-col space-y-space-xs">
+                <span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">TAXAS DE CUSTÓDIA
+                  &amp; CONCIERGE</span>
+                <span class="font-ticker-lg text-ticker-lg text-on-surface">R$ 4.750.000,00</span>
+              </div>
+              <div class="p-2 rounded bg-surface-container text-primary-fixed-dim">
+                <span class="material-symbols-outlined text-lg">shield</span>
+              </div>
+            </div>
+            <div class="mt-space-md flex items-center justify-between pt-space-xs">
+              <span class="font-label-caps text-label-caps text-on-surface-variant">0,95% a.a. em Cofre</span>
+              <span class="font-body-sm text-body-sm text-primary">98 Cotas Isentas Black</span>
+            </div>
+            <div class="w-full bg-surface-container-highest h-1 mt-space-sm rounded-full overflow-hidden">
+              <div class="bg-primary-container h-full rounded-full" style="width: 82%;"></div>
+            </div>
+          </div>
+        </section>
+        <!-- SPLIT SECTION: SIMULATOR & CONTROL vs INTERNATIONAL RESERVE VAULTS -->
+        <section class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg">
+          <!-- SECTION A: SIMULADOR & EDITOR DE TAXAS DA PLATAFORMA (7 cols) -->
+          <div
+            class="xl:col-span-7 flex flex-col space-y-space-md p-space-lg rounded-xl bg-surface-container-low shadow-xl">
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col">
+                <div class="flex items-center gap-space-xs">
+                  <span class="material-symbols-outlined text-primary text-sm">settings_suggest</span>
+                  <span class="font-label-caps text-label-caps text-primary tracking-wider uppercase">Seção A // Master
+                    Configurator</span>
+                </div>
+                <h2 class="font-headline-md text-headline-md text-on-surface font-bold uppercase tracking-tight">
+                  Simulador &amp; Editor de Taxas da Plataforma</h2>
+              </div>
+              <span
+                class="font-label-caps text-label-caps px-2 py-1 rounded bg-surface-container-high text-on-surface-variant">REGIME
+                FISCAL ATUAL: SPE FIDC</span>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">
+              Ajustes em tempo real incidentes sobre smart contracts da rede privada Monza Apex. Parâmetros alterados
+              demandam assinatura HSM nível 5 para propagação em mainnet.
             </p>
-</div>
-<span class="p-2 rounded bg-surface-container-high text-primary material-symbols-outlined">directions_car</span>
-</div>
-<div class="flex flex-col space-y-space-xs pt-space-xs">
-<div class="flex items-center justify-between">
-<span class="font-label-caps text-label-caps text-outline">POOL DE DIVIDENDOS APURADO</span>
-<span class="font-ticker-md text-ticker-md text-primary font-bold">R$ 720.000,00</span>
-</div>
-<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
-<span>Cotistas Elegíveis: 412 contas</span>
-<span>Rendimento Pro Rata: R$ 1.747,57 / cota</span>
-</div>
-<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
-<div class="bg-primary h-full rounded-full" style="width: 100%;"></div>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-xs font-label-caps text-label-caps">
-<span class="text-on-surface-variant">CONTRATO DE LOCAÇÃO HOMOLOGADO</span>
-<span class="text-primary">EXECUÇÃO IMEDIATA</span>
-</div>
-</div>
-<!-- Event 2: Ganho de Capital Porsche RS -->
-<div class="p-space-md rounded-xl bg-surface-container flex flex-col justify-between space-y-space-md shadow-md">
-<div class="flex items-start justify-between">
-<div class="flex flex-col space-y-space-xs">
-<span class="font-label-caps text-label-caps text-tertiary uppercase">Desinvestimento &amp; Ganho Realizado</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Venda de Lote Fracionado Porsche 911 Carrera RS 2.7</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant">
-              Liquidação integral de tranche fiduciária adquirida em 2021. Valorização acima do teto estipulado em comitê de desinvestimento (+34.2%).
-            </p>
-</div>
-<span class="p-2 rounded bg-surface-container-high text-tertiary material-symbols-outlined">trending_up</span>
-</div>
-<div class="flex flex-col space-y-space-xs pt-space-xs">
-<div class="flex items-center justify-between">
-<span class="font-label-caps text-label-caps text-outline">GANHO DE CAPITAL LÍQUIDO A DISTRIBUIR</span>
-<span class="font-ticker-md text-ticker-md text-tertiary font-bold">R$ 1.120.000,00</span>
-</div>
-<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
-<span>Cotistas Elegíveis: 185 contas</span>
-<span>Rendimento Pro Rata: R$ 6.054,05 / cota</span>
-</div>
-<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
-<div class="bg-tertiary h-full rounded-full" style="width: 100%;"></div>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-xs font-label-caps text-label-caps">
-<span class="text-on-surface-variant">APROVADO POR ASSEMBLEIA GERAL SPE</span>
-<span class="text-tertiary">EXECUÇÃO IMEDIATA</span>
-</div>
-</div>
-</div>
-<!-- Master Action Banner: Disparar Liquidação em Massa -->
-<div class="mt-space-md p-space-md rounded-xl bg-surface-container-high flex flex-col md:flex-row items-center justify-between gap-space-md">
-<div class="flex items-center gap-space-md">
-<div class="p-3 rounded-full bg-primary/20 text-primary flex items-center justify-center">
-<span class="material-symbols-outlined text-2xl font-bold">send</span>
-</div>
-<div class="flex flex-col">
-<div class="flex items-center gap-space-xs">
-<span class="font-label-caps text-label-caps text-primary font-bold uppercase">REPASSE TOTAL PREPARADO</span>
-<span class="font-label-caps text-label-caps text-outline">//</span>
-<span class="font-label-caps text-label-caps text-on-surface">597 COTISTAS QUALIFICADOS</span>
-</div>
-<span class="font-ticker-lg text-ticker-lg text-on-surface font-bold">TOTAL A SER DISPARADO: R$ 1.840.000,00</span>
-</div>
-</div>
-<div class="flex items-center gap-space-sm w-full md:w-auto">
-<button class="w-full md:w-auto px-4 py-2.5 rounded bg-surface-container text-on-surface hover:bg-surface-bright font-label-caps text-label-caps transition-colors" id="btn-simulate-pix" type="button">
-          TESTAR ROTA BACEN PIX
-        </button>
-<button class="w-full md:w-auto flex items-center justify-center gap-space-xs px-6 py-2.5 rounded bg-primary text-on-primary font-label-caps text-label-caps font-bold hover:bg-primary-fixed-dim transition-all shadow-[0_12px_24px_-8px_rgba(212,175,55,0.4)]" id="btn-fire-liquidation" type="button">
-<span class="material-symbols-outlined text-base font-bold">currency_exchange</span>
-          DISPARAR LIQUIDAÇÃO EM MASSA (PIX / TED DIRETO)
-        </button>
-</div>
-</div>
-</section>
-</div>
-<script>
-  (function() {
-    // Dynamic sliders logic
-    const sliderDrops = document.getElementById('slider-taxa-drops');
-    const labelDrops = document.getElementById('label-taxa-drops');
-    if (sliderDrops && labelDrops) {
-      sliderDrops.addEventListener('input', function(e) {
-        labelDrops.textContent = parseFloat(e.target.value).toFixed(1) + '%';
-      });
-    }
+            <div class="flex flex-col space-y-space-md pt-space-xs">
+              <!-- Taxa 1 -->
+              <div class="p-space-md rounded bg-surface-container flex flex-col space-y-space-xs">
+                <div class="flex items-center justify-between">
+                  <label class="font-body-sm text-body-sm text-on-surface font-semibold">Taxa de Estruturação SPE (Drops
+                    Primários)</label>
+                  <div class="flex items-center gap-space-xs">
+                    <span class="font-ticker-md text-ticker-md text-primary" id="label-taxa-drops">2.5%</span>
+                    <span class="font-label-caps text-label-caps text-outline">TAM Médio R$ 85M</span>
+                  </div>
+                </div>
+                <input
+                  class="w-full h-1 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary"
+                  id="slider-taxa-drops" max="5.0" min="1.0" step="0.1" type="range" value="2.5" />
+                <div class="flex justify-between font-label-caps text-label-caps text-outline">
+                  <span>Min: 1.0%</span>
+                  <span>Default Regulatório CVM: 2.5%</span>
+                  <span>Max Teto: 5.0%</span>
+                </div>
+              </div>
+              <!-- Taxa 2 -->
+              <div class="p-space-md rounded bg-surface-container flex flex-col space-y-space-xs">
+                <div class="flex items-center justify-between">
+                  <label class="font-body-sm text-body-sm text-on-surface font-semibold">Taxa de Negociação Secundária
+                    (P2P Book Order)</label>
+                  <div class="flex items-center gap-space-xs">
+                    <span class="font-ticker-md text-ticker-md text-primary" id="label-taxa-p2p">0.20%</span>
+                    <span class="font-label-caps text-label-caps text-outline">Maker / Taker</span>
+                  </div>
+                </div>
+                <input
+                  class="w-full h-1 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary"
+                  id="slider-taxa-p2p" max="1.00" min="0.05" step="0.05" type="range" value="0.20" />
+                <div class="flex justify-between font-label-caps text-label-caps text-outline">
+                  <span>Alta Liquidez: 0.05%</span>
+                  <span>Parâmetro Operacional: 0.20%</span>
+                  <span>Spread Crítico: 1.00%</span>
+                </div>
+              </div>
+              <!-- Taxa 3 e Taxa 4 em Split 2 Cols -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+                <div class="p-space-md rounded bg-surface-container flex flex-col space-y-space-xs">
+                  <div class="flex items-center justify-between">
+                    <label class="font-body-sm text-body-sm text-on-surface font-semibold">Custódia Balística /
+                      Ano</label>
+                    <span class="font-ticker-md text-ticker-md text-primary">0.95% a.a.</span>
+                  </div>
+                  <p class="font-label-caps text-label-caps text-outline">Incidente sobre valuation Laudo PwC em bunker
+                    SP/Genebra.</p>
+                  <div class="flex items-center gap-space-xs pt-space-xs">
+                    <span
+                      class="px-2 py-0.5 rounded bg-surface-container-high font-label-caps text-label-caps text-on-surface-variant">Isento:
+                      Apex Black tier</span>
+                  </div>
+                </div>
+                <div class="p-space-md rounded bg-surface-container flex flex-col space-y-space-xs">
+                  <div class="flex items-center justify-between">
+                    <label class="font-body-sm text-body-sm text-on-surface font-semibold">Performance Realizada</label>
+                    <span class="font-ticker-md text-ticker-md text-primary">15.0%</span>
+                  </div>
+                  <p class="font-label-caps text-label-caps text-outline">Benchmark fiduciário de superação: IPCA +
+                    6,00% a.a.</p>
+                  <div class="flex items-center gap-space-xs pt-space-xs">
+                    <span
+                      class="px-2 py-0.5 rounded bg-surface-container-high font-label-caps text-label-caps text-on-surface-variant">Watermark
+                      Perpétuo</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Taxa 5 -->
+              <div class="p-space-md rounded bg-surface-container flex items-center justify-between">
+                <div class="flex flex-col">
+                  <span class="font-body-sm text-body-sm text-on-surface font-semibold">Spread Câmbio Offshore (Genebra
+                    / Miami Settlement)</span>
+                  <span class="font-label-caps text-label-caps text-outline">Remessas diretas em CHF e USD para arremate
+                    em leilão RM Sotheby's</span>
+                </div>
+                <div class="flex items-center gap-space-sm">
+                  <span class="font-ticker-md text-ticker-md text-primary">0.35%</span>
+                  <button
+                    class="px-3 py-1.5 rounded bg-surface-container-high text-on-surface text-label-caps font-label-caps hover:bg-surface-bright transition-colors"
+                    type="button">
+                    MODIFICAR SPREAD
+                  </button>
+                </div>
+              </div>
+              <!-- Action Button -->
+              <div class="flex items-center justify-end gap-space-sm pt-space-xs">
+                <button
+                  class="px-4 py-2 rounded bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface"
+                  type="button">REDEFINIR PADRÕES</button>
+                <button
+                  class="flex items-center gap-space-xs px-5 py-2 rounded bg-primary text-on-primary font-label-caps text-label-caps font-bold hover:bg-primary-fixed-dim transition-all"
+                  id="btn-save-rates" type="button">
+                  <span class="material-symbols-outlined text-sm font-bold">verified_user</span>
+                  SALVAR E APLICAR PARÂMETROS GLOBAIS
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- BANK ACCOUNTS & RESERVE VAULT BALANCES (5 cols) -->
+          <div
+            class="xl:col-span-5 flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-low shadow-xl">
+            <div class="flex flex-col space-y-space-xs">
+              <div class="flex items-center justify-between">
+                <span class="font-label-caps text-label-caps text-primary uppercase tracking-wider">CUSTÓDIA &amp;
+                  CONTAS DE RESERVA MASTER</span>
+                <span class="inline-flex items-center gap-1 font-label-caps text-label-caps text-primary">
+                  <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span> CONCILIADO AGORA
+                </span>
+              </div>
+              <h2 class="font-headline-md text-headline-md text-on-surface font-bold uppercase tracking-tight">Saldos
+                Fiduciários Segregados</h2>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Patrimônio de afetação legalmente isolado das
+                operações corporativas gerais.</p>
+            </div>
+            <!-- Account cards stack -->
+            <div class="flex flex-col space-y-space-sm my-space-md">
+              <!-- Account 1: Itaú BBA -->
+              <div class="p-space-md rounded bg-surface-container flex flex-col space-y-space-xs">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-primary text-base">verified</span>
+                    <span class="font-body-sm text-body-sm text-on-surface font-semibold">Itaú BBA // Conta Reserva de
+                      Contingência</span>
+                  </div>
+                  <span class="font-label-caps text-label-caps px-2 py-0.5 rounded bg-primary/10 text-primary">CVM
+                    175</span>
+                </div>
+                <span class="font-ticker-lg text-ticker-lg text-primary">R$ 25.000.000,00</span>
+                <div class="flex items-center justify-between font-label-caps text-label-caps text-outline pt-space-xs">
+                  <span>Garantia de Liquidação Instantânea</span>
+                  <span>CDI + 1.25%</span>
+                </div>
+              </div>
+              <!-- Account 2: UBS Genebra -->
+              <div class="p-space-md rounded bg-surface-container flex flex-col space-y-space-xs">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-tertiary text-base">public</span>
+                    <span class="font-body-sm text-body-sm text-on-surface font-semibold">UBS Switzerland AG
+                      (Genebra)</span>
+                  </div>
+                  <span
+                    class="font-label-caps text-label-caps px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">SUÍÇA
+                    // CHF</span>
+                </div>
+                <span class="font-ticker-lg text-ticker-lg text-on-surface">CHF 4.200.000,00</span>
+                <div class="flex items-center justify-between font-label-caps text-label-caps text-outline pt-space-xs">
+                  <span>Câmbio Referencial: R$ 6,38</span>
+                  <span>Aporte Reserva Veículos Europa</span>
+                </div>
+              </div>
+              <!-- Account 3: JPMorgan Chase Miami -->
+              <div class="p-space-md rounded bg-surface-container flex flex-col space-y-space-xs">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-secondary text-base">account_balance_wallet</span>
+                    <span class="font-body-sm text-body-sm text-on-surface font-semibold">JPMorgan Chase Bank (Miami,
+                      Private Bank)</span>
+                  </div>
+                  <span
+                    class="font-label-caps text-label-caps px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">EUA
+                    // USD</span>
+                </div>
+                <span class="font-ticker-lg text-ticker-lg text-on-surface">USD 3.800.000,00</span>
+                <div class="flex items-center justify-between font-label-caps text-label-caps text-outline pt-space-xs">
+                  <span>Câmbio Referencial: R$ 5,65</span>
+                  <span>Garantia de Arrematação RM Sotheby's</span>
+                </div>
+              </div>
+            </div>
+            <!-- Quick Transfer Footer -->
+            <div class="flex items-center justify-between p-space-sm rounded bg-surface-container-high">
+              <div class="flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-primary text-sm">lock</span>
+                <span class="font-label-caps text-label-caps text-on-surface">CUSTÓDIA MULTI-SIG 3-OF-5 ATIVA</span>
+              </div>
+              <button class="font-label-caps text-label-caps text-primary hover:underline uppercase"
+                type="button">Extrato Bancário Auditado →</button>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION B: DEMONSTRATIVO DE RESULTADOS DO EXERCÍCIO (DRE FIDUCIÁRIO APEX MASTER) -->
+        <section class="flex flex-col space-y-space-md p-space-lg rounded-xl bg-surface-container-low shadow-xl">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+            <div class="flex flex-col space-y-space-xs">
+              <div class="flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-primary text-sm">balance</span>
+                <span class="font-label-caps text-label-caps text-primary tracking-wider uppercase">Seção B // Fiduciary
+                  Ledger &amp; Compliance</span>
+              </div>
+              <h2 class="font-headline-md text-headline-md text-on-surface font-bold uppercase tracking-tight">
+                Demonstrativo de Resultados do Exercício (DRE Fiduciário Apex Master)</h2>
+              <span class="font-body-sm text-body-sm text-on-surface-variant">Exercício Consolidado YTD 2024 • Auditoria
+                Independente PwC Brasil • Padrão Contábil IFRS 9 / NBC TG 48</span>
+            </div>
+            <div class="flex items-center gap-space-xs">
+              <span
+                class="px-3 py-1 rounded bg-surface-container-high font-label-caps text-label-caps text-primary">PERÍODO:
+                JAN-DEZ VIGENTE</span>
+              <button
+                class="px-3 py-1.5 rounded bg-surface-container font-label-caps text-label-caps text-on-surface hover:bg-surface-bright flex items-center gap-1"
+                type="button">
+                <span class="material-symbols-outlined text-sm">download</span> EXPORTAR XLS/PDF
+              </button>
+            </div>
+          </div>
+          <!-- Tabular Financial Ledger -->
+          <div class="w-full overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-surface-container-high">
+                  <th class="py-space-sm px-space-md font-label-caps text-label-caps text-outline uppercase">Rubrica
+                    Contábil Fiduciária</th>
+                  <th
+                    class="py-space-sm px-space-md font-label-caps text-label-caps text-outline uppercase text-center">
+                    Classificação</th>
+                  <th class="py-space-sm px-space-md font-label-caps text-label-caps text-outline uppercase text-right">
+                    Volume (R$)</th>
+                  <th class="py-space-sm px-space-md font-label-caps text-label-caps text-outline uppercase text-right">
+                    % Receita Bruta</th>
+                  <th
+                    class="py-space-sm px-space-md font-label-caps text-label-caps text-outline uppercase text-center">
+                    Status Auditoria</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-transparent">
+                <!-- Line 1: Receita Bruta -->
+                <tr class="bg-surface-container/60 hover:bg-surface-container transition-colors">
+                  <td
+                    class="py-space-sm px-space-md font-body-md text-body-md text-on-surface font-semibold flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-base">expand_less</span>
+                    Receita Bruta de Operações Globais
+                  </td>
+                  <td
+                    class="py-space-sm px-space-md font-label-caps text-label-caps text-center text-on-surface-variant">
+                    CREDIT REVENUE</td>
+                  <td
+                    class="py-space-sm px-space-md font-ticker-md text-ticker-md text-right text-on-surface font-bold">
+                    R$ 14.680.000,00</td>
+                  <td class="py-space-sm px-space-md font-ticker-md text-ticker-md text-right text-on-surface-variant">
+                    100.0%</td>
+                  <td class="py-space-sm px-space-md text-center">
+                    <span
+                      class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-caps text-label-caps">HOMOLOGADO</span>
+                  </td>
+                </tr>
+                <!-- Line 2: Deduções -->
+                <tr class="bg-surface-container-low hover:bg-surface-container transition-colors">
+                  <td
+                    class="py-space-sm px-space-md font-body-md text-body-md text-secondary pl-8 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-secondary text-sm">remove</span>
+                    (-) Deduções Tributárias, ISS &amp; Taxa de Fiscalização CVM
+                  </td>
+                  <td class="py-space-sm px-space-md font-label-caps text-label-caps text-center text-secondary">TAX
+                    DEDUCTION</td>
+                  <td class="py-space-sm px-space-md font-ticker-md text-ticker-md text-right text-secondary">- R$
+                    1.839.500,00</td>
+                  <td class="py-space-sm px-space-md font-ticker-md text-ticker-md text-right text-on-surface-variant">
+                    12.5%</td>
+                  <td class="py-space-sm px-space-md text-center">
+                    <span
+                      class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-caps text-label-caps">RETIDO
+                      NA FONTE</span>
+                  </td>
+                </tr>
+                <!-- Line 3: Receita Líquida -->
+                <tr class="bg-surface-container-high/80 hover:bg-surface-container-high transition-colors">
+                  <td class="py-space-sm px-space-md font-body-md text-body-md text-primary font-bold">
+                    (=) Receita Líquida Operacional Consolidada
+                  </td>
+                  <td class="py-space-sm px-space-md font-label-caps text-label-caps text-center text-primary">NET
+                    REVENUE</td>
+                  <td class="py-space-sm px-space-md font-ticker-md text-ticker-md text-right text-primary font-bold">R$
+                    12.840.500,00</td>
+                  <td class="py-space-sm px-space-md font-ticker-md text-ticker-md text-right text-on-surface">87.5%
+                  </td>
+                  <td class="py-space-sm px-space-md text-center">
+                    <span
+                      class="px-2 py-0.5 rounded bg-primary/20 text-primary font-label-caps text-label-caps">AUDITADO
+                      PwC</span>
+                  </td>
+                </tr>
+                <!-- Line 4: Custos Operacionais e Bunker -->
+                <tr class="bg-surface-container-low hover:bg-surface-container transition-colors">
+                  <td
+                    class="py-space-sm px-space-md font-body-md text-body-md text-secondary pl-8 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-secondary text-sm">remove</span>
+                    (-) Custos Operacionais de Bunkers, Seguro All-Risks Chubb &amp; Compliance
+                  </td>
+                  <td class="py-space-sm px-space-md font-label-caps text-label-caps text-center text-secondary">OPEX
+                    BUNKERS</td>
+                  <td class="py-space-sm px-space-md font-ticker-md text-ticker-md text-right text-secondary">- R$
+                    3.419.700,00</td>
+                  <td class="py-space-sm px-space-md font-ticker-md text-ticker-md text-right text-on-surface-variant">
+                    23.3%</td>
+                  <td class="py-space-sm px-space-md text-center">
+                    <span
+                      class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-caps text-label-caps">APÓLICE
+                      ATIVA</span>
+                  </td>
+                </tr>
+                <!-- Line 5: Lucro Líquido Master -->
+                <tr class="bg-surface-container-highest/90">
+                  <td
+                    class="py-space-md px-space-md font-body-lg text-body-lg text-primary font-bold flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-base">star</span>
+                    (=) LUCRO LÍQUIDO MASTER DISPONÍVEL PARA A GESTORA
+                  </td>
+                  <td
+                    class="py-space-md px-space-md font-label-caps text-label-caps text-center text-primary font-bold">
+                    MASTER PROFIT</td>
+                  <td class="py-space-md px-space-md font-ticker-lg text-ticker-lg text-right text-primary font-bold">R$
+                    9.420.800,00</td>
+                  <td class="py-space-md px-space-md font-ticker-md text-ticker-md text-right text-primary font-bold">
+                    64.2%</td>
+                  <td class="py-space-md px-space-md text-center">
+                    <span
+                      class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-caps text-label-caps font-bold">PRONTO
+                      P/ RECOLHIMENTO</span>
+                  </td>
+                </tr>
+                <!-- Line 6: Pool de Dividendos -->
+                <tr class="bg-surface-container/90 hover:bg-surface-container">
+                  <td
+                    class="py-space-sm px-space-md font-body-md text-body-md text-on-surface font-semibold pl-8 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-tertiary text-base">savings</span>
+                    (+) Pool de Dividendos dos Cotistas Acumulado para Pagamento Imediato
+                  </td>
+                  <td class="py-space-sm px-space-md font-label-caps text-label-caps text-center text-tertiary">DIVIDEND
+                    POOL</td>
+                  <td class="py-space-sm px-space-md font-ticker-md text-ticker-md text-right text-tertiary font-bold">
+                    R$ 1.840.000,00</td>
+                  <td class="py-space-sm px-space-md font-ticker-md text-ticker-md text-right text-tertiary">12.5%</td>
+                  <td class="py-space-sm px-space-md text-center">
+                    <span
+                      class="px-2 py-0.5 rounded bg-tertiary/20 text-tertiary font-label-caps text-label-caps">NAVALHA
+                      DE CORTE</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <!-- SECTION C: MESA DE PAGAMENTO DE DIVIDENDOS AOS INVESTIDORES -->
+        <section class="flex flex-col space-y-space-md p-space-lg rounded-xl bg-surface-container-low shadow-xl">
+          <div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+            <div class="flex flex-col space-y-space-xs">
+              <div class="flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-primary text-sm">payments</span>
+                <span class="font-label-caps text-label-caps text-primary tracking-wider uppercase">Seção C // Investor
+                  Settlement Desk</span>
+              </div>
+              <h2 class="font-headline-md text-headline-md text-on-surface font-bold uppercase tracking-tight">Mesa de
+                Pagamento de Dividendos aos Investidores</h2>
+              <span class="font-body-sm text-body-sm text-on-surface-variant">Execução orquestrada via smart contracts
+                para liquidação instantânea via PIX / TED fiduciário nas contas cadastradas.</span>
+            </div>
+            <!-- Liquidation schedule alert -->
+            <div class="flex items-center gap-space-md px-space-md py-space-sm rounded bg-surface-container">
+              <div class="flex flex-col">
+                <span class="font-label-caps text-label-caps text-outline">DATA DA LIQUIDAÇÃO AUTOMÁTICA</span>
+                <span class="font-body-md text-body-md text-on-surface font-bold">15 do Mês Corrente (15:00
+                  UTC-3)</span>
+              </div>
+              <span class="px-2.5 py-1 rounded bg-primary/10 text-primary font-label-caps text-label-caps">SMART
+                CONTRACT AUDITADO</span>
+            </div>
+          </div>
+          <!-- Active Distribution Events -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md pt-space-xs">
+            <!-- Event 1: Goodwood / Concours Villa d'Este -->
+            <div
+              class="p-space-md rounded-xl bg-surface-container flex flex-col justify-between space-y-space-md shadow-md">
+              <div class="flex items-start justify-between">
+                <div class="flex flex-col space-y-space-xs">
+                  <span class="font-label-caps text-label-caps text-primary uppercase">Evento Concours &amp; Locação
+                    Exclusiva</span>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Goodwood Revival &amp;
+                    Concours Villa d'Este</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Aluguel comercial e exposição histórica dos chassis: <strong class="text-on-surface">Ferrari F40
+                      LM</strong> (#88521) e <strong class="text-on-surface">Aston Martin DB4 GT Zagato</strong>.
+                  </p>
+                </div>
+                <span
+                  class="p-2 rounded bg-surface-container-high text-primary material-symbols-outlined">directions_car</span>
+              </div>
+              <div class="flex flex-col space-y-space-xs pt-space-xs">
+                <div class="flex items-center justify-between">
+                  <span class="font-label-caps text-label-caps text-outline">POOL DE DIVIDENDOS APURADO</span>
+                  <span class="font-ticker-md text-ticker-md text-primary font-bold">R$ 720.000,00</span>
+                </div>
+                <div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+                  <span>Cotistas Elegíveis: 412 contas</span>
+                  <span>Rendimento Pro Rata: R$ 1.747,57 / cota</span>
+                </div>
+                <div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+                  <div class="bg-primary h-full rounded-full" style="width: 100%;"></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between pt-space-xs font-label-caps text-label-caps">
+                <span class="text-on-surface-variant">CONTRATO DE LOCAÇÃO HOMOLOGADO</span>
+                <span class="text-primary">EXECUÇÃO IMEDIATA</span>
+              </div>
+            </div>
+            <!-- Event 2: Ganho de Capital Porsche RS -->
+            <div
+              class="p-space-md rounded-xl bg-surface-container flex flex-col justify-between space-y-space-md shadow-md">
+              <div class="flex items-start justify-between">
+                <div class="flex flex-col space-y-space-xs">
+                  <span class="font-label-caps text-label-caps text-tertiary uppercase">Desinvestimento &amp; Ganho
+                    Realizado</span>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Venda de Lote Fracionado
+                    Porsche 911 Carrera RS 2.7</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Liquidação integral de tranche fiduciária adquirida em 2021. Valorização acima do teto estipulado em
+                    comitê de desinvestimento (+34.2%).
+                  </p>
+                </div>
+                <span
+                  class="p-2 rounded bg-surface-container-high text-tertiary material-symbols-outlined">trending_up</span>
+              </div>
+              <div class="flex flex-col space-y-space-xs pt-space-xs">
+                <div class="flex items-center justify-between">
+                  <span class="font-label-caps text-label-caps text-outline">GANHO DE CAPITAL LÍQUIDO A
+                    DISTRIBUIR</span>
+                  <span class="font-ticker-md text-ticker-md text-tertiary font-bold">R$ 1.120.000,00</span>
+                </div>
+                <div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+                  <span>Cotistas Elegíveis: 185 contas</span>
+                  <span>Rendimento Pro Rata: R$ 6.054,05 / cota</span>
+                </div>
+                <div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+                  <div class="bg-tertiary h-full rounded-full" style="width: 100%;"></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between pt-space-xs font-label-caps text-label-caps">
+                <span class="text-on-surface-variant">APROVADO POR ASSEMBLEIA GERAL SPE</span>
+                <span class="text-tertiary">EXECUÇÃO IMEDIATA</span>
+              </div>
+            </div>
+          </div>
+          <!-- Master Action Banner: Disparar Liquidação em Massa -->
+          <div
+            class="mt-space-md p-space-md rounded-xl bg-surface-container-high flex flex-col md:flex-row items-center justify-between gap-space-md">
+            <div class="flex items-center gap-space-md">
+              <div class="p-3 rounded-full bg-primary/20 text-primary flex items-center justify-center">
+                <span class="material-symbols-outlined text-2xl font-bold">send</span>
+              </div>
+              <div class="flex flex-col">
+                <div class="flex items-center gap-space-xs">
+                  <span class="font-label-caps text-label-caps text-primary font-bold uppercase">REPASSE TOTAL
+                    PREPARADO</span>
+                  <span class="font-label-caps text-label-caps text-outline">//</span>
+                  <span class="font-label-caps text-label-caps text-on-surface">597 COTISTAS QUALIFICADOS</span>
+                </div>
+                <span class="font-ticker-lg text-ticker-lg text-on-surface font-bold">TOTAL A SER DISPARADO: R$
+                  1.840.000,00</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-space-sm w-full md:w-auto">
+              <button
+                class="w-full md:w-auto px-4 py-2.5 rounded bg-surface-container text-on-surface hover:bg-surface-bright font-label-caps text-label-caps transition-colors"
+                id="btn-simulate-pix" type="button">
+                TESTAR ROTA BACEN PIX
+              </button>
+              <button
+                class="w-full md:w-auto flex items-center justify-center gap-space-xs px-6 py-2.5 rounded bg-primary text-on-primary font-label-caps text-label-caps font-bold hover:bg-primary-fixed-dim transition-all shadow-[0_12px_24px_-8px_rgba(212,175,55,0.4)]"
+                id="btn-fire-liquidation" type="button">
+                <span class="material-symbols-outlined text-base font-bold">currency_exchange</span>
+                DISPARAR LIQUIDAÇÃO EM MASSA (PIX / TED DIRETO)
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <script>
+        (function () {
+          // Dynamic sliders logic
+          const sliderDrops = document.getElementById('slider-taxa-drops');
+          const labelDrops = document.getElementById('label-taxa-drops');
+          if (sliderDrops && labelDrops) {
+            sliderDrops.addEventListener('input', function (e) {
+              labelDrops.textContent = parseFloat(e.target.value).toFixed(1) + '%';
+            });
+          }
 
-    const sliderP2P = document.getElementById('slider-taxa-p2p');
-    const labelP2P = document.getElementById('label-taxa-p2p');
-    if (sliderP2P && labelP2P) {
-      sliderP2P.addEventListener('input', function(e) {
-        labelP2P.textContent = parseFloat(e.target.value).toFixed(2) + '%';
-      });
-    }
+          const sliderP2P = document.getElementById('slider-taxa-p2p');
+          const labelP2P = document.getElementById('label-taxa-p2p');
+          if (sliderP2P && labelP2P) {
+            sliderP2P.addEventListener('input', function (e) {
+              labelP2P.textContent = parseFloat(e.target.value).toFixed(2) + '%';
+            });
+          }
 
-    // Confirmation Toast micro-interactions
-    const btnSaveRates = document.getElementById('btn-save-rates');
-    if (btnSaveRates) {
-      btnSaveRates.addEventListener('click', function() {
-        const originalText = btnSaveRates.innerHTML;
-        btnSaveRates.innerHTML = '<span class="material-symbols-outlined text-sm font-bold animate-spin">sync</span> PROPAGANDO VIA HSM...';
-        btnSaveRates.disabled = true;
-        setTimeout(function() {
-          btnSaveRates.innerHTML = '<span class="material-symbols-outlined text-sm font-bold">check_circle</span> PARÂMETROS SALVOS NA MAINNET';
-          setTimeout(function() {
-            btnSaveRates.innerHTML = originalText;
-            btnSaveRates.disabled = false;
-          }, 2500);
-        }, 1200);
-      });
-    }
+          // Confirmation Toast micro-interactions
+          const btnSaveRates = document.getElementById('btn-save-rates');
+          if (btnSaveRates) {
+            btnSaveRates.addEventListener('click', function () {
+              const originalText = btnSaveRates.innerHTML;
+              btnSaveRates.innerHTML = '<span class="material-symbols-outlined text-sm font-bold animate-spin">sync</span> PROPAGANDO VIA HSM...';
+              btnSaveRates.disabled = true;
+              setTimeout(function () {
+                btnSaveRates.innerHTML = '<span class="material-symbols-outlined text-sm font-bold">check_circle</span> PARÂMETROS SALVOS NA MAINNET';
+                setTimeout(function () {
+                  btnSaveRates.innerHTML = originalText;
+                  btnSaveRates.disabled = false;
+                }, 2500);
+              }, 1200);
+            });
+          }
 
-    const btnFire = document.getElementById('btn-fire-liquidation');
-    if (btnFire) {
-      btnFire.addEventListener('click', function() {
-        if (confirm('CONFIRMAÇÃO CRÍTICA ROOT: Deseja autorizar a liquidação em massa de R$ 1.840.000,00 via PIX/TED aos 597 cotistas?')) {
-          const originalText = btnFire.innerHTML;
-          btnFire.innerHTML = '<span class="material-symbols-outlined text-base animate-spin">hourglass_empty</span> PROCESSANDO LOTES BACEN...';
-          btnFire.disabled = true;
-          setTimeout(function() {
-            btnFire.innerHTML = '<span class="material-symbols-outlined text-base">done_all</span> LIQUIDAÇÃO CONCLUÍDA COM SUCESSO';
-            alert('Ordens enviadas com sucesso ao Banco Central do Brasil e registradas em ledger CVM 175.');
-            setTimeout(function() {
-              btnFire.innerHTML = originalText;
-              btnFire.disabled = false;
-            }, 3000);
-          }, 1800);
-        }
-      });
-    }
+          const btnFire = document.getElementById('btn-fire-liquidation');
+          if (btnFire) {
+            btnFire.addEventListener('click', function () {
+              if (confirm('CONFIRMAÇÃO CRÍTICA ROOT: Deseja autorizar a liquidação em massa de R$ 1.840.000,00 via PIX/TED aos 597 cotistas?')) {
+                const originalText = btnFire.innerHTML;
+                btnFire.innerHTML = '<span class="material-symbols-outlined text-base animate-spin">hourglass_empty</span> PROCESSANDO LOTES BACEN...';
+                btnFire.disabled = true;
+                setTimeout(function () {
+                  btnFire.innerHTML = '<span class="material-symbols-outlined text-base">done_all</span> LIQUIDAÇÃO CONCLUÍDA COM SUCESSO';
+                  alert('Ordens enviadas com sucesso ao Banco Central do Brasil e registradas em ledger CVM 175.');
+                  setTimeout(function () {
+                    btnFire.innerHTML = originalText;
+                    btnFire.disabled = false;
+                  }, 3000);
+                }, 1800);
+              }
+            });
+          }
 
-    const btnDistribute = document.getElementById('btn-distribute-dividend');
-    if (btnDistribute) {
-      btnDistribute.addEventListener('click', function() {
-        if (btnFire) {
-          btnFire.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          btnFire.classList.add('animate-pulse');
-          setTimeout(function() {
-            btnFire.classList.remove('animate-pulse');
-          }, 2000);
-        }
-      });
-    }
+          const btnDistribute = document.getElementById('btn-distribute-dividend');
+          if (btnDistribute) {
+            btnDistribute.addEventListener('click', function () {
+              if (btnFire) {
+                btnFire.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                btnFire.classList.add('animate-pulse');
+                setTimeout(function () {
+                  btnFire.classList.remove('animate-pulse');
+                }, 2000);
+              }
+            });
+          }
 
-    const btnSimulatePix = document.getElementById('btn-simulate-pix');
-    if (btnSimulatePix) {
-      btnSimulatePix.addEventListener('click', function() {
-        alert('Teste de Conectividade PIX BACEN (SPI / RSFN):\nLatência média: 42ms\nCanal: Criptografia mTLS HSM nível 5 ativa\nStatus: 100% OPERACIONAL.');
-      });
-    }
-  })();
-</script></main></div></body></html>
+          const btnSimulatePix = document.getElementById('btn-simulate-pix');
+          if (btnSimulatePix) {
+            btnSimulatePix.addEventListener('click', function () {
+              alert('Teste de Conectividade PIX BACEN (SPI / RSFN):\nLatência média: 42ms\nCanal: Criptografia mTLS HSM nível 5 ativa\nStatus: 100% OPERACIONAL.');
+            });
+          }
+        })();
+      </script>
+    </main>
+  </div>
+</body>
+
+</html>

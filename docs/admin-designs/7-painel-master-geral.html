@@ -1,558 +1,847 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary": "#68001a", "secondary-container": "#cc003c", "on-secondary-container": "#ffdcdc", "on-error-container": "#ffdad6", "on-primary-fixed": "#241a00", "outline": "#99907c", "primary-fixed-dim": "#e9c349", "primary-fixed": "#ffe088", "surface-bright": "#37393f", "surface-container-lowest": "#0c0e13", "on-background": "#e2e2e9", "secondary-fixed": "#ffdada", "surface-container": "#1e2025", "on-primary": "#3c2f00", "on-error": "#690005", "on-tertiary-fixed-variant": "#653e00", "on-secondary-fixed-variant": "#920028", "tertiary-container": "#f7a00f", "on-secondary-fixed": "#40000c", "outline-variant": "#4d4635", "inverse-on-surface": "#2e3036", "surface-variant": "#33353a", "tertiary-fixed-dim": "#ffb95f", "on-tertiary-container": "#633d00", "on-primary-container": "#554300", "primary-container": "#d4af37", "surface": "#111318", "on-tertiary-fixed": "#2a1700", "background": "#111318", "inverse-primary": "#735c00", "surface-tint": "#e9c349", "error": "#ffb4ab", "on-tertiary": "#472a00", "secondary-fixed-dim": "#ffb3b6", "inverse-surface": "#e2e2e9", "on-surface": "#e2e2e9", "error-container": "#93000a", "secondary": "#ffb3b6", "surface-dim": "#111318", "tertiary": "#ffc37b", "tertiary-fixed": "#ffddb8", "primary": "#f2ca50", "surface-container-highest": "#33353a", "on-surface-variant": "#d0c5af", "surface-container-high": "#282a2f", "on-primary-fixed-variant": "#574500", "surface-container-low": "#1a1b21" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1.25rem", "margin": "1.5rem", "gutter-desktop": "2rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-md": "1rem", "margin-desktop": "3rem" }, "fontFamily": { "headline-sm": ["Chivo"], "headline-lg": ["Chivo"], "label-caps": ["JetBrains Mono"], "body-md": ["Plus Jakarta Sans"], "display-lg-mobile": ["Chivo"], "ticker-lg": ["JetBrains Mono"], "body-lg": ["Plus Jakarta Sans"], "headline-md": ["Chivo"], "ticker-md": ["JetBrains Mono"], "body-sm": ["Plus Jakarta Sans"], "display-lg": ["Chivo"], "headline-lg-mobile": ["Chivo"] }, "fontSize": { "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }], "display-lg-mobile": ["34px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "ticker-lg": ["24px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "ticker-md": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-lg-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between border-r border-outline-variant/30 shadow-[0_12px_32px_-4px_rgba(0,0,0,0.7)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm border-b border-outline-variant/20 bg-surface-container-low/40"><img alt="Monza Apex Capital" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VR9Pr18peqmftIX-nbOUsaQMtux65iPuTXbvnVtaKfLtIU2UPnUHtuzX-qTphrRXQt2gN6hbx1gHxE8qVMMAfL-V9PqWaZmw81HUB9TOoYwTv15bw15auF-5nzXnYVeQvmxThJC_gE6UpBhDYbW3YCLSAwn2iYDEXtRaObjtnqMr0yR8UHwCzjOUCvi0l8Wlmb0Tge4Fuzov_71YWDT8EgrAVyh7Ky_CRujpBONoldMok2GwKq3bgqGSXP"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none uppercase">Monza Apex</span><span class="font-label-caps text-label-caps text-on-surface-variant tracking-wider">FIDUCIARY TERMINAL</span></div></div><div class="px-space-md py-space-sm bg-surface-container/60 border-b border-outline-variant/20 flex items-center justify-between"><span class="font-label-caps text-label-caps text-on-surface-variant">NÍVEL DE ACESSO</span><span class="font-label-caps text-label-caps text-primary bg-primary-container/20 px-space-xs py-0.5 rounded border border-primary-container/40">SUPERADMIN ROOT</span></div><nav class="flex flex-col py-space-sm overflow-y-auto max-h-[calc(100vh-210px)]" data-active-classes="bg-surface-container text-primary font-bold border-l-2 border-primary"><div class="px-space-md pt-space-sm pb-space-xs font-label-caps text-label-caps text-outline uppercase tracking-wider">1. Núcleo Master</div><a aria-current="page" class="px-space-md py-space-sm flex items-center justify-between transition-colors bg-surface-container text-primary font-bold border-l-2 border-primary" data-path="painel-master-geral" href="#"><span class="font-body-md text-body-md">Painel Master Geral</span><span class="font-label-caps text-label-caps text-outline">ROOT</span></a><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors" data-path="gestao-de-usuarios-e-acessos" href="#"><span class="font-body-md text-body-md">Gestão de Usuários &amp; Acessos</span><span class="font-label-caps text-label-caps text-outline">RBAC</span></a><div class="px-space-md pt-space-md pb-space-xs font-label-caps text-label-caps text-outline uppercase tracking-wider">2. Ativos &amp; Veículos</div><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors" data-path="catalogo-e-gestao-de-carros" href="#"><span class="font-body-md text-body-md">Catálogo &amp; Gestão de Carros</span><span class="font-label-caps text-label-caps text-outline">VAULT</span></a><div class="px-space-md pt-space-md pb-space-xs font-label-caps text-label-caps text-outline uppercase tracking-wider">3. Tesouraria &amp; Lucros</div><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors" data-path="controle-de-lucros-e-taxas" href="#"><span class="font-body-md text-body-md">Controle de Lucros &amp; Taxas</span><span class="font-label-caps text-label-caps text-outline">DRE</span></a><div class="px-space-md pt-space-md pb-space-xs font-label-caps text-label-caps text-outline uppercase tracking-wider">4. Governança &amp; Segurança</div><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors" data-path="auditoria-de-acoes-master" href="#"><span class="font-body-md text-body-md">Auditoria de Ações Master</span><span class="font-label-caps text-label-caps text-outline">LOGS</span></a><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors" data-path="configuracoes-globais-e-cvm" href="#"><span class="font-body-md text-body-md">Configurações Globais &amp; CVM</span><span class="font-label-caps text-label-caps text-outline">POL</span></a></nav></div><div class="p-space-sm bg-surface-container-low/80 border-t border-outline-variant/30"><div class="flex flex-col gap-1 p-space-xs bg-surface-container-lowest/90 border border-outline-variant/20 rounded"><div class="flex items-center justify-between"><span class="font-label-caps text-label-caps text-on-surface-variant">HARDWARE SECURITY</span><span class="font-label-caps text-label-caps text-primary">HSM LVL 5</span></div><div class="flex items-center justify-between"><span class="font-label-caps text-label-caps text-outline">SIGNATURE CORE</span><span class="font-label-caps text-label-caps text-on-surface">P-256 ACTIVE</span></div><div class="flex items-center justify-between pt-0.5 border-t border-outline-variant/20"><span class="font-label-caps text-label-caps text-outline">BUILD</span><span class="font-label-caps text-label-caps text-on-surface-variant">v4.20.0-PROD</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_12px_32px_-4px_rgba(0,0,0,0.7)] z-40 flex items-center justify-between px-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><span class="font-label-caps text-label-caps text-primary">ROOT ACCESS</span><span class="font-label-caps text-label-caps text-outline">//</span><span class="font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase">MASTER CONSOLE TERMINAL</span></div><div class="hidden xl:flex items-center gap-space-xs pl-space-sm border-l border-outline-variant/40"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/40 font-label-caps text-label-caps text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>CVM 175 COMPLIANT</span><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/40 font-label-caps text-label-caps text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>HSM MASTER KEY ACTIVE</span><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/40 font-label-caps text-label-caps text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>SYSTEM INTEGRITY 100%</span></div></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-1 px-3 py-1.5 rounded bg-secondary-container/20 border border-secondary-container/50 text-secondary hover:bg-secondary-container hover:text-on-secondary-container transition-colors shadow-[0_0_16px_-4px_rgba(225,29,72,0.4)]" type="button"><span class="material-symbols-outlined text-sm leading-none">bolt</span><span class="font-label-caps text-label-caps tracking-wider">CIRCUIT BREAKER</span></button><div class="flex items-center gap-space-sm pl-space-sm border-l border-outline-variant/30"><div class="text-right hidden sm:flex flex-col"><span class="font-body-sm text-body-sm text-on-surface font-semibold leading-none">Dr. Alexandre Vance</span><span class="font-label-caps text-label-caps text-primary leading-none mt-1">CHIEF ADMINISTRATOR / MASTER ROOT</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-primary/40 shadow-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1XX39PukV7vCaRFUL3JIM8CMKOqfU5fbd0Fi8WVvSKOBCLSRaic7uhj7rnVbdQui5FupQOcBuMDxAZ-_T6oSsQ89Z8b0gwx5XwNBjJUMfhCQ9iNqbbM2G7ZjkTMx27rdhM7UloIVtaha-5-jMN133Ruoi2X42asGrNrLfVMYpgttZPhLMABz_aiY_vkyZ__Y8UzU2X1-sz3PChT32HmF0gl_xTMFqCkgOdCi4Bbq7fQ_6jkO4QXFPj86oI"/></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-space-md py-space-md"><div class="flex flex-col w-full gap-space-lg">
-<!-- Master Executive Header Panel -->
-<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg shadow-2xl">
-<div class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
-<div class="absolute left-1/3 -bottom-16 w-96 h-40 bg-secondary-container/10 blur-3xl pointer-events-none"></div>
-<div class="relative z-10 flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
-<div class="flex flex-col gap-space-xs">
-<div class="flex flex-wrap items-center gap-space-xs">
-<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-caps text-label-caps font-bold tracking-widest uppercase">SUPERADMIN ROOT</span>
-<span class="font-label-caps text-label-caps text-outline tracking-wider">//</span>
-<span class="font-label-caps text-label-caps text-primary-fixed-dim tracking-wider">APEX COMMAND CORE SYSTEM v4.20</span>
-<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container font-label-caps text-label-caps text-on-surface-variant">
-<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
-            LATENCY: 8ms GRU-ZRH
-          </span>
-</div>
-<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-extrabold uppercase">
-          SALA DE COMANDO MASTER <span class="text-primary">//</span> ROOT CONSOLE
-        </h1>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
-          Supervisão fiduciária consolidada, governança institucional de custódia física e execução de contratos inteligentes SPE sob diretrizes CVM 175.
-        </p>
-<!-- Dynamic Micro Badges -->
-<div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
-<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-high text-on-surface">
-<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">verified_user</span>
-<span class="font-label-caps text-label-caps">Contratos Inteligentes 100% Auditados PwC</span>
-</div>
-<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-high text-on-surface">
-<span class="material-symbols-outlined text-sm text-primary-fixed" style="font-variation-settings: 'FILL' 1;">account_balance</span>
-<span class="font-label-caps text-label-caps">Fiança Bancária Itaú BBA R$ 50.000.000,00</span>
-</div>
-<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-high text-on-surface">
-<span class="material-symbols-outlined text-sm text-tertiary" style="font-variation-settings: 'FILL' 1;">tune</span>
-<span class="font-label-caps text-label-caps">Custo Operacional Otimizado (81.2 bps)</span>
-</div>
-</div>
-</div>
-<!-- Quick Actions Core -->
-<div class="flex flex-wrap xl:flex-col sm:flex-row items-stretch xl:items-end gap-space-xs self-start xl:self-center">
-<button class="flex items-center justify-center gap-2 px-4 py-2.5 rounded bg-primary text-on-primary font-label-caps text-label-caps tracking-wider uppercase hover:bg-primary-fixed-dim transition-all shadow-lg active:scale-95" type="button">
-<span class="material-symbols-outlined text-base">add_circle</span>
-<span>NOVO VEÍCULO / DROP</span>
-</button>
-<button class="flex items-center justify-center gap-2 px-4 py-2.5 rounded bg-surface-container-high text-on-surface font-label-caps text-label-caps tracking-wider uppercase hover:bg-surface-bright transition-all active:scale-95" type="button">
-<span class="material-symbols-outlined text-base text-primary">description</span>
-<span>EMITIR RELATÓRIO EXECUTIVO CVM</span>
-</button>
-<button class="flex items-center justify-center gap-2 px-4 py-2 rounded bg-secondary-container/30 text-secondary hover:bg-secondary-container hover:text-on-secondary-container font-label-caps text-label-caps tracking-widest uppercase transition-all" onclick="confirmCircuitBreaker()" type="button">
-<span class="material-symbols-outlined text-sm">lock_clock</span>
-<span>TRAVAR PLATAFORMA (CIRCUIT BREAKER)</span>
-</button>
-</div>
-</div>
-</div>
-<!-- Top KPI Master Cards Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
-<!-- KPI 1: AUM -->
-<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-xl flex flex-col justify-between">
-<div class="flex items-center justify-between">
-<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">AUM TOTAL EM CUSTÓDIA</span>
-<span class="px-1.5 py-0.5 rounded bg-primary/10 text-primary font-label-caps text-label-caps">+18.4% YoY</span>
-</div>
-<div class="my-space-sm">
-<div class="font-ticker-lg text-ticker-lg text-on-surface font-bold tracking-tight">
-          R$ 142.850.000<span class="text-primary text-headline-sm">,00</span>
-</div>
-<div class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-2">
-<span>19 Supercarros SPE</span>
-<span class="text-outline">•</span>
-<span>3 Bunkers Fiduciários</span>
-</div>
-</div>
-<div class="pt-space-xs mt-space-xs bg-surface-container-lowest/60 rounded px-2.5 py-1.5 flex items-center justify-between">
-<span class="font-label-caps text-label-caps text-on-surface-variant">Bunkers Globais</span>
-<span class="font-ticker-md text-ticker-md text-primary font-medium">SP (11) • ZRH (5) • MIA (3)</span>
-</div>
-</div>
-<!-- KPI 2: Receita Master -->
-<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-xl flex flex-col justify-between">
-<div class="flex items-center justify-between">
-<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">RECEITA LÍQUIDA ACUMULADA</span>
-<span class="px-1.5 py-0.5 rounded bg-primary/10 text-primary font-label-caps text-label-caps">+32.1% Trimestre</span>
-</div>
-<div class="my-space-sm">
-<div class="font-ticker-lg text-ticker-lg text-on-surface font-bold tracking-tight">
-          R$ 9.420.800<span class="text-primary text-headline-sm">,00</span>
-</div>
-<div class="font-body-sm text-body-sm text-on-surface-variant mt-1">
-          Take rate médio ponderado: <span class="font-label-caps text-label-caps text-on-surface font-semibold">2.74%</span>
-</div>
-</div>
-<div class="pt-space-xs mt-space-xs bg-surface-container-lowest/60 rounded px-2.5 py-1.5 flex items-center justify-between text-body-sm">
-<span class="font-label-caps text-label-caps text-on-surface-variant">Origem das Taxas</span>
-<span class="font-ticker-md text-ticker-md text-on-surface">IPO 2.5% // Sec 0.2%</span>
-</div>
-</div>
-<!-- KPI 3: Base Usuários -->
-<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-xl flex flex-col justify-between">
-<div class="flex items-center justify-between">
-<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">BASE DE INVESTIDORES</span>
-<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps">99.2% KYC/AML</span>
-</div>
-<div class="my-space-sm">
-<div class="font-ticker-lg text-ticker-lg text-on-surface font-bold tracking-tight">
-          1.248 <span class="text-on-surface-variant text-body-lg font-normal">Contas Ativas</span>
-</div>
-<div class="font-body-sm text-body-sm text-on-surface-variant mt-1">
-          842 Qualificados // 312 Profissionais
-        </div>
-</div>
-<div class="pt-space-xs mt-space-xs bg-surface-container-lowest/60 rounded px-2.5 py-1.5 flex items-center justify-between">
-<span class="font-label-caps text-label-caps text-on-surface-variant">Apex Private VIP</span>
-<span class="font-ticker-md text-ticker-md text-primary font-medium">94 Cotistas HNW</span>
-</div>
-</div>
-<!-- KPI 4: Próximos Dividendos -->
-<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-xl flex flex-col justify-between">
-<div class="flex items-center justify-between">
-<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">DIVIDENDOS PROJETADOS</span>
-<span class="px-1.5 py-0.5 rounded bg-tertiary-container/30 text-tertiary font-label-caps text-label-caps">Ciclo D-4</span>
-</div>
-<div class="my-space-sm">
-<div class="font-ticker-lg text-ticker-lg text-tertiary font-bold tracking-tight">
-          R$ 1.840.000<span class="text-on-surface text-headline-sm">,00</span>
-</div>
-<div class="font-body-sm text-body-sm text-on-surface-variant mt-1">
-          Liquidação automática agendada dia 15
-        </div>
-</div>
-<div class="pt-space-xs mt-space-xs bg-surface-container-lowest/60 rounded px-2.5 py-1.5 flex items-center justify-between">
-<span class="font-label-caps text-label-caps text-on-surface-variant">Fontes de Yield</span>
-<span class="font-ticker-md text-ticker-md text-on-surface truncate">Goodwood + Acervo</span>
-</div>
-</div>
-</div>
-<!-- Central Section Split (65% / 35%) -->
-<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg">
-<!-- Left Column (Wide, 8 of 12 cols = 66.6%) -->
-<div class="xl:col-span-8 flex flex-col gap-space-lg">
-<!-- a) Visão de Liquidez & Rentabilidade -->
-<div class="rounded-xl bg-surface-container-low p-space-lg shadow-xl flex flex-col gap-space-md">
-<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
-<div class="flex flex-col">
-<div class="flex items-center gap-2">
-<span class="w-2 h-2 rounded-full bg-primary"></span>
-<h2 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">
-                Visão de Liquidez &amp; Rentabilidade da Plataforma
-              </h2>
-</div>
-<span class="font-body-sm text-body-sm text-on-surface-variant">
-              Demonstrativo de fluxos financeiros, fees retidos e custos de custódia segurada (Apolice Chubb Master)
-            </span>
-</div>
-<!-- Filter Controls -->
-<div class="flex items-center gap-1 p-1 bg-surface-container rounded-lg self-start sm:self-auto">
-<button class="chart-tab active px-3 py-1 rounded font-label-caps text-label-caps bg-primary text-on-primary transition-all" onclick="setChartFilter('all')" type="button">Consolidado</button>
-<button class="chart-tab px-3 py-1 rounded font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-all" onclick="setChartFilter('revenue')" type="button">Receita Master</button>
-<button class="chart-tab px-3 py-1 rounded font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-all" onclick="setChartFilter('payout')" type="button">Repasse Cotistas</button>
-</div>
-</div>
-<!-- Metric Stream Bars -->
-<div class="grid grid-cols-3 gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest/80">
-<div class="flex flex-col">
-<span class="font-label-caps text-label-caps text-outline">RECEITA BRUTA PLATAFORMA</span>
-<span class="font-ticker-md text-ticker-md text-primary font-bold">R$ 11.260.400,00</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Margem Líquida 83.6%</span>
-</div>
-<div class="flex flex-col">
-<span class="font-label-caps text-label-caps text-outline">REPASSADO AOS INVESTIDORES</span>
-<span class="font-ticker-md text-ticker-md text-tertiary font-bold">R$ 38.940.120,00</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Yield médio 14.8% a.a.</span>
-</div>
-<div class="flex flex-col">
-<span class="font-label-caps text-label-caps text-outline">CUSTÓDIA, SEGURO &amp; SPEs</span>
-<span class="font-ticker-md text-ticker-md text-on-surface font-bold">R$ 1.839.600,00</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Sinistralidade zero</span>
-</div>
-</div>
-<!-- Custom Inline Visual Chart -->
-<div class="relative w-full h-56 pt-space-sm flex flex-col justify-end">
-<!-- Background Grid Lines -->
-<div class="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-20">
-<div class="w-full h-px bg-outline"></div>
-<div class="w-full h-px bg-outline"></div>
-<div class="w-full h-px bg-outline"></div>
-<div class="w-full h-px bg-outline"></div>
-</div>
-<!-- SVG Chart Curve -->
-<svg class="w-full h-44 overflow-visible" preserveaspectratio="none" viewbox="0 0 700 160">
-<defs>
-<lineargradient id="goldGradient" x1="0%" x2="0%" y1="0%" y2="100%">
-<stop offset="0%" stop-color="#f2ca50" stop-opacity="0.35"></stop>
-<stop offset="100%" stop-color="#f2ca50" stop-opacity="0.0"></stop>
-</lineargradient>
-<lineargradient id="amberGradient" x1="0%" x2="0%" y1="0%" y2="100%">
-<stop offset="0%" stop-color="#ffc37b" stop-opacity="0.25"></stop>
-<stop offset="100%" stop-color="#ffc37b" stop-opacity="0.0"></stop>
-</lineargradient>
-</defs>
-<!-- Fill Area 1: Receita Cotistas -->
-<path d="M0,130 Q70,110 140,115 T280,85 T420,70 T560,45 T700,20 L700,160 L0,160 Z" fill="url(#amberGradient)"></path>
-<!-- Line 1: Cotistas -->
-<path d="M0,130 Q70,110 140,115 T280,85 T420,70 T560,45 T700,20" fill="none" stroke="#ffc37b" stroke-linecap="round" stroke-width="2"></path>
-<!-- Fill Area 2: Receita Master Apex -->
-<path d="M0,145 Q70,135 140,140 T280,110 T420,95 T560,75 T700,40 L700,160 L0,160 Z" fill="url(#goldGradient)"></path>
-<!-- Line 2: Master -->
-<path d="M0,145 Q70,135 140,140 T280,110 T420,95 T560,75 T700,40" fill="none" stroke="#f2ca50" stroke-linecap="round" stroke-width="3"></path>
-<!-- Line 3: Custo de Custodia/Seguros Chubb -->
-<path d="M0,152 Q70,150 140,151 T280,148 T420,145 T560,142 T700,138" fill="none" stroke="#99907c" stroke-dasharray="4 4" stroke-width="1.5"></path>
-<!-- Dynamic Highlight Points -->
-<circle class="animate-pulse" cx="280" cy="85" fill="#ffc37b" r="4"></circle>
-<circle class="animate-pulse" cx="560" cy="75" fill="#f2ca50" r="4"></circle>
-<circle cx="700" cy="40" fill="#f2ca50" r="5"></circle>
-</svg>
-<!-- Timeline X-Axis Labels -->
-<div class="flex items-center justify-between font-label-caps text-label-caps text-outline pt-2 px-1">
-<span>OUT / 23</span>
-<span>NOV / 23</span>
-<span>DEZ / 23</span>
-<span>JAN / 24</span>
-<span>FEV / 24</span>
-<span>MAR / 24</span>
-<span class="text-primary font-bold">ABR / 24 (PROJ)</span>
-</div>
-</div>
-<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
-<div class="flex items-center gap-space-md">
-<span class="flex items-center gap-1.5 font-label-caps text-label-caps text-primary">
-<span class="w-3 h-1 bg-primary rounded-full"></span> Receita da Plataforma Apex
-            </span>
-<span class="flex items-center gap-1.5 font-label-caps text-label-caps text-tertiary">
-<span class="w-3 h-1 bg-tertiary rounded-full"></span> Rendimento Repassado aos Cotistas
-            </span>
-<span class="flex items-center gap-1.5 font-label-caps text-label-caps text-outline">
-<span class="w-3 h-1 bg-outline rounded-full"></span> Despesas de Custódia &amp; Chubb
-            </span>
-</div>
-<span class="font-label-caps text-label-caps text-on-surface-variant">Dados consolidados via DTVM Oliveira Trust</span>
-</div>
-</div>
-<!-- b) Ações Rápidas do Administrador Master (Privilege Cards) -->
-<div class="flex flex-col gap-space-sm">
-<div class="flex items-center justify-between">
-<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold uppercase tracking-tight">
-            Comandos de Alta Privilégio // Master Root
-          </h3>
-<span class="font-label-caps text-label-caps text-secondary-container flex items-center gap-1">
-<span class="material-symbols-outlined text-xs">vpn_key</span>
-            REQUER HSM 2FA
-          </span>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
-<!-- Action 1 -->
-<button class="group p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container text-left transition-all flex items-start gap-space-sm shadow-md" type="button">
-<div class="p-2.5 rounded-lg bg-secondary-container/20 text-secondary group-hover:bg-secondary-container group-hover:text-on-secondary transition-colors">
-<span class="material-symbols-outlined text-xl">payments</span>
-</div>
-<div class="flex flex-col">
-<span class="font-headline-sm text-headline-sm text-on-surface text-base group-hover:text-primary transition-colors font-bold">Liberar Saque Emergencial</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Bypass em quarentena de D+2 para cotistas Apex Private qualificados.</span>
-<span class="font-label-caps text-label-caps text-outline mt-2 tracking-wider">CHAVE DE CONTINGÊNCIA FISCAL</span>
-</div>
-</button>
-<!-- Action 2 -->
-<button class="group p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container text-left transition-all flex items-start gap-space-sm shadow-md" type="button">
-<div class="p-2.5 rounded-lg bg-primary-container/20 text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
-<span class="material-symbols-outlined text-xl">directions_car</span>
-</div>
-<div class="flex flex-col">
-<span class="font-headline-sm text-headline-sm text-on-surface text-base group-hover:text-primary transition-colors font-bold">Aprovar Novo Drop de Supercarro</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Disparar registro escritural e carregar livro de ofertas primárias CVM.</span>
-<span class="font-label-caps text-label-caps text-primary mt-2 tracking-wider">4 LOTES EM AUDITORIA PRÉVIA</span>
-</div>
-</button>
-<!-- Action 3 -->
-<button class="group p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container text-left transition-all flex items-start gap-space-sm shadow-md" type="button">
-<div class="p-2.5 rounded-lg bg-tertiary-container/20 text-tertiary group-hover:bg-tertiary-container group-hover:text-on-tertiary transition-colors">
-<span class="material-symbols-outlined text-xl">price_change</span>
-</div>
-<div class="flex flex-col">
-<span class="font-headline-sm text-headline-sm text-on-surface text-base group-hover:text-primary transition-colors font-bold">Alterar Tabela de Taxas Globais</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Rebalancear spread de mercado secundário e carência de custódia física.</span>
-<span class="font-label-caps text-label-caps text-outline mt-2 tracking-wider">IMPACTO PROJETADO: +4.2% REV</span>
-</div>
-</button>
-<!-- Action 4 -->
-<button class="group p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container text-left transition-all flex items-start gap-space-sm shadow-md" type="button">
-<div class="p-2.5 rounded-lg bg-error-container/20 text-error group-hover:bg-error group-hover:text-on-error transition-colors">
-<span class="material-symbols-outlined text-xl">gavel</span>
-</div>
-<div class="flex flex-col">
-<span class="font-headline-sm text-headline-sm text-on-surface text-base group-hover:text-error transition-colors font-bold">Suspender Conta / Biometria</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Congelamento cautelar de custódia e desativação de chaves criptográficas de API.</span>
-<span class="font-label-caps text-label-caps text-error mt-2 tracking-wider">FLAG DE COMPLIANCE / COAF</span>
-</div>
-</button>
-</div>
-</div>
-<!-- c) Fila de Decisões Críticas Pendentes do Master -->
-<div class="rounded-xl bg-surface-container-low p-space-lg shadow-xl flex flex-col gap-space-md">
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-tertiary">notification_important</span>
-<h3 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">
-              Fila de Decisões Críticas Pendentes // Assinatura Root
-            </h3>
-</div>
-<span class="px-2 py-0.5 rounded bg-tertiary/20 text-tertiary font-label-caps text-label-caps font-bold">
-            3 DEMANDAS EXIGEM PROTOCOLO MASTER
-          </span>
-</div>
-<div class="flex flex-col gap-space-sm">
-<!-- Item 1: SPE Ferrari Daytona SP3 -->
-<div class="p-space-md rounded-lg bg-surface-container flex flex-col md:flex-row md:items-center justify-between gap-space-md transition-all hover:bg-surface-container-high">
-<div class="flex items-start gap-space-sm">
-<div class="w-2 h-12 rounded bg-primary shrink-0"></div>
-<div class="flex flex-col">
-<div class="flex items-center gap-2">
-<span class="font-label-caps text-label-caps text-primary font-bold">SPE #042</span>
-<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Aprovação da SPE 'Ferrari Daytona SP3'</span>
-<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-label-caps text-label-caps text-on-surface-variant">Lote 2023 / Rosso Libano</span>
-</div>
-<div class="flex flex-wrap items-center gap-space-sm mt-1 font-body-sm text-body-sm text-on-surface-variant">
-<span>Valuation Fiduciário: <strong class="text-on-surface font-ticker-md">R$ 18.000.000,00</strong></span>
-<span>•</span>
-<span>Parecer Pinheiro Neto: <strong class="text-primary font-semibold">APROVADO 100%</strong></span>
-<span>•</span>
-<span>Bunker: <span class="text-on-surface">São Paulo Jardins</span></span>
-</div>
-</div>
-</div>
-<div class="flex items-center gap-2 shrink-0 self-end md:self-center">
-<button class="px-3 py-1.5 rounded bg-surface-container-highest text-on-surface hover:bg-surface-bright font-label-caps text-label-caps uppercase transition-colors" type="button">
-                Ver Dossiê
-              </button>
-<button class="px-4 py-1.5 rounded bg-primary text-on-primary hover:bg-primary-fixed-dim font-label-caps text-label-caps font-bold uppercase transition-all shadow-md active:scale-95" type="button">
-                Chancelar SPE
-              </button>
-</div>
-</div>
-<!-- Item 2: Liberação OTC -->
-<div class="p-space-md rounded-lg bg-surface-container flex flex-col md:flex-row md:items-center justify-between gap-space-md transition-all hover:bg-surface-container-high">
-<div class="flex items-start gap-space-sm">
-<div class="w-2 h-12 rounded bg-tertiary shrink-0"></div>
-<div class="flex flex-col">
-<div class="flex items-center gap-2">
-<span class="font-label-caps text-label-caps text-tertiary font-bold">OTC BLOCK</span>
-<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Liquidação de Bloco de Cotas OTC Privado</span>
-<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-label-caps text-label-caps text-on-surface-variant">Investidor Institucional #8812</span>
-</div>
-<div class="flex flex-wrap items-center gap-space-sm mt-1 font-body-sm text-body-sm text-on-surface-variant">
-<span>Volume: <strong class="text-on-surface font-ticker-md">R$ 3.500.000,00</strong></span>
-<span>•</span>
-<span>Ativo: <span class="text-on-surface">Porsche 918 Spyder Weissach</span></span>
-<span>•</span>
-<span>Spread Plataforma (0.35%): <strong class="text-tertiary">R$ 12.250,00</strong></span>
-</div>
-</div>
-</div>
-<div class="flex items-center gap-2 shrink-0 self-end md:self-center">
-<button class="px-3 py-1.5 rounded bg-surface-container-highest text-on-surface hover:bg-surface-bright font-label-caps text-label-caps uppercase transition-colors" type="button">
-                Análise KYC
-              </button>
-<button class="px-4 py-1.5 rounded bg-tertiary text-on-tertiary hover:bg-tertiary-fixed-dim font-label-caps text-label-caps font-bold uppercase transition-all shadow-md active:scale-95" type="button">
-                Liberar Bloco
-              </button>
-</div>
-</div>
-<!-- Item 3: Reajuste Custodia Pre-1970 -->
-<div class="p-space-md rounded-lg bg-surface-container flex flex-col md:flex-row md:items-center justify-between gap-space-md transition-all hover:bg-surface-container-high">
-<div class="flex items-start gap-space-sm">
-<div class="w-2 h-12 rounded bg-outline shrink-0"></div>
-<div class="flex flex-col">
-<div class="flex items-center gap-2">
-<span class="font-label-caps text-label-caps text-outline font-bold">POLICY</span>
-<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Reajuste de Taxa de Custódia Clássicos Pré-1970</span>
-<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-label-caps text-label-caps text-on-surface-variant">Zurique &amp; SP</span>
-</div>
-<div class="flex flex-wrap items-center gap-space-sm mt-1 font-body-sm text-body-sm text-on-surface-variant">
-<span>Ajuste proposto: <strong class="text-on-surface font-ticker-md">0.45% -&gt; 0.52% a.a.</strong></span>
-<span>•</span>
-<span>Motivo: <span class="text-on-surface">Controle de microclima + laudos FIA Heritage</span></span>
-</div>
-</div>
-</div>
-<div class="flex items-center gap-2 shrink-0 self-end md:self-center">
-<button class="px-3 py-1.5 rounded bg-surface-container-highest text-on-surface hover:bg-surface-bright font-label-caps text-label-caps uppercase transition-colors" type="button">
-                Rejeitar
-              </button>
-<button class="px-4 py-1.5 rounded bg-surface-bright text-on-surface hover:bg-primary hover:text-on-primary font-label-caps text-label-caps font-bold uppercase transition-all shadow-md active:scale-95" type="button">
-                Promulgar Regra
-              </button>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Right Column (Narrower, 4 of 12 cols = 33.3%) -->
-<div class="xl:col-span-4 flex flex-col gap-space-lg">
-<!-- a) Monitor de Segurança & Integridade de Sistema -->
-<div class="rounded-xl bg-surface-container-low p-space-lg shadow-xl flex flex-col gap-space-md">
-<div class="flex items-center justify-between pb-space-xs">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-xl">shield_locked</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold uppercase tracking-tight">
-              Segurança &amp; Conexões Master
-            </h3>
-</div>
-<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
-</div>
-<div class="flex flex-col gap-space-xs">
-<!-- HSM Status -->
-<div class="p-space-sm rounded-lg bg-surface-container-lowest/80 flex flex-col gap-1">
-<div class="flex items-center justify-between">
-<span class="font-label-caps text-label-caps text-on-surface-variant">HARDWARE SECURITY MODULE (HSM)</span>
-<span class="px-1.5 py-0.2 rounded bg-primary/20 text-primary font-label-caps text-label-caps">FIPS 140-3 LEVEL 4</span>
-</div>
-<div class="font-ticker-md text-ticker-md text-on-surface font-mono truncate">
-              KEY ID: 0x89A...F04_SECP256R1
-            </div>
-<div class="flex items-center justify-between text-body-sm text-outline">
-<span>Sessão HSM: Ativa</span>
-<span>Tokens Válidos: 4 de 4</span>
-</div>
-</div>
-<!-- DB Failover Latency -->
-<div class="p-space-sm rounded-lg bg-surface-container-lowest/80 flex flex-col gap-1">
-<div class="flex items-center justify-between">
-<span class="font-label-caps text-label-caps text-on-surface-variant">INFRAESTRUTURA DISTRIBUÍDA</span>
-<span class="font-ticker-md text-ticker-md text-primary font-bold">8ms (AWS SP-1)</span>
-</div>
-<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
-<div class="bg-primary h-full rounded-full w-1/12"></div>
-</div>
-<div class="flex items-center justify-between font-label-caps text-label-caps text-on-surface-variant">
-<span>Failover Ativo: Zurich Vault Zero-Day</span>
-<span class="text-primary font-semibold">99.999% SLA</span>
-</div>
-</div>
-<!-- CVM Link -->
-<div class="p-space-sm rounded-lg bg-surface-container-lowest/80 flex flex-col gap-1">
-<div class="flex items-center justify-between">
-<span class="font-label-caps text-label-caps text-on-surface-variant">SISTEMA ESCRITURAL CVM 175</span>
-<span class="px-1.5 py-0.2 rounded bg-primary-container/20 text-primary font-label-caps text-label-caps font-bold">SINCRONIZADO</span>
-</div>
-<div class="font-body-sm text-body-sm text-on-surface flex items-center gap-1.5">
-<span class="material-symbols-outlined text-sm text-primary">check_circle</span>
-<span>Comunicação direta Oliveira Trust sem filas</span>
-</div>
-<span class="font-label-caps text-label-caps text-outline">Última conciliação: Hoje às 15:42:01 UTC</span>
-</div>
-</div>
-<!-- System Vault Photo Feature -->
-<div class="relative overflow-hidden rounded-lg bg-surface-container-lowest h-36 mt-space-xs">
-<img class="w-full h-full object-cover opacity-60 hover:opacity-80 transition-opacity" data-alt="High-security underground luxury car vault in Zurich with ambient dark moody architectural lighting, brushed titanium walls, polished concrete floors and rare hypercars shrouded in dramatic spotlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw9UNoGCh3UB_eClmSdcHcmf6Hbf79oWijGMIZCbQQ5keCVDluKxqbcgtbCt80sDG9MGCspS0pIr2xbpoHEes0tsWIY6rkTbI22KWvsgL5UxNhOOmLqzi7ztQHz-VFV-hxh0w9AR_zRHcOap44dhjwumDo2madNseKLu_XiiZ40q6JXu31U2DqHT0ZMj0L6X_Av0deomuWtG6A-5401Gt3tQB071rFqD14avKb9rvtyD1ybZ0Zuzy5yQ"/>
-<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
-<div class="absolute bottom-2 left-3 right-3 flex items-center justify-between">
-<div class="flex flex-col">
-<span class="font-label-caps text-label-caps text-primary font-bold">BUNKER ALPES // CUSTÓDIA MASTER</span>
-<span class="font-body-sm text-body-sm text-on-surface">5 Unidades Exclusivas em Zurique</span>
-</div>
-<span class="material-symbols-outlined text-on-surface-variant">videocam</span>
-</div>
-</div>
-</div>
-<!-- b) Live Audit Log Master (Últimos 15 min) -->
-<div class="rounded-xl bg-surface-container-low p-space-lg shadow-xl flex flex-col gap-space-md">
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-xl">history_toggle_off</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold uppercase tracking-tight">
-              Live Audit Log Master
-            </h3>
-</div>
-<span class="font-label-caps text-label-caps text-outline tracking-wider">ÚLTIMOS 15 MIN</span>
-</div>
-<!-- Audit Timeline Stream -->
-<div class="flex flex-col gap-space-sm">
-<!-- Event 1 -->
-<div class="flex items-start gap-space-sm p-space-xs rounded hover:bg-surface-container transition-colors">
-<div class="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></div>
-<div class="flex flex-col flex-1 min-w-0">
-<div class="flex items-center justify-between gap-1">
-<span class="font-label-caps text-label-caps text-primary font-bold truncate">ROOT LOGIN CONFIRMADO</span>
-<span class="font-label-caps text-label-caps text-outline shrink-0">15:44:12</span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface truncate">Dr. Alexandre Vance via Chave YubiKey 5Ci HSM</p>
-<span class="font-label-caps text-label-caps text-on-surface-variant">IP: 187.19.201.89 (São Paulo Corporate Hub)</span>
-</div>
-</div>
-<!-- Event 2 -->
-<div class="flex items-start gap-space-sm p-space-xs rounded hover:bg-surface-container transition-colors">
-<div class="w-1.5 h-1.5 rounded-full bg-tertiary mt-2 shrink-0"></div>
-<div class="flex flex-col flex-1 min-w-0">
-<div class="flex items-center justify-between gap-1">
-<span class="font-label-caps text-label-caps text-tertiary font-bold truncate">ORDEM PRIMÁRIA EXECUTADA</span>
-<span class="font-label-caps text-label-caps text-outline shrink-0">15:39:04</span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface truncate">Aporte de R$ 250.000,00 na SPE Ferrari F40 LM</p>
-<span class="font-label-caps text-label-caps text-on-surface-variant">Investidor #0931 (Escrituração Liquidação D+0)</span>
-</div>
-</div>
-<!-- Event 3 -->
-<div class="flex items-start gap-space-sm p-space-xs rounded hover:bg-surface-container transition-colors">
-<div class="w-1.5 h-1.5 rounded-full bg-primary-fixed mt-2 shrink-0"></div>
-<div class="flex flex-col flex-1 min-w-0">
-<div class="flex items-center justify-between gap-1">
-<span class="font-label-caps text-label-caps text-primary-fixed font-bold truncate">BACKUP CRIPTOGRÁFICO</span>
-<span class="font-label-caps text-label-caps text-outline shrink-0">15:35:00</span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface truncate">Snapshot Snapshot_0420_PROD concluído no cold vault</p>
-<span class="font-label-caps text-label-caps text-on-surface-variant">Hash: 8b3a...7c91 (Armazenamento Imutável AWS S3 Glacier)</span>
-</div>
-</div>
-<!-- Event 4 -->
-<div class="flex items-start gap-space-sm p-space-xs rounded hover:bg-surface-container transition-colors">
-<div class="w-1.5 h-1.5 rounded-full bg-secondary mt-2 shrink-0"></div>
-<div class="flex flex-col flex-1 min-w-0">
-<div class="flex items-center justify-between gap-1">
-<span class="font-label-caps text-label-caps text-secondary font-bold truncate">ALTERAÇÃO DE RBAC MASTER</span>
-<span class="font-label-caps text-label-caps text-outline shrink-0">15:31:48</span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface truncate">Operador #14 promovido a Custodiante Nível 2</p>
-<span class="font-label-caps text-label-caps text-on-surface-variant">Assinado por Root Administrator (P-256 Validated)</span>
-</div>
-</div>
-</div>
-<button class="w-full py-2 rounded bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps uppercase transition-colors text-center mt-space-xs" type="button">
-          Visualizar Todos os 1.842 Registros do Dia
-        </button>
-</div>
-</div>
-</div>
-</div>
-<script>
-  function confirmCircuitBreaker() {
-    const code = prompt("PROTOCOLO DE EMERGÊNCIA MASTER:\nDigite 'INTERROMPER-APEX' para travar todas as ordens de compra, venda e liquidação imediatamente.");
-    if (code === 'INTERROMPER-APEX') {
-      alert("CIRCUIT BREAKER ACIONADO! Todas as transações da plataforma foram suspensas e comunicadas aos auditores fiduciários.");
-    } else if (code !== null) {
-      alert("Código incorreto. Ação cancelada.");
-    }
-  }
+<html class="dark" lang="pt-BR">
 
-  function setChartFilter(type) {
-    const tabs = document.querySelectorAll('.chart-tab');
-    tabs.forEach(tab => {
-      tab.classList.remove('bg-primary', 'text-on-primary');
-      tab.classList.add('text-on-surface-variant');
-    });
-    event.target.classList.add('bg-primary', 'text-on-primary');
-    event.target.classList.remove('text-on-surface-variant');
-  }
-</script></main></div></body></html>
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="web_dashboard" name="shell-type" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary": "#68001a", "secondary-container": "#cc003c", "on-secondary-container": "#ffdcdc", "on-error-container": "#ffdad6", "on-primary-fixed": "#241a00", "outline": "#99907c", "primary-fixed-dim": "#e9c349", "primary-fixed": "#ffe088", "surface-bright": "#37393f", "surface-container-lowest": "#0c0e13", "on-background": "#e2e2e9", "secondary-fixed": "#ffdada", "surface-container": "#1e2025", "on-primary": "#3c2f00", "on-error": "#690005", "on-tertiary-fixed-variant": "#653e00", "on-secondary-fixed-variant": "#920028", "tertiary-container": "#f7a00f", "on-secondary-fixed": "#40000c", "outline-variant": "#4d4635", "inverse-on-surface": "#2e3036", "surface-variant": "#33353a", "tertiary-fixed-dim": "#ffb95f", "on-tertiary-container": "#633d00", "on-primary-container": "#554300", "primary-container": "#d4af37", "surface": "#111318", "on-tertiary-fixed": "#2a1700", "background": "#111318", "inverse-primary": "#735c00", "surface-tint": "#e9c349", "error": "#ffb4ab", "on-tertiary": "#472a00", "secondary-fixed-dim": "#ffb3b6", "inverse-surface": "#e2e2e9", "on-surface": "#e2e2e9", "error-container": "#93000a", "secondary": "#ffb3b6", "surface-dim": "#111318", "tertiary": "#ffc37b", "tertiary-fixed": "#ffddb8", "primary": "#f2ca50", "surface-container-highest": "#33353a", "on-surface-variant": "#d0c5af", "surface-container-high": "#282a2f", "on-primary-fixed-variant": "#574500", "surface-container-low": "#1a1b21" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1.25rem", "margin": "1.5rem", "gutter-desktop": "2rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-md": "1rem", "margin-desktop": "3rem" }, "fontFamily": { "headline-sm": ["Chivo"], "headline-lg": ["Chivo"], "label-caps": ["JetBrains Mono"], "body-md": ["Plus Jakarta Sans"], "display-lg-mobile": ["Chivo"], "ticker-lg": ["JetBrains Mono"], "body-lg": ["Plus Jakarta Sans"], "headline-md": ["Chivo"], "ticker-md": ["JetBrains Mono"], "body-sm": ["Plus Jakarta Sans"], "display-lg": ["Chivo"], "headline-lg-mobile": ["Chivo"] }, "fontSize": { "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }], "display-lg-mobile": ["34px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "ticker-lg": ["24px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "ticker-md": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-lg-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }] } } } };</script>
+</head>
+
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased">
+  <aside
+    class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between border-r border-outline-variant/30 shadow-[0_12px_32px_-4px_rgba(0,0,0,0.7)]">
+    <div class="flex flex-col">
+      <div
+        class="h-16 px-space-md flex items-center gap-space-sm border-b border-outline-variant/20 bg-surface-container-low/40">
+        <img alt="Monza Apex Capital" class="h-8 w-auto object-contain"
+          src="https://lh3.googleusercontent.com/aida/AEtjO1VR9Pr18peqmftIX-nbOUsaQMtux65iPuTXbvnVtaKfLtIU2UPnUHtuzX-qTphrRXQt2gN6hbx1gHxE8qVMMAfL-V9PqWaZmw81HUB9TOoYwTv15bw15auF-5nzXnYVeQvmxThJC_gE6UpBhDYbW3YCLSAwn2iYDEXtRaObjtnqMr0yR8UHwCzjOUCvi0l8Wlmb0Tge4Fuzov_71YWDT8EgrAVyh7Ky_CRujpBONoldMok2GwKq3bgqGSXP" />
+        <div class="flex flex-col"><span
+            class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none uppercase">Monza
+            Apex</span><span class="font-label-caps text-label-caps text-on-surface-variant tracking-wider">FIDUCIARY
+            TERMINAL</span></div>
+      </div>
+      <div
+        class="px-space-md py-space-sm bg-surface-container/60 border-b border-outline-variant/20 flex items-center justify-between">
+        <span class="font-label-caps text-label-caps text-on-surface-variant">NÍVEL DE ACESSO</span><span
+          class="font-label-caps text-label-caps text-primary bg-primary-container/20 px-space-xs py-0.5 rounded border border-primary-container/40">SUPERADMIN
+          ROOT</span>
+      </div>
+      <nav class="flex flex-col py-space-sm overflow-y-auto max-h-[calc(100vh-210px)]"
+        data-active-classes="bg-surface-container text-primary font-bold border-l-2 border-primary">
+        <div
+          class="px-space-md pt-space-sm pb-space-xs font-label-caps text-label-caps text-outline uppercase tracking-wider">
+          1. Núcleo Master</div><a aria-current="page"
+          class="px-space-md py-space-sm flex items-center justify-between transition-colors bg-surface-container text-primary font-bold border-l-2 border-primary"
+          data-path="painel-master-geral" href="#"><span class="font-body-md text-body-md">Painel Master
+            Geral</span><span class="font-label-caps text-label-caps text-outline">ROOT</span></a><a
+          class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors"
+          data-path="gestao-de-usuarios-e-acessos" href="#"><span class="font-body-md text-body-md">Gestão de Usuários
+            &amp; Acessos</span><span class="font-label-caps text-label-caps text-outline">RBAC</span></a>
+        <div
+          class="px-space-md pt-space-md pb-space-xs font-label-caps text-label-caps text-outline uppercase tracking-wider">
+          2. Ativos &amp; Veículos</div><a
+          class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors"
+          data-path="catalogo-e-gestao-de-carros" href="#"><span class="font-body-md text-body-md">Catálogo &amp; Gestão
+            de Carros</span><span class="font-label-caps text-label-caps text-outline">VAULT</span></a>
+        <div
+          class="px-space-md pt-space-md pb-space-xs font-label-caps text-label-caps text-outline uppercase tracking-wider">
+          3. Tesouraria &amp; Lucros</div><a
+          class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors"
+          data-path="controle-de-lucros-e-taxas" href="#"><span class="font-body-md text-body-md">Controle de Lucros
+            &amp; Taxas</span><span class="font-label-caps text-label-caps text-outline">DRE</span></a>
+        <div
+          class="px-space-md pt-space-md pb-space-xs font-label-caps text-label-caps text-outline uppercase tracking-wider">
+          4. Governança &amp; Segurança</div><a
+          class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors"
+          data-path="auditoria-de-acoes-master" href="#"><span class="font-body-md text-body-md">Auditoria de Ações
+            Master</span><span class="font-label-caps text-label-caps text-outline">LOGS</span></a><a
+          class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors"
+          data-path="configuracoes-globais-e-cvm" href="#"><span class="font-body-md text-body-md">Configurações Globais
+            &amp; CVM</span><span class="font-label-caps text-label-caps text-outline">POL</span></a>
+      </nav>
+    </div>
+    <div class="p-space-sm bg-surface-container-low/80 border-t border-outline-variant/30">
+      <div
+        class="flex flex-col gap-1 p-space-xs bg-surface-container-lowest/90 border border-outline-variant/20 rounded">
+        <div class="flex items-center justify-between"><span
+            class="font-label-caps text-label-caps text-on-surface-variant">HARDWARE SECURITY</span><span
+            class="font-label-caps text-label-caps text-primary">HSM LVL 5</span></div>
+        <div class="flex items-center justify-between"><span
+            class="font-label-caps text-label-caps text-outline">SIGNATURE CORE</span><span
+            class="font-label-caps text-label-caps text-on-surface">P-256 ACTIVE</span></div>
+        <div class="flex items-center justify-between pt-0.5 border-t border-outline-variant/20"><span
+            class="font-label-caps text-label-caps text-outline">BUILD</span><span
+            class="font-label-caps text-label-caps text-on-surface-variant">v4.20.0-PROD</span></div>
+      </div>
+    </div>
+  </aside>
+  <div class="pl-72">
+    <header
+      class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_12px_32px_-4px_rgba(0,0,0,0.7)] z-40 flex items-center justify-between px-space-md">
+      <div class="flex items-center gap-space-md">
+        <div class="flex items-center gap-space-xs"><span class="font-label-caps text-label-caps text-primary">ROOT
+            ACCESS</span><span class="font-label-caps text-label-caps text-outline">//</span><span
+            class="font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase">MASTER CONSOLE
+            TERMINAL</span></div>
+        <div class="hidden xl:flex items-center gap-space-xs pl-space-sm border-l border-outline-variant/40"><span
+            class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/40 font-label-caps text-label-caps text-on-surface-variant"><span
+              class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>CVM 175 COMPLIANT</span><span
+            class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/40 font-label-caps text-label-caps text-on-surface-variant"><span
+              class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>HSM MASTER KEY ACTIVE</span><span
+            class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/40 font-label-caps text-label-caps text-on-surface-variant"><span
+              class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>SYSTEM INTEGRITY 100%</span></div>
+      </div>
+      <div class="flex items-center gap-space-md"><button
+          class="flex items-center gap-1 px-3 py-1.5 rounded bg-secondary-container/20 border border-secondary-container/50 text-secondary hover:bg-secondary-container hover:text-on-secondary-container transition-colors shadow-[0_0_16px_-4px_rgba(225,29,72,0.4)]"
+          type="button"><span class="material-symbols-outlined text-sm leading-none">bolt</span><span
+            class="font-label-caps text-label-caps tracking-wider">CIRCUIT BREAKER</span></button>
+        <div class="flex items-center gap-space-sm pl-space-sm border-l border-outline-variant/30">
+          <div class="text-right hidden sm:flex flex-col"><span
+              class="font-body-sm text-body-sm text-on-surface font-semibold leading-none">Dr. Alexandre
+              Vance</span><span class="font-label-caps text-label-caps text-primary leading-none mt-1">CHIEF
+              ADMINISTRATOR / MASTER ROOT</span></div><img alt="Profile"
+            class="w-8 h-8 rounded-full object-cover border border-primary/40 shadow-sm"
+            src="https://lh3.googleusercontent.com/aida/AEtjO1XX39PukV7vCaRFUL3JIM8CMKOqfU5fbd0Fi8WVvSKOBCLSRaic7uhj7rnVbdQui5FupQOcBuMDxAZ-_T6oSsQ89Z8b0gwx5XwNBjJUMfhCQ9iNqbbM2G7ZjkTMx27rdhM7UloIVtaha-5-jMN133Ruoi2X42asGrNrLfVMYpgttZPhLMABz_aiY_vkyZ__Y8UzU2X1-sz3PChT32HmF0gl_xTMFqCkgOdCi4Bbq7fQ_6jkO4QXFPj86oI" />
+        </div>
+      </div>
+    </header>
+    <main class="relative pt-16 bg-surface min-h-screen w-full px-space-md py-space-md">
+      <div class="flex flex-col w-full gap-space-lg">
+        <!-- Master Executive Header Panel -->
+        <div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg shadow-2xl">
+          <div class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-primary/5 blur-3xl pointer-events-none">
+          </div>
+          <div class="absolute left-1/3 -bottom-16 w-96 h-40 bg-secondary-container/10 blur-3xl pointer-events-none">
+          </div>
+          <div class="relative z-10 flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+            <div class="flex flex-col gap-space-xs">
+              <div class="flex flex-wrap items-center gap-space-xs">
+                <span
+                  class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-caps text-label-caps font-bold tracking-widest uppercase">SUPERADMIN
+                  ROOT</span>
+                <span class="font-label-caps text-label-caps text-outline tracking-wider">//</span>
+                <span class="font-label-caps text-label-caps text-primary-fixed-dim tracking-wider">APEX COMMAND CORE
+                  SYSTEM v4.20</span>
+                <span
+                  class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container font-label-caps text-label-caps text-on-surface-variant">
+                  <span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+                  LATENCY: 8ms GRU-ZRH
+                </span>
+              </div>
+              <h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-extrabold uppercase">
+                SALA DE COMANDO MASTER <span class="text-primary">//</span> ROOT CONSOLE
+              </h1>
+              <p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+                Supervisão fiduciária consolidada, governança institucional de custódia física e execução de contratos
+                inteligentes SPE sob diretrizes CVM 175.
+              </p>
+              <!-- Dynamic Micro Badges -->
+              <div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
+                <div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-high text-on-surface">
+                  <span class="material-symbols-outlined text-sm text-primary"
+                    style="font-variation-settings: 'FILL' 1;">verified_user</span>
+                  <span class="font-label-caps text-label-caps">Contratos Inteligentes 100% Auditados PwC</span>
+                </div>
+                <div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-high text-on-surface">
+                  <span class="material-symbols-outlined text-sm text-primary-fixed"
+                    style="font-variation-settings: 'FILL' 1;">account_balance</span>
+                  <span class="font-label-caps text-label-caps">Fiança Bancária Itaú BBA R$ 50.000.000,00</span>
+                </div>
+                <div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-high text-on-surface">
+                  <span class="material-symbols-outlined text-sm text-tertiary"
+                    style="font-variation-settings: 'FILL' 1;">tune</span>
+                  <span class="font-label-caps text-label-caps">Custo Operacional Otimizado (81.2 bps)</span>
+                </div>
+              </div>
+            </div>
+            <!-- Quick Actions Core -->
+            <div
+              class="flex flex-wrap xl:flex-col sm:flex-row items-stretch xl:items-end gap-space-xs self-start xl:self-center">
+              <button
+                class="flex items-center justify-center gap-2 px-4 py-2.5 rounded bg-primary text-on-primary font-label-caps text-label-caps tracking-wider uppercase hover:bg-primary-fixed-dim transition-all shadow-lg active:scale-95"
+                type="button">
+                <span class="material-symbols-outlined text-base">add_circle</span>
+                <span>NOVO VEÍCULO / DROP</span>
+              </button>
+              <button
+                class="flex items-center justify-center gap-2 px-4 py-2.5 rounded bg-surface-container-high text-on-surface font-label-caps text-label-caps tracking-wider uppercase hover:bg-surface-bright transition-all active:scale-95"
+                type="button">
+                <span class="material-symbols-outlined text-base text-primary">description</span>
+                <span>EMITIR RELATÓRIO EXECUTIVO CVM</span>
+              </button>
+              <button
+                class="flex items-center justify-center gap-2 px-4 py-2 rounded bg-secondary-container/30 text-secondary hover:bg-secondary-container hover:text-on-secondary-container font-label-caps text-label-caps tracking-widest uppercase transition-all"
+                onclick="confirmCircuitBreaker()" type="button">
+                <span class="material-symbols-outlined text-sm">lock_clock</span>
+                <span>TRAVAR PLATAFORMA (CIRCUIT BREAKER)</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Top KPI Master Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+          <!-- KPI 1: AUM -->
+          <div
+            class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-xl flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">AUM TOTAL EM
+                CUSTÓDIA</span>
+              <span class="px-1.5 py-0.5 rounded bg-primary/10 text-primary font-label-caps text-label-caps">+18.4%
+                YoY</span>
+            </div>
+            <div class="my-space-sm">
+              <div class="font-ticker-lg text-ticker-lg text-on-surface font-bold tracking-tight">
+                R$ 142.850.000<span class="text-primary text-headline-sm">,00</span>
+              </div>
+              <div class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-2">
+                <span>19 Supercarros SPE</span>
+                <span class="text-outline">•</span>
+                <span>3 Bunkers Fiduciários</span>
+              </div>
+            </div>
+            <div
+              class="pt-space-xs mt-space-xs bg-surface-container-lowest/60 rounded px-2.5 py-1.5 flex items-center justify-between">
+              <span class="font-label-caps text-label-caps text-on-surface-variant">Bunkers Globais</span>
+              <span class="font-ticker-md text-ticker-md text-primary font-medium">SP (11) • ZRH (5) • MIA (3)</span>
+            </div>
+          </div>
+          <!-- KPI 2: Receita Master -->
+          <div
+            class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-xl flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">RECEITA LÍQUIDA
+                ACUMULADA</span>
+              <span class="px-1.5 py-0.5 rounded bg-primary/10 text-primary font-label-caps text-label-caps">+32.1%
+                Trimestre</span>
+            </div>
+            <div class="my-space-sm">
+              <div class="font-ticker-lg text-ticker-lg text-on-surface font-bold tracking-tight">
+                R$ 9.420.800<span class="text-primary text-headline-sm">,00</span>
+              </div>
+              <div class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Take rate médio ponderado: <span
+                  class="font-label-caps text-label-caps text-on-surface font-semibold">2.74%</span>
+              </div>
+            </div>
+            <div
+              class="pt-space-xs mt-space-xs bg-surface-container-lowest/60 rounded px-2.5 py-1.5 flex items-center justify-between text-body-sm">
+              <span class="font-label-caps text-label-caps text-on-surface-variant">Origem das Taxas</span>
+              <span class="font-ticker-md text-ticker-md text-on-surface">IPO 2.5% // Sec 0.2%</span>
+            </div>
+          </div>
+          <!-- KPI 3: Base Usuários -->
+          <div
+            class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-xl flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">BASE DE
+                INVESTIDORES</span>
+              <span
+                class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps">99.2%
+                KYC/AML</span>
+            </div>
+            <div class="my-space-sm">
+              <div class="font-ticker-lg text-ticker-lg text-on-surface font-bold tracking-tight">
+                1.248 <span class="text-on-surface-variant text-body-lg font-normal">Contas Ativas</span>
+              </div>
+              <div class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                842 Qualificados // 312 Profissionais
+              </div>
+            </div>
+            <div
+              class="pt-space-xs mt-space-xs bg-surface-container-lowest/60 rounded px-2.5 py-1.5 flex items-center justify-between">
+              <span class="font-label-caps text-label-caps text-on-surface-variant">Apex Private VIP</span>
+              <span class="font-ticker-md text-ticker-md text-primary font-medium">94 Cotistas HNW</span>
+            </div>
+          </div>
+          <!-- KPI 4: Próximos Dividendos -->
+          <div
+            class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-xl flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">DIVIDENDOS
+                PROJETADOS</span>
+              <span
+                class="px-1.5 py-0.5 rounded bg-tertiary-container/30 text-tertiary font-label-caps text-label-caps">Ciclo
+                D-4</span>
+            </div>
+            <div class="my-space-sm">
+              <div class="font-ticker-lg text-ticker-lg text-tertiary font-bold tracking-tight">
+                R$ 1.840.000<span class="text-on-surface text-headline-sm">,00</span>
+              </div>
+              <div class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Liquidação automática agendada dia 15
+              </div>
+            </div>
+            <div
+              class="pt-space-xs mt-space-xs bg-surface-container-lowest/60 rounded px-2.5 py-1.5 flex items-center justify-between">
+              <span class="font-label-caps text-label-caps text-on-surface-variant">Fontes de Yield</span>
+              <span class="font-ticker-md text-ticker-md text-on-surface truncate">Goodwood + Acervo</span>
+            </div>
+          </div>
+        </div>
+        <!-- Central Section Split (65% / 35%) -->
+        <div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg">
+          <!-- Left Column (Wide, 8 of 12 cols = 66.6%) -->
+          <div class="xl:col-span-8 flex flex-col gap-space-lg">
+            <!-- a) Visão de Liquidez & Rentabilidade -->
+            <div class="rounded-xl bg-surface-container-low p-space-lg shadow-xl flex flex-col gap-space-md">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+                <div class="flex flex-col">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-primary"></span>
+                    <h2 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">
+                      Visão de Liquidez &amp; Rentabilidade da Plataforma
+                    </h2>
+                  </div>
+                  <span class="font-body-sm text-body-sm text-on-surface-variant">
+                    Demonstrativo de fluxos financeiros, fees retidos e custos de custódia segurada (Apolice Chubb
+                    Master)
+                  </span>
+                </div>
+                <!-- Filter Controls -->
+                <div class="flex items-center gap-1 p-1 bg-surface-container rounded-lg self-start sm:self-auto">
+                  <button
+                    class="chart-tab active px-3 py-1 rounded font-label-caps text-label-caps bg-primary text-on-primary transition-all"
+                    onclick="setChartFilter('all')" type="button">Consolidado</button>
+                  <button
+                    class="chart-tab px-3 py-1 rounded font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-all"
+                    onclick="setChartFilter('revenue')" type="button">Receita Master</button>
+                  <button
+                    class="chart-tab px-3 py-1 rounded font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-all"
+                    onclick="setChartFilter('payout')" type="button">Repasse Cotistas</button>
+                </div>
+              </div>
+              <!-- Metric Stream Bars -->
+              <div class="grid grid-cols-3 gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest/80">
+                <div class="flex flex-col">
+                  <span class="font-label-caps text-label-caps text-outline">RECEITA BRUTA PLATAFORMA</span>
+                  <span class="font-ticker-md text-ticker-md text-primary font-bold">R$ 11.260.400,00</span>
+                  <span class="font-body-sm text-body-sm text-on-surface-variant">Margem Líquida 83.6%</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-label-caps text-label-caps text-outline">REPASSADO AOS INVESTIDORES</span>
+                  <span class="font-ticker-md text-ticker-md text-tertiary font-bold">R$ 38.940.120,00</span>
+                  <span class="font-body-sm text-body-sm text-on-surface-variant">Yield médio 14.8% a.a.</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-label-caps text-label-caps text-outline">CUSTÓDIA, SEGURO &amp; SPEs</span>
+                  <span class="font-ticker-md text-ticker-md text-on-surface font-bold">R$ 1.839.600,00</span>
+                  <span class="font-body-sm text-body-sm text-on-surface-variant">Sinistralidade zero</span>
+                </div>
+              </div>
+              <!-- Custom Inline Visual Chart -->
+              <div class="relative w-full h-56 pt-space-sm flex flex-col justify-end">
+                <!-- Background Grid Lines -->
+                <div class="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-20">
+                  <div class="w-full h-px bg-outline"></div>
+                  <div class="w-full h-px bg-outline"></div>
+                  <div class="w-full h-px bg-outline"></div>
+                  <div class="w-full h-px bg-outline"></div>
+                </div>
+                <!-- SVG Chart Curve -->
+                <svg class="w-full h-44 overflow-visible" preserveaspectratio="none" viewbox="0 0 700 160">
+                  <defs>
+                    <lineargradient id="goldGradient" x1="0%" x2="0%" y1="0%" y2="100%">
+                      <stop offset="0%" stop-color="#f2ca50" stop-opacity="0.35"></stop>
+                      <stop offset="100%" stop-color="#f2ca50" stop-opacity="0.0"></stop>
+                    </lineargradient>
+                    <lineargradient id="amberGradient" x1="0%" x2="0%" y1="0%" y2="100%">
+                      <stop offset="0%" stop-color="#ffc37b" stop-opacity="0.25"></stop>
+                      <stop offset="100%" stop-color="#ffc37b" stop-opacity="0.0"></stop>
+                    </lineargradient>
+                  </defs>
+                  <!-- Fill Area 1: Receita Cotistas -->
+                  <path d="M0,130 Q70,110 140,115 T280,85 T420,70 T560,45 T700,20 L700,160 L0,160 Z"
+                    fill="url(#amberGradient)"></path>
+                  <!-- Line 1: Cotistas -->
+                  <path d="M0,130 Q70,110 140,115 T280,85 T420,70 T560,45 T700,20" fill="none" stroke="#ffc37b"
+                    stroke-linecap="round" stroke-width="2"></path>
+                  <!-- Fill Area 2: Receita Master Apex -->
+                  <path d="M0,145 Q70,135 140,140 T280,110 T420,95 T560,75 T700,40 L700,160 L0,160 Z"
+                    fill="url(#goldGradient)"></path>
+                  <!-- Line 2: Master -->
+                  <path d="M0,145 Q70,135 140,140 T280,110 T420,95 T560,75 T700,40" fill="none" stroke="#f2ca50"
+                    stroke-linecap="round" stroke-width="3"></path>
+                  <!-- Line 3: Custo de Custodia/Seguros Chubb -->
+                  <path d="M0,152 Q70,150 140,151 T280,148 T420,145 T560,142 T700,138" fill="none" stroke="#99907c"
+                    stroke-dasharray="4 4" stroke-width="1.5"></path>
+                  <!-- Dynamic Highlight Points -->
+                  <circle class="animate-pulse" cx="280" cy="85" fill="#ffc37b" r="4"></circle>
+                  <circle class="animate-pulse" cx="560" cy="75" fill="#f2ca50" r="4"></circle>
+                  <circle cx="700" cy="40" fill="#f2ca50" r="5"></circle>
+                </svg>
+                <!-- Timeline X-Axis Labels -->
+                <div class="flex items-center justify-between font-label-caps text-label-caps text-outline pt-2 px-1">
+                  <span>OUT / 23</span>
+                  <span>NOV / 23</span>
+                  <span>DEZ / 23</span>
+                  <span>JAN / 24</span>
+                  <span>FEV / 24</span>
+                  <span>MAR / 24</span>
+                  <span class="text-primary font-bold">ABR / 24 (PROJ)</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+                <div class="flex items-center gap-space-md">
+                  <span class="flex items-center gap-1.5 font-label-caps text-label-caps text-primary">
+                    <span class="w-3 h-1 bg-primary rounded-full"></span> Receita da Plataforma Apex
+                  </span>
+                  <span class="flex items-center gap-1.5 font-label-caps text-label-caps text-tertiary">
+                    <span class="w-3 h-1 bg-tertiary rounded-full"></span> Rendimento Repassado aos Cotistas
+                  </span>
+                  <span class="flex items-center gap-1.5 font-label-caps text-label-caps text-outline">
+                    <span class="w-3 h-1 bg-outline rounded-full"></span> Despesas de Custódia &amp; Chubb
+                  </span>
+                </div>
+                <span class="font-label-caps text-label-caps text-on-surface-variant">Dados consolidados via DTVM
+                  Oliveira Trust</span>
+              </div>
+            </div>
+            <!-- b) Ações Rápidas do Administrador Master (Privilege Cards) -->
+            <div class="flex flex-col gap-space-sm">
+              <div class="flex items-center justify-between">
+                <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold uppercase tracking-tight">
+                  Comandos de Alta Privilégio // Master Root
+                </h3>
+                <span class="font-label-caps text-label-caps text-secondary-container flex items-center gap-1">
+                  <span class="material-symbols-outlined text-xs">vpn_key</span>
+                  REQUER HSM 2FA
+                </span>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+                <!-- Action 1 -->
+                <button
+                  class="group p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container text-left transition-all flex items-start gap-space-sm shadow-md"
+                  type="button">
+                  <div
+                    class="p-2.5 rounded-lg bg-secondary-container/20 text-secondary group-hover:bg-secondary-container group-hover:text-on-secondary transition-colors">
+                    <span class="material-symbols-outlined text-xl">payments</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span
+                      class="font-headline-sm text-headline-sm text-on-surface text-base group-hover:text-primary transition-colors font-bold">Liberar
+                      Saque Emergencial</span>
+                    <span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Bypass em quarentena de D+2
+                      para cotistas Apex Private qualificados.</span>
+                    <span class="font-label-caps text-label-caps text-outline mt-2 tracking-wider">CHAVE DE CONTINGÊNCIA
+                      FISCAL</span>
+                  </div>
+                </button>
+                <!-- Action 2 -->
+                <button
+                  class="group p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container text-left transition-all flex items-start gap-space-sm shadow-md"
+                  type="button">
+                  <div
+                    class="p-2.5 rounded-lg bg-primary-container/20 text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                    <span class="material-symbols-outlined text-xl">directions_car</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span
+                      class="font-headline-sm text-headline-sm text-on-surface text-base group-hover:text-primary transition-colors font-bold">Aprovar
+                      Novo Drop de Supercarro</span>
+                    <span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Disparar registro escritural
+                      e carregar livro de ofertas primárias CVM.</span>
+                    <span class="font-label-caps text-label-caps text-primary mt-2 tracking-wider">4 LOTES EM AUDITORIA
+                      PRÉVIA</span>
+                  </div>
+                </button>
+                <!-- Action 3 -->
+                <button
+                  class="group p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container text-left transition-all flex items-start gap-space-sm shadow-md"
+                  type="button">
+                  <div
+                    class="p-2.5 rounded-lg bg-tertiary-container/20 text-tertiary group-hover:bg-tertiary-container group-hover:text-on-tertiary transition-colors">
+                    <span class="material-symbols-outlined text-xl">price_change</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span
+                      class="font-headline-sm text-headline-sm text-on-surface text-base group-hover:text-primary transition-colors font-bold">Alterar
+                      Tabela de Taxas Globais</span>
+                    <span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Rebalancear spread de mercado
+                      secundário e carência de custódia física.</span>
+                    <span class="font-label-caps text-label-caps text-outline mt-2 tracking-wider">IMPACTO PROJETADO:
+                      +4.2% REV</span>
+                  </div>
+                </button>
+                <!-- Action 4 -->
+                <button
+                  class="group p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container text-left transition-all flex items-start gap-space-sm shadow-md"
+                  type="button">
+                  <div
+                    class="p-2.5 rounded-lg bg-error-container/20 text-error group-hover:bg-error group-hover:text-on-error transition-colors">
+                    <span class="material-symbols-outlined text-xl">gavel</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span
+                      class="font-headline-sm text-headline-sm text-on-surface text-base group-hover:text-error transition-colors font-bold">Suspender
+                      Conta / Biometria</span>
+                    <span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Congelamento cautelar de
+                      custódia e desativação de chaves criptográficas de API.</span>
+                    <span class="font-label-caps text-label-caps text-error mt-2 tracking-wider">FLAG DE COMPLIANCE /
+                      COAF</span>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <!-- c) Fila de Decisões Críticas Pendentes do Master -->
+            <div class="rounded-xl bg-surface-container-low p-space-lg shadow-xl flex flex-col gap-space-md">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-tertiary">notification_important</span>
+                  <h3 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">
+                    Fila de Decisões Críticas Pendentes // Assinatura Root
+                  </h3>
+                </div>
+                <span
+                  class="px-2 py-0.5 rounded bg-tertiary/20 text-tertiary font-label-caps text-label-caps font-bold">
+                  3 DEMANDAS EXIGEM PROTOCOLO MASTER
+                </span>
+              </div>
+              <div class="flex flex-col gap-space-sm">
+                <!-- Item 1: SPE Ferrari Daytona SP3 -->
+                <div
+                  class="p-space-md rounded-lg bg-surface-container flex flex-col md:flex-row md:items-center justify-between gap-space-md transition-all hover:bg-surface-container-high">
+                  <div class="flex items-start gap-space-sm">
+                    <div class="w-2 h-12 rounded bg-primary shrink-0"></div>
+                    <div class="flex flex-col">
+                      <div class="flex items-center gap-2">
+                        <span class="font-label-caps text-label-caps text-primary font-bold">SPE #042</span>
+                        <span class="font-headline-sm text-headline-sm text-on-surface font-bold">Aprovação da SPE
+                          'Ferrari Daytona SP3'</span>
+                        <span
+                          class="px-1.5 py-0.5 rounded bg-surface-container-highest font-label-caps text-label-caps text-on-surface-variant">Lote
+                          2023 / Rosso Libano</span>
+                      </div>
+                      <div
+                        class="flex flex-wrap items-center gap-space-sm mt-1 font-body-sm text-body-sm text-on-surface-variant">
+                        <span>Valuation Fiduciário: <strong class="text-on-surface font-ticker-md">R$
+                            18.000.000,00</strong></span>
+                        <span>•</span>
+                        <span>Parecer Pinheiro Neto: <strong class="text-primary font-semibold">APROVADO
+                            100%</strong></span>
+                        <span>•</span>
+                        <span>Bunker: <span class="text-on-surface">São Paulo Jardins</span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2 shrink-0 self-end md:self-center">
+                    <button
+                      class="px-3 py-1.5 rounded bg-surface-container-highest text-on-surface hover:bg-surface-bright font-label-caps text-label-caps uppercase transition-colors"
+                      type="button">
+                      Ver Dossiê
+                    </button>
+                    <button
+                      class="px-4 py-1.5 rounded bg-primary text-on-primary hover:bg-primary-fixed-dim font-label-caps text-label-caps font-bold uppercase transition-all shadow-md active:scale-95"
+                      type="button">
+                      Chancelar SPE
+                    </button>
+                  </div>
+                </div>
+                <!-- Item 2: Liberação OTC -->
+                <div
+                  class="p-space-md rounded-lg bg-surface-container flex flex-col md:flex-row md:items-center justify-between gap-space-md transition-all hover:bg-surface-container-high">
+                  <div class="flex items-start gap-space-sm">
+                    <div class="w-2 h-12 rounded bg-tertiary shrink-0"></div>
+                    <div class="flex flex-col">
+                      <div class="flex items-center gap-2">
+                        <span class="font-label-caps text-label-caps text-tertiary font-bold">OTC BLOCK</span>
+                        <span class="font-headline-sm text-headline-sm text-on-surface font-bold">Liquidação de Bloco de
+                          Cotas OTC Privado</span>
+                        <span
+                          class="px-1.5 py-0.5 rounded bg-surface-container-highest font-label-caps text-label-caps text-on-surface-variant">Investidor
+                          Institucional #8812</span>
+                      </div>
+                      <div
+                        class="flex flex-wrap items-center gap-space-sm mt-1 font-body-sm text-body-sm text-on-surface-variant">
+                        <span>Volume: <strong class="text-on-surface font-ticker-md">R$ 3.500.000,00</strong></span>
+                        <span>•</span>
+                        <span>Ativo: <span class="text-on-surface">Porsche 918 Spyder Weissach</span></span>
+                        <span>•</span>
+                        <span>Spread Plataforma (0.35%): <strong class="text-tertiary">R$ 12.250,00</strong></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2 shrink-0 self-end md:self-center">
+                    <button
+                      class="px-3 py-1.5 rounded bg-surface-container-highest text-on-surface hover:bg-surface-bright font-label-caps text-label-caps uppercase transition-colors"
+                      type="button">
+                      Análise KYC
+                    </button>
+                    <button
+                      class="px-4 py-1.5 rounded bg-tertiary text-on-tertiary hover:bg-tertiary-fixed-dim font-label-caps text-label-caps font-bold uppercase transition-all shadow-md active:scale-95"
+                      type="button">
+                      Liberar Bloco
+                    </button>
+                  </div>
+                </div>
+                <!-- Item 3: Reajuste Custodia Pre-1970 -->
+                <div
+                  class="p-space-md rounded-lg bg-surface-container flex flex-col md:flex-row md:items-center justify-between gap-space-md transition-all hover:bg-surface-container-high">
+                  <div class="flex items-start gap-space-sm">
+                    <div class="w-2 h-12 rounded bg-outline shrink-0"></div>
+                    <div class="flex flex-col">
+                      <div class="flex items-center gap-2">
+                        <span class="font-label-caps text-label-caps text-outline font-bold">POLICY</span>
+                        <span class="font-headline-sm text-headline-sm text-on-surface font-bold">Reajuste de Taxa de
+                          Custódia Clássicos Pré-1970</span>
+                        <span
+                          class="px-1.5 py-0.5 rounded bg-surface-container-highest font-label-caps text-label-caps text-on-surface-variant">Zurique
+                          &amp; SP</span>
+                      </div>
+                      <div
+                        class="flex flex-wrap items-center gap-space-sm mt-1 font-body-sm text-body-sm text-on-surface-variant">
+                        <span>Ajuste proposto: <strong class="text-on-surface font-ticker-md">0.45% -&gt; 0.52%
+                            a.a.</strong></span>
+                        <span>•</span>
+                        <span>Motivo: <span class="text-on-surface">Controle de microclima + laudos FIA
+                            Heritage</span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2 shrink-0 self-end md:self-center">
+                    <button
+                      class="px-3 py-1.5 rounded bg-surface-container-highest text-on-surface hover:bg-surface-bright font-label-caps text-label-caps uppercase transition-colors"
+                      type="button">
+                      Rejeitar
+                    </button>
+                    <button
+                      class="px-4 py-1.5 rounded bg-surface-bright text-on-surface hover:bg-primary hover:text-on-primary font-label-caps text-label-caps font-bold uppercase transition-all shadow-md active:scale-95"
+                      type="button">
+                      Promulgar Regra
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Right Column (Narrower, 4 of 12 cols = 33.3%) -->
+          <div class="xl:col-span-4 flex flex-col gap-space-lg">
+            <!-- a) Monitor de Segurança & Integridade de Sistema -->
+            <div class="rounded-xl bg-surface-container-low p-space-lg shadow-xl flex flex-col gap-space-md">
+              <div class="flex items-center justify-between pb-space-xs">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary text-xl">shield_locked</span>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold uppercase tracking-tight">
+                    Segurança &amp; Conexões Master
+                  </h3>
+                </div>
+                <span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+              </div>
+              <div class="flex flex-col gap-space-xs">
+                <!-- HSM Status -->
+                <div class="p-space-sm rounded-lg bg-surface-container-lowest/80 flex flex-col gap-1">
+                  <div class="flex items-center justify-between">
+                    <span class="font-label-caps text-label-caps text-on-surface-variant">HARDWARE SECURITY MODULE
+                      (HSM)</span>
+                    <span class="px-1.5 py-0.2 rounded bg-primary/20 text-primary font-label-caps text-label-caps">FIPS
+                      140-3 LEVEL 4</span>
+                  </div>
+                  <div class="font-ticker-md text-ticker-md text-on-surface font-mono truncate">
+                    KEY ID: 0x89A...F04_SECP256R1
+                  </div>
+                  <div class="flex items-center justify-between text-body-sm text-outline">
+                    <span>Sessão HSM: Ativa</span>
+                    <span>Tokens Válidos: 4 de 4</span>
+                  </div>
+                </div>
+                <!-- DB Failover Latency -->
+                <div class="p-space-sm rounded-lg bg-surface-container-lowest/80 flex flex-col gap-1">
+                  <div class="flex items-center justify-between">
+                    <span class="font-label-caps text-label-caps text-on-surface-variant">INFRAESTRUTURA
+                      DISTRIBUÍDA</span>
+                    <span class="font-ticker-md text-ticker-md text-primary font-bold">8ms (AWS SP-1)</span>
+                  </div>
+                  <div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+                    <div class="bg-primary h-full rounded-full w-1/12"></div>
+                  </div>
+                  <div
+                    class="flex items-center justify-between font-label-caps text-label-caps text-on-surface-variant">
+                    <span>Failover Ativo: Zurich Vault Zero-Day</span>
+                    <span class="text-primary font-semibold">99.999% SLA</span>
+                  </div>
+                </div>
+                <!-- CVM Link -->
+                <div class="p-space-sm rounded-lg bg-surface-container-lowest/80 flex flex-col gap-1">
+                  <div class="flex items-center justify-between">
+                    <span class="font-label-caps text-label-caps text-on-surface-variant">SISTEMA ESCRITURAL CVM
+                      175</span>
+                    <span
+                      class="px-1.5 py-0.2 rounded bg-primary-container/20 text-primary font-label-caps text-label-caps font-bold">SINCRONIZADO</span>
+                  </div>
+                  <div class="font-body-sm text-body-sm text-on-surface flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-sm text-primary">check_circle</span>
+                    <span>Comunicação direta Oliveira Trust sem filas</span>
+                  </div>
+                  <span class="font-label-caps text-label-caps text-outline">Última conciliação: Hoje às 15:42:01
+                    UTC</span>
+                </div>
+              </div>
+              <!-- System Vault Photo Feature -->
+              <div class="relative overflow-hidden rounded-lg bg-surface-container-lowest h-36 mt-space-xs">
+                <img class="w-full h-full object-cover opacity-60 hover:opacity-80 transition-opacity"
+                  data-alt="High-security underground luxury car vault in Zurich with ambient dark moody architectural lighting, brushed titanium walls, polished concrete floors and rare hypercars shrouded in dramatic spotlighting"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw9UNoGCh3UB_eClmSdcHcmf6Hbf79oWijGMIZCbQQ5keCVDluKxqbcgtbCt80sDG9MGCspS0pIr2xbpoHEes0tsWIY6rkTbI22KWvsgL5UxNhOOmLqzi7ztQHz-VFV-hxh0w9AR_zRHcOap44dhjwumDo2madNseKLu_XiiZ40q6JXu31U2DqHT0ZMj0L6X_Av0deomuWtG6A-5401Gt3tQB071rFqD14avKb9rvtyD1ybZ0Zuzy5yQ" />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent">
+                </div>
+                <div class="absolute bottom-2 left-3 right-3 flex items-center justify-between">
+                  <div class="flex flex-col">
+                    <span class="font-label-caps text-label-caps text-primary font-bold">BUNKER ALPES // CUSTÓDIA
+                      MASTER</span>
+                    <span class="font-body-sm text-body-sm text-on-surface">5 Unidades Exclusivas em Zurique</span>
+                  </div>
+                  <span class="material-symbols-outlined text-on-surface-variant">videocam</span>
+                </div>
+              </div>
+            </div>
+            <!-- b) Live Audit Log Master (Últimos 15 min) -->
+            <div class="rounded-xl bg-surface-container-low p-space-lg shadow-xl flex flex-col gap-space-md">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary text-xl">history_toggle_off</span>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold uppercase tracking-tight">
+                    Live Audit Log Master
+                  </h3>
+                </div>
+                <span class="font-label-caps text-label-caps text-outline tracking-wider">ÚLTIMOS 15 MIN</span>
+              </div>
+              <!-- Audit Timeline Stream -->
+              <div class="flex flex-col gap-space-sm">
+                <!-- Event 1 -->
+                <div
+                  class="flex items-start gap-space-sm p-space-xs rounded hover:bg-surface-container transition-colors">
+                  <div class="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></div>
+                  <div class="flex flex-col flex-1 min-w-0">
+                    <div class="flex items-center justify-between gap-1">
+                      <span class="font-label-caps text-label-caps text-primary font-bold truncate">ROOT LOGIN
+                        CONFIRMADO</span>
+                      <span class="font-label-caps text-label-caps text-outline shrink-0">15:44:12</span>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-on-surface truncate">Dr. Alexandre Vance via Chave YubiKey
+                      5Ci HSM</p>
+                    <span class="font-label-caps text-label-caps text-on-surface-variant">IP: 187.19.201.89 (São Paulo
+                      Corporate Hub)</span>
+                  </div>
+                </div>
+                <!-- Event 2 -->
+                <div
+                  class="flex items-start gap-space-sm p-space-xs rounded hover:bg-surface-container transition-colors">
+                  <div class="w-1.5 h-1.5 rounded-full bg-tertiary mt-2 shrink-0"></div>
+                  <div class="flex flex-col flex-1 min-w-0">
+                    <div class="flex items-center justify-between gap-1">
+                      <span class="font-label-caps text-label-caps text-tertiary font-bold truncate">ORDEM PRIMÁRIA
+                        EXECUTADA</span>
+                      <span class="font-label-caps text-label-caps text-outline shrink-0">15:39:04</span>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-on-surface truncate">Aporte de R$ 250.000,00 na SPE Ferrari
+                      F40 LM</p>
+                    <span class="font-label-caps text-label-caps text-on-surface-variant">Investidor #0931 (Escrituração
+                      Liquidação D+0)</span>
+                  </div>
+                </div>
+                <!-- Event 3 -->
+                <div
+                  class="flex items-start gap-space-sm p-space-xs rounded hover:bg-surface-container transition-colors">
+                  <div class="w-1.5 h-1.5 rounded-full bg-primary-fixed mt-2 shrink-0"></div>
+                  <div class="flex flex-col flex-1 min-w-0">
+                    <div class="flex items-center justify-between gap-1">
+                      <span class="font-label-caps text-label-caps text-primary-fixed font-bold truncate">BACKUP
+                        CRIPTOGRÁFICO</span>
+                      <span class="font-label-caps text-label-caps text-outline shrink-0">15:35:00</span>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-on-surface truncate">Snapshot Snapshot_0420_PROD concluído
+                      no cold vault</p>
+                    <span class="font-label-caps text-label-caps text-on-surface-variant">Hash: 8b3a...7c91
+                      (Armazenamento Imutável AWS S3 Glacier)</span>
+                  </div>
+                </div>
+                <!-- Event 4 -->
+                <div
+                  class="flex items-start gap-space-sm p-space-xs rounded hover:bg-surface-container transition-colors">
+                  <div class="w-1.5 h-1.5 rounded-full bg-secondary mt-2 shrink-0"></div>
+                  <div class="flex flex-col flex-1 min-w-0">
+                    <div class="flex items-center justify-between gap-1">
+                      <span class="font-label-caps text-label-caps text-secondary font-bold truncate">ALTERAÇÃO DE RBAC
+                        MASTER</span>
+                      <span class="font-label-caps text-label-caps text-outline shrink-0">15:31:48</span>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-on-surface truncate">Operador #14 promovido a Custodiante
+                      Nível 2</p>
+                    <span class="font-label-caps text-label-caps text-on-surface-variant">Assinado por Root
+                      Administrator (P-256 Validated)</span>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="w-full py-2 rounded bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps uppercase transition-colors text-center mt-space-xs"
+                type="button">
+                Visualizar Todos os 1.842 Registros do Dia
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        function confirmCircuitBreaker() {
+          const code = prompt("PROTOCOLO DE EMERGÊNCIA MASTER:\nDigite 'INTERROMPER-APEX' para travar todas as ordens de compra, venda e liquidação imediatamente.");
+          if (code === 'INTERROMPER-APEX') {
+            alert("CIRCUIT BREAKER ACIONADO! Todas as transações da plataforma foram suspensas e comunicadas aos auditores fiduciários.");
+          } else if (code !== null) {
+            alert("Código incorreto. Ação cancelada.");
+          }
+        }
+
+        function setChartFilter(type) {
+          const tabs = document.querySelectorAll('.chart-tab');
+          tabs.forEach(tab => {
+            tab.classList.remove('bg-primary', 'text-on-primary');
+            tab.classList.add('text-on-surface-variant');
+          });
+          event.target.classList.add('bg-primary', 'text-on-primary');
+          event.target.classList.remove('text-on-surface-variant');
+        }
+      </script>
+    </main>
+  </div>
+</body>
+
+</html>

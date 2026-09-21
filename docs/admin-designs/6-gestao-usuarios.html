@@ -1,689 +1,1000 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary": "#68001a", "secondary-container": "#cc003c", "on-secondary-container": "#ffdcdc", "on-error-container": "#ffdad6", "on-primary-fixed": "#241a00", "outline": "#99907c", "primary-fixed-dim": "#e9c349", "primary-fixed": "#ffe088", "surface-bright": "#37393f", "surface-container-lowest": "#0c0e13", "on-background": "#e2e2e9", "secondary-fixed": "#ffdada", "surface-container": "#1e2025", "on-primary": "#3c2f00", "on-error": "#690005", "on-tertiary-fixed-variant": "#653e00", "on-secondary-fixed-variant": "#920028", "tertiary-container": "#f7a00f", "on-secondary-fixed": "#40000c", "outline-variant": "#4d4635", "inverse-on-surface": "#2e3036", "surface-variant": "#33353a", "tertiary-fixed-dim": "#ffb95f", "on-tertiary-container": "#633d00", "on-primary-container": "#554300", "primary-container": "#d4af37", "surface": "#111318", "on-tertiary-fixed": "#2a1700", "background": "#111318", "inverse-primary": "#735c00", "surface-tint": "#e9c349", "error": "#ffb4ab", "on-tertiary": "#472a00", "secondary-fixed-dim": "#ffb3b6", "inverse-surface": "#e2e2e9", "on-surface": "#e2e2e9", "error-container": "#93000a", "secondary": "#ffb3b6", "surface-dim": "#111318", "tertiary": "#ffc37b", "tertiary-fixed": "#ffddb8", "primary": "#f2ca50", "surface-container-highest": "#33353a", "on-surface-variant": "#d0c5af", "surface-container-high": "#282a2f", "on-primary-fixed-variant": "#574500", "surface-container-low": "#1a1b21" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1.25rem", "margin": "1.5rem", "gutter-desktop": "2rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-md": "1rem", "margin-desktop": "3rem" }, "fontFamily": { "headline-sm": ["Chivo"], "headline-lg": ["Chivo"], "label-caps": ["JetBrains Mono"], "body-md": ["Plus Jakarta Sans"], "display-lg-mobile": ["Chivo"], "ticker-lg": ["JetBrains Mono"], "body-lg": ["Plus Jakarta Sans"], "headline-md": ["Chivo"], "ticker-md": ["JetBrains Mono"], "body-sm": ["Plus Jakarta Sans"], "display-lg": ["Chivo"], "headline-lg-mobile": ["Chivo"] }, "fontSize": { "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }], "display-lg-mobile": ["34px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "ticker-lg": ["24px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "ticker-md": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-lg-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between border-r border-outline-variant/30 shadow-[0_12px_32px_-4px_rgba(0,0,0,0.7)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm border-b border-outline-variant/20 bg-surface-container-low/40"><img alt="Monza Apex Capital" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VR9Pr18peqmftIX-nbOUsaQMtux65iPuTXbvnVtaKfLtIU2UPnUHtuzX-qTphrRXQt2gN6hbx1gHxE8qVMMAfL-V9PqWaZmw81HUB9TOoYwTv15bw15auF-5nzXnYVeQvmxThJC_gE6UpBhDYbW3YCLSAwn2iYDEXtRaObjtnqMr0yR8UHwCzjOUCvi0l8Wlmb0Tge4Fuzov_71YWDT8EgrAVyh7Ky_CRujpBONoldMok2GwKq3bgqGSXP"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none uppercase">Monza Apex</span><span class="font-label-caps text-label-caps text-on-surface-variant tracking-wider">FIDUCIARY TERMINAL</span></div></div><div class="px-space-md py-space-sm bg-surface-container/60 border-b border-outline-variant/20 flex items-center justify-between"><span class="font-label-caps text-label-caps text-on-surface-variant">NÍVEL DE ACESSO</span><span class="font-label-caps text-label-caps text-primary bg-primary-container/20 px-space-xs py-0.5 rounded border border-primary-container/40">SUPERADMIN ROOT</span></div><nav class="flex flex-col py-space-sm overflow-y-auto max-h-[calc(100vh-210px)]" data-active-classes="bg-surface-container text-primary font-bold border-l-2 border-primary"><div class="px-space-md pt-space-sm pb-space-xs font-label-caps text-label-caps text-outline uppercase tracking-wider">1. Núcleo Master</div><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors" data-path="painel-master-geral" href="#"><span class="font-body-md text-body-md">Painel Master Geral</span><span class="font-label-caps text-label-caps text-outline">ROOT</span></a><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors" data-path="gestao-de-usuarios-e-acessos" href="#"><span class="font-body-md text-body-md">Gestão de Usuários &amp; Acessos</span><span class="font-label-caps text-label-caps text-outline">RBAC</span></a><div class="px-space-md pt-space-md pb-space-xs font-label-caps text-label-caps text-outline uppercase tracking-wider">2. Ativos &amp; Veículos</div><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors" data-path="catalogo-e-gestao-de-carros" href="#"><span class="font-body-md text-body-md">Catálogo &amp; Gestão de Carros</span><span class="font-label-caps text-label-caps text-outline">VAULT</span></a><div class="px-space-md pt-space-md pb-space-xs font-label-caps text-label-caps text-outline uppercase tracking-wider">3. Tesouraria &amp; Lucros</div><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors" data-path="controle-de-lucros-e-taxas" href="#"><span class="font-body-md text-body-md">Controle de Lucros &amp; Taxas</span><span class="font-label-caps text-label-caps text-outline">DRE</span></a><div class="px-space-md pt-space-md pb-space-xs font-label-caps text-label-caps text-outline uppercase tracking-wider">4. Governança &amp; Segurança</div><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors" data-path="auditoria-de-acoes-master" href="#"><span class="font-body-md text-body-md">Auditoria de Ações Master</span><span class="font-label-caps text-label-caps text-outline">LOGS</span></a><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors" data-path="configuracoes-globais-e-cvm" href="#"><span class="font-body-md text-body-md">Configurações Globais &amp; CVM</span><span class="font-label-caps text-label-caps text-outline">POL</span></a></nav></div><div class="p-space-sm bg-surface-container-low/80 border-t border-outline-variant/30"><div class="flex flex-col gap-1 p-space-xs bg-surface-container-lowest/90 border border-outline-variant/20 rounded"><div class="flex items-center justify-between"><span class="font-label-caps text-label-caps text-on-surface-variant">HARDWARE SECURITY</span><span class="font-label-caps text-label-caps text-primary">HSM LVL 5</span></div><div class="flex items-center justify-between"><span class="font-label-caps text-label-caps text-outline">SIGNATURE CORE</span><span class="font-label-caps text-label-caps text-on-surface">P-256 ACTIVE</span></div><div class="flex items-center justify-between pt-0.5 border-t border-outline-variant/20"><span class="font-label-caps text-label-caps text-outline">BUILD</span><span class="font-label-caps text-label-caps text-on-surface-variant">v4.20.0-PROD</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_12px_32px_-4px_rgba(0,0,0,0.7)] z-40 flex items-center justify-between px-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><span class="font-label-caps text-label-caps text-primary">ROOT ACCESS</span><span class="font-label-caps text-label-caps text-outline">//</span><span class="font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase">MASTER CONSOLE TERMINAL</span></div><div class="hidden xl:flex items-center gap-space-xs pl-space-sm border-l border-outline-variant/40"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/40 font-label-caps text-label-caps text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>CVM 175 COMPLIANT</span><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/40 font-label-caps text-label-caps text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>HSM MASTER KEY ACTIVE</span><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/40 font-label-caps text-label-caps text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>SYSTEM INTEGRITY 100%</span></div></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-1 px-3 py-1.5 rounded bg-secondary-container/20 border border-secondary-container/50 text-secondary hover:bg-secondary-container hover:text-on-secondary-container transition-colors shadow-[0_0_16px_-4px_rgba(225,29,72,0.4)]" type="button"><span class="material-symbols-outlined text-sm leading-none">bolt</span><span class="font-label-caps text-label-caps tracking-wider">CIRCUIT BREAKER</span></button><div class="flex items-center gap-space-sm pl-space-sm border-l border-outline-variant/30"><div class="text-right hidden sm:flex flex-col"><span class="font-body-sm text-body-sm text-on-surface font-semibold leading-none">Dr. Alexandre Vance</span><span class="font-label-caps text-label-caps text-primary leading-none mt-1">CHIEF ADMINISTRATOR / MASTER ROOT</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-primary/40 shadow-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1XX39PukV7vCaRFUL3JIM8CMKOqfU5fbd0Fi8WVvSKOBCLSRaic7uhj7rnVbdQui5FupQOcBuMDxAZ-_T6oSsQ89Z8b0gwx5XwNBjJUMfhCQ9iNqbbM2G7ZjkTMx27rdhM7UloIVtaha-5-jMN133Ruoi2X42asGrNrLfVMYpgttZPhLMABz_aiY_vkyZ__Y8UzU2X1-sz3PChT32HmF0gl_xTMFqCkgOdCi4Bbq7fQ_6jkO4QXFPj86oI"/></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-space-md py-space-md"><div class="flex flex-col w-full space-y-space-md">
-<!-- TOP HEADER & FIDUCIARY IDENTITY BANNER -->
-<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-low p-space-lg rounded shadow-xl relative overflow-hidden">
-<div class="absolute -right-16 -top-16 w-80 h-80 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
-<div class="absolute right-1/3 bottom-0 w-64 h-32 bg-secondary-container/5 rounded-full blur-2xl pointer-events-none"></div>
-<div class="flex flex-col space-y-1 z-10 max-w-3xl">
-<div class="flex items-center gap-space-xs text-primary font-label-caps text-label-caps tracking-wider">
-<span class="material-symbols-outlined text-sm">shield_person</span>
-<span>ROOT PRIVILEGE // RBAC GOVERNANCE MODULE</span>
-<span class="text-outline">/</span>
-<span class="text-on-surface-variant font-ticker-md text-body-sm">NODE: SA-EAST-BR-1</span>
-</div>
-<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
-        GESTÃO GLOBAL DE USUÁRIOS, INVESTIDORES &amp; PERMISSÕES RBAC
-      </h1>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-        Supervisão de identidades, controle de limites operacionais, aprovação manual, revogação de acessos e concessão de privilégios fiduciários sob normas CVM 175 &amp; custódia institucional de ativos físicos.
-      </p>
-</div>
-<!-- QUICK ACTIONS -->
-<div class="flex flex-wrap items-center gap-space-sm z-10 shrink-0">
-<button class="px-space-md py-2.5 bg-primary text-on-primary font-label-caps text-label-caps tracking-wider rounded font-bold hover:bg-primary-fixed transition-all flex items-center gap-1.5 shadow-md active:scale-95" type="button">
-<span class="material-symbols-outlined text-base">person_add</span>
-<span>+ CONVIDAR MEMBRO INSTITUCIONAL</span>
-</button>
-<button class="px-space-md py-2.5 bg-surface-container-high text-on-surface font-label-caps text-label-caps tracking-wider rounded font-semibold hover:bg-surface-bright transition-all flex items-center gap-1.5 active:scale-95" type="button">
-<span class="material-symbols-outlined text-base">badge</span>
-<span>+ NOVO OPERADOR / AUDITOR</span>
-</button>
-<button class="px-space-md py-2.5 bg-surface-container-highest text-on-surface-variant hover:text-primary font-label-caps text-label-caps tracking-wider rounded flex items-center gap-1.5 transition-all" type="button">
-<span class="material-symbols-outlined text-base">download</span>
-<span>EXPORTAR BASE (LGPD)</span>
-</button>
-</div>
-</div>
-<!-- SUMMARY STAT BANNERS (HIGH DENSITY BENTO) -->
-<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
-<!-- Stat 1 -->
-<div class="bg-surface-container-low p-space-md rounded shadow-lg flex flex-col justify-between relative overflow-hidden group">
-<div class="flex items-center justify-between">
-<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Total Usuários Cadastrados</span>
-<div class="w-8 h-8 rounded bg-primary/10 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-lg">group</span>
-</div>
-</div>
-<div class="my-space-sm">
-<div class="flex items-baseline gap-2">
-<span class="font-ticker-lg text-ticker-lg text-on-surface">1.412</span>
-<span class="font-label-caps text-label-caps text-primary bg-primary/10 px-1.5 py-0.5 rounded">+4.2% m/m</span>
-</div>
-<div class="w-full bg-surface-container-highest h-1 rounded overflow-hidden mt-2 flex">
-<div class="bg-primary h-full" style="width: 88.3%" title="Aprovados: 1.248"></div>
-<div class="bg-tertiary-container h-full" style="width: 1.0%" title="Mesa KYC: 14"></div>
-<div class="bg-outline h-full" style="width: 10.7%" title="Pré-Cadastro: 150"></div>
-</div>
-</div>
-<div class="flex items-center justify-between text-body-sm font-body-sm text-outline pt-1">
-<span class="text-on-surface-variant font-medium">1.248 Aprovados</span>
-<span class="text-tertiary">14 Mesa KYC</span>
-<span>150 Pré-Cad.</span>
-</div>
-</div>
-<!-- Stat 2 -->
-<div class="bg-surface-container-low p-space-md rounded shadow-lg flex flex-col justify-between relative overflow-hidden group">
-<div class="flex items-center justify-between">
-<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Volume Alocado Médio / Usuário</span>
-<div class="w-8 h-8 rounded bg-primary-container/20 flex items-center justify-center text-primary-fixed">
-<span class="material-symbols-outlined text-lg">account_balance_wallet</span>
-</div>
-</div>
-<div class="my-space-sm">
-<div class="flex items-baseline gap-1">
-<span class="font-label-caps text-body-sm text-outline">R$</span>
-<span class="font-ticker-lg text-ticker-lg text-primary">114.460,00</span>
-</div>
-<div class="flex items-center gap-1.5 mt-2 text-on-surface-variant font-body-sm">
-<span class="material-symbols-outlined text-xs text-primary">trending_up</span>
-<span class="font-ticker-md text-xs text-on-surface">AUM TOTAL: R$ 161.617.520,00</span>
-</div>
-</div>
-<div class="flex items-center justify-between text-body-sm font-body-sm text-outline pt-1">
-<span>Fração Média: 18.4 cotas</span>
-<span class="text-primary font-ticker-md">Ticket Max: R$ 5.4M</span>
-</div>
-</div>
-<!-- Stat 3 -->
-<div class="bg-surface-container-low p-space-md rounded shadow-lg flex flex-col justify-between relative overflow-hidden group">
-<div class="flex items-center justify-between">
-<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Investidores Black / Titanium</span>
-<div class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-lg">diamond</span>
-</div>
-</div>
-<div class="my-space-sm">
-<div class="flex items-baseline gap-2">
-<span class="font-ticker-lg text-ticker-lg text-on-surface">94</span>
-<span class="font-label-caps text-label-caps text-primary bg-primary/10 px-1.5 py-0.5 rounded">6.6% BASE</span>
-</div>
-<div class="flex items-center gap-2 mt-2">
-<div class="flex -space-x-1.5 overflow-hidden">
-<span class="inline-block h-4 w-4 rounded-full bg-primary/40 ring-1 ring-surface"></span>
-<span class="inline-block h-4 w-4 rounded-full bg-primary-container ring-1 ring-surface"></span>
-<span class="inline-block h-4 w-4 rounded-full bg-surface-bright ring-1 ring-surface"></span>
-</div>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Concierge Exclusivo Ativo</span>
-</div>
-</div>
-<div class="flex items-center justify-between text-body-sm font-body-sm text-outline pt-1">
-<span>Bunker Passes: 94</span>
-<span class="text-primary">Direito a Voto ESG</span>
-</div>
-</div>
-<!-- Stat 4 -->
-<div class="bg-surface-container-low p-space-md rounded shadow-lg flex flex-col justify-between relative overflow-hidden group">
-<div class="flex items-center justify-between">
-<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Bloqueios &amp; Travas Cautelares</span>
-<div class="w-8 h-8 rounded bg-secondary-container/20 flex items-center justify-center text-secondary">
-<span class="material-symbols-outlined text-lg">gavel</span>
-</div>
-</div>
-<div class="my-space-sm">
-<div class="flex items-baseline gap-2">
-<span class="font-ticker-lg text-ticker-lg text-secondary">02</span>
-<span class="font-label-caps text-label-caps text-secondary bg-secondary-container/30 px-1.5 py-0.5 rounded">QUARANTINE</span>
-</div>
-<div class="flex items-center gap-1.5 mt-2 text-outline font-body-sm">
-<span class="w-2 h-2 rounded-full bg-secondary-container animate-ping"></span>
-<span class="text-on-surface-variant">Compliance Flag: CVM Art. 32</span>
-</div>
-</div>
-<div class="flex items-center justify-between text-body-sm font-body-sm text-outline pt-1">
-<span class="text-secondary">Alçadas Congeladas</span>
-<span class="underline cursor-pointer hover:text-on-surface">Ver Parecer</span>
-</div>
-</div>
-</div>
-<!-- SEARCH & GRANULAR FILTER TOOLBAR -->
-<div class="flex flex-col gap-space-sm bg-surface-container-low p-space-md rounded shadow-lg">
-<div class="flex flex-col xl:flex-row gap-space-md items-stretch xl:items-center justify-between">
-<!-- Search Input with High-Tech Aesthetics -->
-<div class="relative flex-1">
-<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-outline">
-<span class="material-symbols-outlined text-lg">search</span>
-</div>
-<input class="w-full bg-surface-container-lowest text-on-surface pl-10 pr-4 py-2.5 rounded font-body-md text-body-md placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" placeholder="Buscar por Nome do Investidor, CPF/CNPJ, ID Fiduciário (#APX-), Chave HSM ou E-mail corporativo..." type="text"/>
-<div class="absolute inset-y-0 right-0 pr-3 flex items-center gap-1 pointer-events-none">
-<kbd class="px-1.5 py-0.5 text-xs font-label-caps bg-surface-container text-outline rounded shadow-sm">⌘K</kbd>
-</div>
-</div>
-<!-- Quick Status Selectors -->
-<div class="flex items-center gap-space-xs overflow-x-auto pb-1 xl:pb-0">
-<span class="font-label-caps text-label-caps text-outline shrink-0 pr-2">STATUS:</span>
-<button class="px-2.5 py-1.5 rounded bg-surface-container-high text-primary font-label-caps text-label-caps shrink-0">Todos (1.412)</button>
-<button class="px-2.5 py-1.5 rounded bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps shrink-0">Ativos (1.248)</button>
-<button class="px-2.5 py-1.5 rounded bg-surface-container-lowest text-tertiary hover:text-tertiary-fixed font-label-caps text-label-caps shrink-0">Em Análise / KYC (14)</button>
-<button class="px-2.5 py-1.5 rounded bg-surface-container-lowest text-secondary hover:text-on-secondary font-label-caps text-label-caps shrink-0">Suspensos / Travas (2)</button>
-</div>
-</div>
-<!-- Secondary Role Filter Pills -->
-<div class="flex items-center gap-2 overflow-x-auto pt-2 border-t border-surface-container">
-<span class="font-label-caps text-label-caps text-outline shrink-0">SEGMENTO &amp; PAPEL:</span>
-<button class="px-2 py-1 rounded bg-primary/10 text-primary font-label-caps text-label-caps whitespace-nowrap shadow-sm">Todos os Perfis</button>
-<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps whitespace-nowrap">Apex Private (94)</button>
-<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps whitespace-nowrap">Profissionais CVM (312)</button>
-<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps whitespace-nowrap">Qualificados (842)</button>
-<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps whitespace-nowrap">Mesa Compliance (6)</button>
-<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps whitespace-nowrap">Custodiantes Bunker (4)</button>
-<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps whitespace-nowrap">Auditores PwC (3)</button>
-<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-primary-fixed font-label-caps text-label-caps whitespace-nowrap">SuperAdmin Root (2)</button>
-</div>
-</div>
-<!-- MASTER USER MANAGEMENT DATA TABLE -->
-<div class="bg-surface-container-low rounded shadow-xl overflow-hidden">
-<div class="px-space-md py-space-sm bg-surface-container flex items-center justify-between">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-sm text-primary">data_table</span>
-<span class="font-label-caps text-label-caps text-on-surface font-semibold tracking-wider">LIVRO DE USUÁRIOS &amp; MATRIZ DE ACESSO HSM</span>
-</div>
-<div class="flex items-center gap-space-md font-label-caps text-label-caps text-outline">
-<span>EXIBINDO 6 DE 1.412 REGISTROS AUDITADOS</span>
-<button class="text-primary hover:underline flex items-center gap-1">
-<span class="material-symbols-outlined text-xs">tune</span> COLUNAS AVANÇADAS
-        </button>
-</div>
-</div>
-<div class="overflow-x-auto">
-<table class="w-full text-left font-body-md text-body-md border-collapse">
-<thead>
-<tr class="bg-surface-container-lowest text-on-surface-variant font-label-caps text-label-caps uppercase">
-<th class="py-3 px-4 font-semibold">Usuário / ID Fiduciário</th>
-<th class="py-3 px-4 font-semibold">Categoria / Perfil CVM</th>
-<th class="py-3 px-4 font-semibold text-right">Patrimônio Apex (AUM)</th>
-<th class="py-3 px-4 font-semibold text-right">Limite Diário Aprovado</th>
-<th class="py-3 px-4 font-semibold text-center">Status da Conta</th>
-<th class="py-3 px-4 font-semibold text-center">2FA / Hardware HSM</th>
-<th class="py-3 px-4 font-semibold text-right">Ações Fiduciárias</th>
-</tr>
-</thead>
-<tbody class="divide-y divide-surface-container/50">
-<!-- ROW 1: Apex Private Regular -->
-<tr class="hover:bg-surface-container/60 transition-colors group">
-<td class="py-3.5 px-4">
-<div class="flex items-center gap-3">
-<div class="w-9 h-9 rounded bg-surface-container-highest flex items-center justify-center text-primary font-bold font-ticker-md text-sm shrink-0">
-                  RS
-                </div>
-<div class="flex flex-col">
-<div class="flex items-center gap-2">
-<span class="font-headline-sm text-sm font-semibold text-on-surface">Rodrigo Sanches da Silva</span>
-<span class="material-symbols-outlined text-xs text-primary" title="Identidade Verificada">verified</span>
-</div>
-<div class="flex items-center gap-2 text-outline font-ticker-md text-xs">
-<span>#APX-882190</span>
-<span>•</span>
-<span class="font-body-sm text-xs text-on-surface-variant">rsanches@sanchesasset.com.br</span>
-</div>
-</div>
-</div>
-</td>
-<td class="py-3.5 px-4">
-<div class="flex flex-col">
-<span class="inline-flex items-center gap-1 text-primary font-label-caps text-label-caps">
-<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
-                  APEX PRIVATE / COLECIONADOR
-                </span>
-<span class="text-xs text-outline font-body-sm">Membro Titular Coleção Vintage Ferrari</span>
-</div>
-</td>
-<td class="py-3.5 px-4 text-right font-ticker-md text-sm text-on-surface">
-              R$ 164.820,00
-              <span class="block text-xs text-outline font-body-sm">12 Ativos em Custódia</span>
-</td>
-<td class="py-3.5 px-4 text-right">
-<span class="font-ticker-md text-sm text-primary font-semibold">R$ 250.000,00</span>
-<span class="block text-xs text-outline font-body-sm">CVM 175 Art. 11</span>
-</td>
-<td class="py-3.5 px-4 text-center">
-<span class="inline-flex items-center px-2 py-0.5 rounded bg-primary/10 text-primary font-label-caps text-label-caps">
-                ATIVO &amp; REGULAR
-              </span>
-</td>
-<td class="py-3.5 px-4 text-center">
-<div class="flex items-center justify-center gap-1.5">
-<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-xs font-ticker-md text-on-surface-variant">
-<span class="material-symbols-outlined text-xs text-primary">fingerprint</span> FaceID
-                </span>
-<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-xs font-ticker-md text-primary">
-<span class="material-symbols-outlined text-xs">key</span> YubiKey
-                </span>
-</div>
-</td>
-<td class="py-3.5 px-4 text-right">
-<div class="flex items-center justify-end gap-1">
-<button class="p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-primary transition-colors" title="Editar Limites &amp; Alçadas">
-<span class="material-symbols-outlined text-base">tune</span>
-</button>
-<button class="p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-primary transition-colors" title="Editar Permissões RBAC">
-<span class="material-symbols-outlined text-base">lock_open</span>
-</button>
-<button class="p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-secondary transition-colors" title="Suspender Acesso">
-<span class="material-symbols-outlined text-base">block</span>
-</button>
-<button class="p-1.5 rounded bg-surface-container hover:bg-surface-container-highest text-primary font-label-caps text-label-caps px-2 py-1" title="Impersonar para Auditoria">
-                  AUDITAR
-                </button>
-</div>
-</td>
-</tr>
-<!-- ROW 2: Aguardando Revisão de Limite -->
-<tr class="bg-tertiary-container/5 hover:bg-tertiary-container/10 transition-colors">
-<td class="py-3.5 px-4">
-<div class="flex items-center gap-3">
-<div class="w-9 h-9 rounded bg-tertiary-container/20 flex items-center justify-center text-tertiary font-bold font-ticker-md text-sm shrink-0">
-                  EV
-                </div>
-<div class="flex flex-col">
-<div class="flex items-center gap-2">
-<span class="font-headline-sm text-sm font-semibold text-on-surface">Dr. Eduardo Prado Vianna</span>
-<span class="px-1.5 py-0.2 bg-tertiary-container/30 text-tertiary rounded text-[10px] font-label-caps">SOLICITAÇÃO PENDENTE</span>
-</div>
-<div class="flex items-center gap-2 text-outline font-ticker-md text-xs">
-<span>#APX-771024</span>
-<span>•</span>
-<span class="font-body-sm text-xs text-on-surface-variant">eprado@viannawealth.ch</span>
-</div>
-</div>
-</div>
-</td>
-<td class="py-3.5 px-4">
-<div class="flex flex-col">
-<span class="text-on-surface font-label-caps text-label-caps">PROFISSIONAL CVM // FAMILY OFFICE</span>
-<span class="text-xs text-outline font-body-sm">Registro CVM: #88391-B</span>
-</div>
-</td>
-<td class="py-3.5 px-4 text-right font-ticker-md text-sm text-on-surface font-semibold">
-              R$ 3.000.000,00
-              <span class="block text-xs text-outline font-body-sm">5 Frações F40 &amp; Senna LM</span>
-</td>
-<td class="py-3.5 px-4 text-right">
-<div class="flex flex-col items-end">
-<span class="font-ticker-md text-sm text-tertiary font-bold">R$ 1.000.000,00 / dia</span>
-<span class="text-[11px] font-label-caps text-outline line-through">Atual: R$ 300.000,00</span>
-</div>
-</td>
-<td class="py-3.5 px-4 text-center">
-<span class="inline-flex items-center px-2 py-0.5 rounded bg-tertiary-container/20 text-tertiary font-label-caps text-label-caps">
-                REVISÃO DE LIMITE
-              </span>
-</td>
-<td class="py-3.5 px-4 text-center">
-<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-xs font-ticker-md text-tertiary">
-<span class="material-symbols-outlined text-xs">vpn_key</span> Key 5Ci Lightning
-              </span>
-</td>
-<td class="py-3.5 px-4 text-right">
-<div class="flex items-center justify-end gap-1.5">
-<button class="px-2.5 py-1 bg-primary text-on-primary font-label-caps text-label-caps font-bold rounded hover:bg-primary-fixed shadow-sm">
-                  APROVAR LIMITE
-                </button>
-<button class="px-2 py-1 bg-surface-container-high text-secondary hover:bg-secondary-container hover:text-on-secondary font-label-caps text-label-caps rounded">
-                  RECUSAR
-                </button>
-</div>
-</td>
-</tr>
-<!-- ROW 3: Investidor Qualificado -->
-<tr class="hover:bg-surface-container/60 transition-colors">
-<td class="py-3.5 px-4">
-<div class="flex items-center gap-3">
-<div class="w-9 h-9 rounded bg-surface-container-highest flex items-center justify-center text-on-surface-variant font-bold font-ticker-md text-sm shrink-0">
-                  CM
-                </div>
-<div class="flex flex-col">
-<span class="font-headline-sm text-sm font-semibold text-on-surface">Carlos Henrique Mendes</span>
-<div class="flex items-center gap-2 text-outline font-ticker-md text-xs">
-<span>#APX-553210</span>
-<span>•</span>
-<span class="font-body-sm text-xs text-on-surface-variant">carlos.mendes@mendescorp.com</span>
-</div>
-</div>
-</div>
-</td>
-<td class="py-3.5 px-4">
-<span class="text-on-surface font-label-caps text-label-caps">INVESTIDOR QUALIFICADO</span>
-<span class="block text-xs text-outline font-body-sm">Atestado de Aptidão 2024 Válido</span>
-</td>
-<td class="py-3.5 px-4 text-right font-ticker-md text-sm text-on-surface">
-              R$ 850.000,00
-              <span class="block text-xs text-outline font-body-sm">Portfólio Hypercar Apex</span>
-</td>
-<td class="py-3.5 px-4 text-right font-ticker-md text-sm text-on-surface">
-              R$ 500.000,00
-            </td>
-<td class="py-3.5 px-4 text-center">
-<span class="inline-flex items-center px-2 py-0.5 rounded bg-primary/10 text-primary font-label-caps text-label-caps">
-                ATIVO
-              </span>
-</td>
-<td class="py-3.5 px-4 text-center">
-<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-xs font-ticker-md text-on-surface-variant">
-<span class="material-symbols-outlined text-xs text-primary">key</span> YubiKey NFC
-              </span>
-</td>
-<td class="py-3.5 px-4 text-right">
-<button class="px-2.5 py-1 bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps rounded">
-                GERENCIAR
-              </button>
-</td>
-</tr>
-<!-- ROW 4: Apex Private Top Tier -->
-<tr class="hover:bg-surface-container/60 transition-colors">
-<td class="py-3.5 px-4">
-<div class="flex items-center gap-3">
-<div class="w-9 h-9 rounded bg-primary-container/30 flex items-center justify-center text-primary font-bold font-ticker-md text-sm shrink-0">
-                  RC
-                </div>
-<div class="flex flex-col">
-<div class="flex items-center gap-1.5">
-<span class="font-headline-sm text-sm font-semibold text-on-surface">Roberto Civita Jr</span>
-<span class="material-symbols-outlined text-xs text-primary">verified</span>
-</div>
-<div class="flex items-center gap-2 text-outline font-ticker-md text-xs">
-<span>#APX-994102</span>
-<span>•</span>
-<span class="font-body-sm text-xs text-on-surface-variant">rcivita@apexvault.vip</span>
-</div>
-</div>
-</div>
-</td>
-<td class="py-3.5 px-4">
-<span class="text-primary font-label-caps text-label-caps">APEX PRIVATE // TITANIUM FOUNDER</span>
-<span class="block text-xs text-outline font-body-sm">Conselheiro de Aquisição de Carros</span>
-</td>
-<td class="py-3.5 px-4 text-right font-ticker-md text-sm text-primary font-bold">
-              R$ 5.400.000,00
-              <span class="block text-xs text-outline font-body-sm">Custódia F1 Ayrton Senna 1993</span>
-</td>
-<td class="py-3.5 px-4 text-right">
-<span class="font-ticker-md text-xs text-primary-fixed bg-primary-container/20 px-2 py-0.5 rounded uppercase">ILIMITADO (MASTER)</span>
-</td>
-<td class="py-3.5 px-4 text-center">
-<span class="inline-flex items-center px-2 py-0.5 rounded bg-primary/10 text-primary font-label-caps text-label-caps">
-                ATIVO
-              </span>
-</td>
-<td class="py-3.5 px-4 text-center">
-<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-xs font-ticker-md text-primary">
-<span class="material-symbols-outlined text-xs">memory</span> HSM P-256
-              </span>
-</td>
-<td class="py-3.5 px-4 text-right">
-<button class="px-2.5 py-1 bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps rounded">
-                GERENCIAR
-              </button>
-</td>
-</tr>
-<!-- ROW 5: Bunker Custodian Operator -->
-<tr class="hover:bg-surface-container/60 transition-colors">
-<td class="py-3.5 px-4">
-<div class="flex items-center gap-3">
-<div class="w-9 h-9 rounded bg-surface-container-highest flex items-center justify-center text-outline font-bold font-ticker-md text-sm shrink-0">
-                  MS
-                </div>
-<div class="flex flex-col">
-<div class="flex items-center gap-1.5">
-<span class="font-headline-sm text-sm font-semibold text-on-surface">Marcos F. Siqueira</span>
-<span class="px-1.5 py-0.2 bg-surface-container-highest text-outline rounded text-[10px] font-label-caps">OPERACIONAL</span>
-</div>
-<div class="flex items-center gap-2 text-outline font-ticker-md text-xs">
-<span>#ADM-004</span>
-<span>•</span>
-<span class="font-body-sm text-xs text-on-surface-variant">marcos.custodia@apex.capital</span>
-</div>
-</div>
-</div>
-</td>
-<td class="py-3.5 px-4">
-<span class="text-on-surface-variant font-label-caps text-label-caps">CUSTÓDIA FÍSICA &amp; TELEMETRIA</span>
-<span class="block text-xs text-outline font-body-sm">Operador Chefe de Bunker SP</span>
-</td>
-<td class="py-3.5 px-4 text-right font-ticker-md text-sm text-outline">
-              R$ 0,00 (NÃO INVESTIDOR)
-            </td>
-<td class="py-3.5 px-4 text-right font-ticker-md text-xs text-outline">
-              SEM ALÇADA MONETÁRIA
-            </td>
-<td class="py-3.5 px-4 text-center">
-<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-caps text-label-caps">
-                ATIVO (COMERCIAL)
-              </span>
-</td>
-<td class="py-3.5 px-4 text-center">
-<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-xs font-ticker-md text-primary">
-<span class="material-symbols-outlined text-xs">badge</span> PKI Token L4
-              </span>
-</td>
-<td class="py-3.5 px-4 text-right">
-<div class="flex items-center justify-end gap-1">
-<button class="px-2 py-1 bg-secondary-container/20 text-secondary hover:bg-secondary-container hover:text-on-secondary font-label-caps text-label-caps rounded">
-                  REVOGAR
-                </button>
-<button class="px-2 py-1 bg-surface-container text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps rounded">
-                  LOGS
-                </button>
-</div>
-</td>
-</tr>
-<!-- ROW 6: Alexandre Vance SuperAdmin Root -->
-<tr class="bg-primary/5 hover:bg-primary/10 transition-colors">
-<td class="py-3.5 px-4">
-<div class="flex items-center gap-3">
-<div class="w-9 h-9 rounded bg-primary text-on-primary flex items-center justify-center font-bold font-ticker-md text-sm shrink-0">
-                  AV
-                </div>
-<div class="flex flex-col">
-<div class="flex items-center gap-1.5">
-<span class="font-headline-sm text-sm font-semibold text-primary">Dr. Alexandre Vance</span>
-<span class="material-symbols-outlined text-xs text-primary">verified_user</span>
-</div>
-<div class="flex items-center gap-2 text-outline font-ticker-md text-xs">
-<span>#ROOT-001</span>
-<span>•</span>
-<span class="font-body-sm text-xs text-on-surface-variant">alexandre.vance@apex.capital</span>
-</div>
-</div>
-</div>
-</td>
-<td class="py-3.5 px-4">
-<span class="text-primary font-label-caps text-label-caps">SUPERADMIN MASTER ROOT</span>
-<span class="block text-xs text-outline font-body-sm">Signatário de Chaves Fiduciárias CVM</span>
-</td>
-<td class="py-3.5 px-4 text-right font-ticker-md text-sm text-primary">
-              MASTER PORTFOLIO AUM
-            </td>
-<td class="py-3.5 px-4 text-right">
-<span class="font-ticker-md text-xs text-primary font-bold">CONTROLE TOTAL IRRESTRITO</span>
-</td>
-<td class="py-3.5 px-4 text-center">
-<span class="inline-flex items-center px-2 py-0.5 rounded bg-primary text-on-primary font-label-caps text-label-caps font-bold">
-                ROOT ACTIVE
-              </span>
-</td>
-<td class="py-3.5 px-4 text-center">
-<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-xs font-ticker-md text-primary font-bold">
-<span class="material-symbols-outlined text-xs">security</span> HSM LVL 5
-              </span>
-</td>
-<td class="py-3.5 px-4 text-right">
-<span class="font-label-caps text-label-caps text-outline">PROTECTED ROOT</span>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<!-- Table Pagination -->
-<div class="px-space-md py-3 bg-surface-container-lowest flex items-center justify-between text-body-sm">
-<div class="text-outline font-ticker-md text-xs">
-        PÁGINA 01 DE 118 // REGISTROS CRIPTOGRAFADOS E ASSINADOS POR HSM
+<html class="dark" lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="web_dashboard" name="shell-type" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary": "#68001a", "secondary-container": "#cc003c", "on-secondary-container": "#ffdcdc", "on-error-container": "#ffdad6", "on-primary-fixed": "#241a00", "outline": "#99907c", "primary-fixed-dim": "#e9c349", "primary-fixed": "#ffe088", "surface-bright": "#37393f", "surface-container-lowest": "#0c0e13", "on-background": "#e2e2e9", "secondary-fixed": "#ffdada", "surface-container": "#1e2025", "on-primary": "#3c2f00", "on-error": "#690005", "on-tertiary-fixed-variant": "#653e00", "on-secondary-fixed-variant": "#920028", "tertiary-container": "#f7a00f", "on-secondary-fixed": "#40000c", "outline-variant": "#4d4635", "inverse-on-surface": "#2e3036", "surface-variant": "#33353a", "tertiary-fixed-dim": "#ffb95f", "on-tertiary-container": "#633d00", "on-primary-container": "#554300", "primary-container": "#d4af37", "surface": "#111318", "on-tertiary-fixed": "#2a1700", "background": "#111318", "inverse-primary": "#735c00", "surface-tint": "#e9c349", "error": "#ffb4ab", "on-tertiary": "#472a00", "secondary-fixed-dim": "#ffb3b6", "inverse-surface": "#e2e2e9", "on-surface": "#e2e2e9", "error-container": "#93000a", "secondary": "#ffb3b6", "surface-dim": "#111318", "tertiary": "#ffc37b", "tertiary-fixed": "#ffddb8", "primary": "#f2ca50", "surface-container-highest": "#33353a", "on-surface-variant": "#d0c5af", "surface-container-high": "#282a2f", "on-primary-fixed-variant": "#574500", "surface-container-low": "#1a1b21" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1.25rem", "margin": "1.5rem", "gutter-desktop": "2rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-md": "1rem", "margin-desktop": "3rem" }, "fontFamily": { "headline-sm": ["Chivo"], "headline-lg": ["Chivo"], "label-caps": ["JetBrains Mono"], "body-md": ["Plus Jakarta Sans"], "display-lg-mobile": ["Chivo"], "ticker-lg": ["JetBrains Mono"], "body-lg": ["Plus Jakarta Sans"], "headline-md": ["Chivo"], "ticker-md": ["JetBrains Mono"], "body-sm": ["Plus Jakarta Sans"], "display-lg": ["Chivo"], "headline-lg-mobile": ["Chivo"] }, "fontSize": { "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }], "display-lg-mobile": ["34px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "ticker-lg": ["24px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "ticker-md": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-lg-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }] } } } };</script>
+</head>
+
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased">
+  <aside
+    class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between border-r border-outline-variant/30 shadow-[0_12px_32px_-4px_rgba(0,0,0,0.7)]">
+    <div class="flex flex-col">
+      <div
+        class="h-16 px-space-md flex items-center gap-space-sm border-b border-outline-variant/20 bg-surface-container-low/40">
+        <img alt="Monza Apex Capital" class="h-8 w-auto object-contain"
+          src="https://lh3.googleusercontent.com/aida/AEtjO1VR9Pr18peqmftIX-nbOUsaQMtux65iPuTXbvnVtaKfLtIU2UPnUHtuzX-qTphrRXQt2gN6hbx1gHxE8qVMMAfL-V9PqWaZmw81HUB9TOoYwTv15bw15auF-5nzXnYVeQvmxThJC_gE6UpBhDYbW3YCLSAwn2iYDEXtRaObjtnqMr0yR8UHwCzjOUCvi0l8Wlmb0Tge4Fuzov_71YWDT8EgrAVyh7Ky_CRujpBONoldMok2GwKq3bgqGSXP" />
+        <div class="flex flex-col"><span
+            class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none uppercase">Monza
+            Apex</span><span class="font-label-caps text-label-caps text-on-surface-variant tracking-wider">FIDUCIARY
+            TERMINAL</span></div>
       </div>
-<div class="flex items-center gap-1 font-ticker-md text-xs">
-<button class="px-2.5 py-1 bg-surface-container text-outline rounded hover:text-on-surface disabled:opacity-50" disabled="">ANTERIOR</button>
-<button class="px-2.5 py-1 bg-primary text-on-primary font-bold rounded">1</button>
-<button class="px-2.5 py-1 bg-surface-container text-on-surface rounded hover:bg-surface-container-high">2</button>
-<button class="px-2.5 py-1 bg-surface-container text-on-surface rounded hover:bg-surface-container-high">3</button>
-<span class="text-outline px-1">...</span>
-<button class="px-2.5 py-1 bg-surface-container text-on-surface rounded hover:bg-surface-container-high">118</button>
-<button class="px-2.5 py-1 bg-surface-container text-on-surface rounded hover:bg-surface-container-high">PRÓXIMO</button>
-</div>
-</div>
-</div>
-<!-- BOTTOM MASTER ACTION PANEL & GRANULAR RBAC MATRIX (INSPECTOR DRAWER) -->
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
-<!-- SELECTED USER INSPECTION & RBAC CONTROLS (8 COLS) -->
-<div class="lg:col-span-8 bg-surface-container-low p-space-lg rounded shadow-xl flex flex-col justify-between">
-<div>
-<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-sm border-b border-surface-container gap-2">
-<div class="flex items-center gap-space-sm">
-<div class="w-10 h-10 rounded bg-primary/20 flex items-center justify-center text-primary font-bold text-base">
-              RS
+      <div
+        class="px-space-md py-space-sm bg-surface-container/60 border-b border-outline-variant/20 flex items-center justify-between">
+        <span class="font-label-caps text-label-caps text-on-surface-variant">NÍVEL DE ACESSO</span><span
+          class="font-label-caps text-label-caps text-primary bg-primary-container/20 px-space-xs py-0.5 rounded border border-primary-container/40">SUPERADMIN
+          ROOT</span>
+      </div>
+      <nav class="flex flex-col py-space-sm overflow-y-auto max-h-[calc(100vh-210px)]"
+        data-active-classes="bg-surface-container text-primary font-bold border-l-2 border-primary">
+        <div
+          class="px-space-md pt-space-sm pb-space-xs font-label-caps text-label-caps text-outline uppercase tracking-wider">
+          1. Núcleo Master</div><a
+          class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors"
+          data-path="painel-master-geral" href="#"><span class="font-body-md text-body-md">Painel Master
+            Geral</span><span class="font-label-caps text-label-caps text-outline">ROOT</span></a><a
+          class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors"
+          data-path="gestao-de-usuarios-e-acessos" href="#"><span class="font-body-md text-body-md">Gestão de Usuários
+            &amp; Acessos</span><span class="font-label-caps text-label-caps text-outline">RBAC</span></a>
+        <div
+          class="px-space-md pt-space-md pb-space-xs font-label-caps text-label-caps text-outline uppercase tracking-wider">
+          2. Ativos &amp; Veículos</div><a
+          class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors"
+          data-path="catalogo-e-gestao-de-carros" href="#"><span class="font-body-md text-body-md">Catálogo &amp; Gestão
+            de Carros</span><span class="font-label-caps text-label-caps text-outline">VAULT</span></a>
+        <div
+          class="px-space-md pt-space-md pb-space-xs font-label-caps text-label-caps text-outline uppercase tracking-wider">
+          3. Tesouraria &amp; Lucros</div><a
+          class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors"
+          data-path="controle-de-lucros-e-taxas" href="#"><span class="font-body-md text-body-md">Controle de Lucros
+            &amp; Taxas</span><span class="font-label-caps text-label-caps text-outline">DRE</span></a>
+        <div
+          class="px-space-md pt-space-md pb-space-xs font-label-caps text-label-caps text-outline uppercase tracking-wider">
+          4. Governança &amp; Segurança</div><a
+          class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors"
+          data-path="auditoria-de-acoes-master" href="#"><span class="font-body-md text-body-md">Auditoria de Ações
+            Master</span><span class="font-label-caps text-label-caps text-outline">LOGS</span></a><a
+          class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-between transition-colors"
+          data-path="configuracoes-globais-e-cvm" href="#"><span class="font-body-md text-body-md">Configurações Globais
+            &amp; CVM</span><span class="font-label-caps text-label-caps text-outline">POL</span></a>
+      </nav>
+    </div>
+    <div class="p-space-sm bg-surface-container-low/80 border-t border-outline-variant/30">
+      <div
+        class="flex flex-col gap-1 p-space-xs bg-surface-container-lowest/90 border border-outline-variant/20 rounded">
+        <div class="flex items-center justify-between"><span
+            class="font-label-caps text-label-caps text-on-surface-variant">HARDWARE SECURITY</span><span
+            class="font-label-caps text-label-caps text-primary">HSM LVL 5</span></div>
+        <div class="flex items-center justify-between"><span
+            class="font-label-caps text-label-caps text-outline">SIGNATURE CORE</span><span
+            class="font-label-caps text-label-caps text-on-surface">P-256 ACTIVE</span></div>
+        <div class="flex items-center justify-between pt-0.5 border-t border-outline-variant/20"><span
+            class="font-label-caps text-label-caps text-outline">BUILD</span><span
+            class="font-label-caps text-label-caps text-on-surface-variant">v4.20.0-PROD</span></div>
+      </div>
+    </div>
+  </aside>
+  <div class="pl-72">
+    <header
+      class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_12px_32px_-4px_rgba(0,0,0,0.7)] z-40 flex items-center justify-between px-space-md">
+      <div class="flex items-center gap-space-md">
+        <div class="flex items-center gap-space-xs"><span class="font-label-caps text-label-caps text-primary">ROOT
+            ACCESS</span><span class="font-label-caps text-label-caps text-outline">//</span><span
+            class="font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase">MASTER CONSOLE
+            TERMINAL</span></div>
+        <div class="hidden xl:flex items-center gap-space-xs pl-space-sm border-l border-outline-variant/40"><span
+            class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/40 font-label-caps text-label-caps text-on-surface-variant"><span
+              class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>CVM 175 COMPLIANT</span><span
+            class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/40 font-label-caps text-label-caps text-on-surface-variant"><span
+              class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>HSM MASTER KEY ACTIVE</span><span
+            class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/40 font-label-caps text-label-caps text-on-surface-variant"><span
+              class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>SYSTEM INTEGRITY 100%</span></div>
+      </div>
+      <div class="flex items-center gap-space-md"><button
+          class="flex items-center gap-1 px-3 py-1.5 rounded bg-secondary-container/20 border border-secondary-container/50 text-secondary hover:bg-secondary-container hover:text-on-secondary-container transition-colors shadow-[0_0_16px_-4px_rgba(225,29,72,0.4)]"
+          type="button"><span class="material-symbols-outlined text-sm leading-none">bolt</span><span
+            class="font-label-caps text-label-caps tracking-wider">CIRCUIT BREAKER</span></button>
+        <div class="flex items-center gap-space-sm pl-space-sm border-l border-outline-variant/30">
+          <div class="text-right hidden sm:flex flex-col"><span
+              class="font-body-sm text-body-sm text-on-surface font-semibold leading-none">Dr. Alexandre
+              Vance</span><span class="font-label-caps text-label-caps text-primary leading-none mt-1">CHIEF
+              ADMINISTRATOR / MASTER ROOT</span></div><img alt="Profile"
+            class="w-8 h-8 rounded-full object-cover border border-primary/40 shadow-sm"
+            src="https://lh3.googleusercontent.com/aida/AEtjO1XX39PukV7vCaRFUL3JIM8CMKOqfU5fbd0Fi8WVvSKOBCLSRaic7uhj7rnVbdQui5FupQOcBuMDxAZ-_T6oSsQ89Z8b0gwx5XwNBjJUMfhCQ9iNqbbM2G7ZjkTMx27rdhM7UloIVtaha-5-jMN133Ruoi2X42asGrNrLfVMYpgttZPhLMABz_aiY_vkyZ__Y8UzU2X1-sz3PChT32HmF0gl_xTMFqCkgOdCi4Bbq7fQ_6jkO4QXFPj86oI" />
+        </div>
+      </div>
+    </header>
+    <main class="relative pt-16 bg-surface min-h-screen w-full px-space-md py-space-md">
+      <div class="flex flex-col w-full space-y-space-md">
+        <!-- TOP HEADER & FIDUCIARY IDENTITY BANNER -->
+        <div
+          class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-low p-space-lg rounded shadow-xl relative overflow-hidden">
+          <div class="absolute -right-16 -top-16 w-80 h-80 bg-primary/5 rounded-full blur-3xl pointer-events-none">
+          </div>
+          <div
+            class="absolute right-1/3 bottom-0 w-64 h-32 bg-secondary-container/5 rounded-full blur-2xl pointer-events-none">
+          </div>
+          <div class="flex flex-col space-y-1 z-10 max-w-3xl">
+            <div class="flex items-center gap-space-xs text-primary font-label-caps text-label-caps tracking-wider">
+              <span class="material-symbols-outlined text-sm">shield_person</span>
+              <span>ROOT PRIVILEGE // RBAC GOVERNANCE MODULE</span>
+              <span class="text-outline">/</span>
+              <span class="text-on-surface-variant font-ticker-md text-body-sm">NODE: SA-EAST-BR-1</span>
             </div>
-<div>
-<div class="flex items-center gap-2">
-<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Rodrigo Sanches da Silva</h3>
-<span class="px-2 py-0.5 rounded bg-primary/20 text-primary font-label-caps text-label-caps">ID #APX-882190</span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Painel de Privilégios Granulares RBAC &amp; Diretrizes Fiduciárias</p>
-</div>
-</div>
-<span class="inline-flex items-center gap-1 font-label-caps text-label-caps text-outline">
-<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-            SESSÃO ATIVA EM IP: 187.52.190.12 (SP/BR)
-          </span>
-</div>
-<!-- PERMISSION SWITCHES GRID -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md mt-space-md">
-<!-- Switch 1 -->
-<label class="flex items-start justify-between p-space-sm bg-surface-container rounded cursor-pointer hover:bg-surface-container-high transition-colors">
-<div class="flex flex-col pr-4">
-<span class="font-headline-sm text-sm font-semibold text-on-surface">Pode Comprar Drops Primários</span>
-<span class="font-body-sm text-xs text-outline">Habilita alocação na emissão oficial de cotas de novos hipercarros.</span>
-</div>
-<input checked="" class="mt-1 h-4 w-4 rounded bg-surface-container-lowest text-primary focus:ring-0 focus:ring-offset-0 border-0 cursor-pointer accent-primary" type="checkbox"/>
-</label>
-<!-- Switch 2 -->
-<label class="flex items-start justify-between p-space-sm bg-surface-container rounded cursor-pointer hover:bg-surface-container-high transition-colors">
-<div class="flex flex-col pr-4">
-<span class="font-headline-sm text-sm font-semibold text-on-surface">Pode Negociar no Livro Secundário</span>
-<span class="font-body-sm text-xs text-outline">Permite ordens a mercado e a limite no orderbook peer-to-peer.</span>
-</div>
-<input checked="" class="mt-1 h-4 w-4 rounded bg-surface-container-lowest text-primary focus:ring-0 focus:ring-offset-0 border-0 cursor-pointer accent-primary" type="checkbox"/>
-</label>
-<!-- Switch 3 -->
-<label class="flex items-start justify-between p-space-sm bg-surface-container rounded cursor-pointer hover:bg-surface-container-high transition-colors">
-<div class="flex flex-col pr-4">
-<div class="flex items-center gap-1.5">
-<span class="font-headline-sm text-sm font-semibold text-on-surface">Acesso Físico ao Bunker Apex</span>
-<span class="material-symbols-outlined text-xs text-primary">lock</span>
-</div>
-<span class="font-body-sm text-xs text-outline">Agendamento de visita privativa e inspeção técnica com perito.</span>
-</div>
-<input checked="" class="mt-1 h-4 w-4 rounded bg-surface-container-lowest text-primary focus:ring-0 focus:ring-offset-0 border-0 cursor-pointer accent-primary" type="checkbox"/>
-</label>
-<!-- Switch 4 -->
-<label class="flex items-start justify-between p-space-sm bg-surface-container rounded cursor-pointer hover:bg-surface-container-high transition-colors">
-<div class="flex flex-col pr-4">
-<span class="font-headline-sm text-sm font-semibold text-on-surface">Operações OTC de Grande Porte</span>
-<span class="font-body-sm text-xs text-outline">Acesso direto ao balcão fechado para transações &gt; R$ 1.000.000.</span>
-</div>
-<input class="mt-1 h-4 w-4 rounded bg-surface-container-lowest text-primary focus:ring-0 focus:ring-offset-0 border-0 cursor-pointer accent-primary" type="checkbox"/>
-</label>
-<!-- Switch 5 -->
-<label class="flex items-start justify-between p-space-sm bg-surface-container rounded cursor-pointer hover:bg-surface-container-high transition-colors md:col-span-2">
-<div class="flex flex-col pr-4">
-<div class="flex items-center gap-1.5">
-<span class="font-headline-sm text-sm font-semibold text-secondary">Bypass de Limite CVM 175 (Exceção Fiduciária)</span>
-<span class="px-1.5 py-0.5 rounded bg-secondary-container/20 text-secondary font-label-caps text-[10px]">REQUIRES HSM SIGN</span>
-</div>
-<span class="font-body-sm text-xs text-outline">Isenta o investidor da trava percentual máxima de 10% por ativo colecionável.</span>
-</div>
-<input class="mt-1 h-4 w-4 rounded bg-surface-container-lowest text-secondary focus:ring-0 focus:ring-offset-0 border-0 cursor-pointer accent-secondary" type="checkbox"/>
-</label>
-</div>
-</div>
-<!-- FOOTER BUTTONS IN INSPECTOR -->
-<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-md mt-space-md border-t border-surface-container">
-<span class="font-label-caps text-label-caps text-outline">ÚLTIMA MODIFICAÇÃO: HOJE ÀS 10:44 POR AVANCE (SUPERADMIN)</span>
-<div class="flex items-center gap-2">
-<button class="px-space-md py-2 bg-surface-container text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps rounded" type="button">
-            DESCARTAR ALTERAÇÕES
-          </button>
-<button class="px-space-md py-2 bg-primary text-on-primary font-label-caps text-label-caps font-bold rounded hover:bg-primary-fixed shadow-md" type="button">
-            SALVAR PERMISSÕES NA LEDGER
-          </button>
-</div>
-</div>
-</div>
-<!-- SECURITY OVERRIDE & AUDIT CONTROLS (4 COLS) -->
-<div class="lg:col-span-4 bg-surface-container-low p-space-lg rounded shadow-xl flex flex-col justify-between">
-<div>
-<div class="flex items-center gap-2 pb-space-sm border-b border-surface-container text-secondary">
-<span class="material-symbols-outlined text-lg">admin_panel_settings</span>
-<h3 class="font-headline-sm text-headline-sm font-semibold">AÇÕES CRÍTICAS DE SEGURANÇA</h3>
-</div>
-<div class="my-space-md flex flex-col space-y-3">
-<div class="p-space-sm bg-surface-container rounded flex items-center justify-between">
-<div class="flex flex-col">
-<span class="font-label-caps text-label-caps text-on-surface font-semibold">STATUS DO HARDWARE HSM</span>
-<span class="font-body-sm text-xs text-outline">Chave P-256 Pareada com Sucesso</span>
-</div>
-<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
-</div>
-<div class="p-space-sm bg-surface-container rounded flex items-center justify-between">
-<div class="flex flex-col">
-<span class="font-label-caps text-label-caps text-on-surface font-semibold">DISPOSITIVOS ATIVOS</span>
-<span class="font-body-sm text-xs text-outline">1 MacBook Pro M3, 1 iPhone 16 Pro</span>
-</div>
-<button class="text-xs font-label-caps text-primary hover:underline">VER DETALHES</button>
-</div>
-<div class="p-space-sm bg-secondary-container/10 rounded">
-<span class="font-label-caps text-label-caps text-secondary font-semibold uppercase">Revogação Cautelar Imediata</span>
-<p class="font-body-sm text-xs text-on-surface-variant mt-1">
-              Força o encerramento imediato de todos os tokens JWT, revoga acessos à API, cancela ordens ativas no book e bloqueia logins futuros.
+            <h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+              GESTÃO GLOBAL DE USUÁRIOS, INVESTIDORES &amp; PERMISSÕES RBAC
+            </h1>
+            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Supervisão de identidades, controle de limites operacionais, aprovação manual, revogação de acessos e
+              concessão de privilégios fiduciários sob normas CVM 175 &amp; custódia institucional de ativos físicos.
             </p>
-</div>
-</div>
-</div>
-<!-- CIRCUIT BREAKER / EMERGENCY OVERRIDE BUTTON -->
-<div class="pt-space-md border-t border-surface-container flex flex-col gap-2">
-<button class="w-full py-3 px-space-md bg-secondary-container text-on-secondary-container font-label-caps text-label-caps font-bold tracking-wider rounded hover:bg-on-secondary hover:text-white transition-all flex items-center justify-center gap-2 shadow-lg active:scale-98" onclick="document.getElementById('security-modal').classList.remove('hidden')" type="button">
-<span class="material-symbols-outlined text-base">power_settings_new</span>
-<span>RESETAR CREDENCIAIS &amp; EXPULSAR SESSÕES</span>
-</button>
-<span class="font-label-caps text-center text-[10px] text-outline">REQUER CONFIRMAÇÃO HSM DO SUPERADMIN ROOT</span>
-</div>
-</div>
-</div>
-<!-- SECURITY OVERRIDE CONFIRMATION MODAL (HIDDEN BY DEFAULT) -->
-<div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-surface-container-lowest/80 backdrop-blur-md p-space-md" id="security-modal">
-<div class="bg-surface-container-low max-w-md w-full p-space-lg rounded shadow-2xl flex flex-col gap-space-md relative">
-<div class="flex items-center gap-3 text-secondary">
-<div class="w-10 h-10 rounded bg-secondary-container/20 flex items-center justify-center">
-<span class="material-symbols-outlined text-2xl">warning</span>
-</div>
-<div>
-<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">Confirmar Revogação Master?</h4>
-<span class="font-label-caps text-label-caps text-secondary">PROTOCOLO DE EMERGÊNCIA FIDUCIÁRIA</span>
-</div>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant">
-        Você está prestes a desconectar <strong>Rodrigo Sanches da Silva (#APX-882190)</strong> de todos os terminais, cancelar 3 ordens ativas no livro e revogar o certificado HSM. Esta ação ficará gravada indelevelmente na auditoria de conformidade CVM.
-      </p>
-<div class="p-space-sm bg-surface-container rounded flex flex-col gap-1">
-<span class="font-label-caps text-label-caps text-outline">DIGITE SUA CHAVE PIN DE MASTER ROOT:</span>
-<input class="bg-surface-container-lowest text-on-surface px-3 py-2 rounded font-ticker-md text-center tracking-widest focus:outline-none focus:ring-1 focus:ring-primary" placeholder="••••••••" type="password"/>
-</div>
-<div class="flex items-center justify-end gap-2 pt-2">
-<button class="px-space-md py-2 bg-surface-container text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps rounded" onclick="document.getElementById('security-modal').classList.add('hidden')" type="button">
-          CANCELAR
-        </button>
-<button class="px-space-md py-2 bg-secondary-container text-on-secondary-container font-label-caps text-label-caps font-bold rounded hover:bg-on-secondary" onclick="document.getElementById('security-modal').classList.add('hidden'); alert('Acesso revogado com sucesso!');" type="button">
-          CONFIRMAR &amp; EXECUTAR
-        </button>
-</div>
-</div>
-</div>
-</div></main></div></body></html>
+          </div>
+          <!-- QUICK ACTIONS -->
+          <div class="flex flex-wrap items-center gap-space-sm z-10 shrink-0">
+            <button
+              class="px-space-md py-2.5 bg-primary text-on-primary font-label-caps text-label-caps tracking-wider rounded font-bold hover:bg-primary-fixed transition-all flex items-center gap-1.5 shadow-md active:scale-95"
+              type="button">
+              <span class="material-symbols-outlined text-base">person_add</span>
+              <span>+ CONVIDAR MEMBRO INSTITUCIONAL</span>
+            </button>
+            <button
+              class="px-space-md py-2.5 bg-surface-container-high text-on-surface font-label-caps text-label-caps tracking-wider rounded font-semibold hover:bg-surface-bright transition-all flex items-center gap-1.5 active:scale-95"
+              type="button">
+              <span class="material-symbols-outlined text-base">badge</span>
+              <span>+ NOVO OPERADOR / AUDITOR</span>
+            </button>
+            <button
+              class="px-space-md py-2.5 bg-surface-container-highest text-on-surface-variant hover:text-primary font-label-caps text-label-caps tracking-wider rounded flex items-center gap-1.5 transition-all"
+              type="button">
+              <span class="material-symbols-outlined text-base">download</span>
+              <span>EXPORTAR BASE (LGPD)</span>
+            </button>
+          </div>
+        </div>
+        <!-- SUMMARY STAT BANNERS (HIGH DENSITY BENTO) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+          <!-- Stat 1 -->
+          <div
+            class="bg-surface-container-low p-space-md rounded shadow-lg flex flex-col justify-between relative overflow-hidden group">
+            <div class="flex items-center justify-between">
+              <span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Total Usuários
+                Cadastrados</span>
+              <div class="w-8 h-8 rounded bg-primary/10 flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined text-lg">group</span>
+              </div>
+            </div>
+            <div class="my-space-sm">
+              <div class="flex items-baseline gap-2">
+                <span class="font-ticker-lg text-ticker-lg text-on-surface">1.412</span>
+                <span class="font-label-caps text-label-caps text-primary bg-primary/10 px-1.5 py-0.5 rounded">+4.2%
+                  m/m</span>
+              </div>
+              <div class="w-full bg-surface-container-highest h-1 rounded overflow-hidden mt-2 flex">
+                <div class="bg-primary h-full" style="width: 88.3%" title="Aprovados: 1.248"></div>
+                <div class="bg-tertiary-container h-full" style="width: 1.0%" title="Mesa KYC: 14"></div>
+                <div class="bg-outline h-full" style="width: 10.7%" title="Pré-Cadastro: 150"></div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between text-body-sm font-body-sm text-outline pt-1">
+              <span class="text-on-surface-variant font-medium">1.248 Aprovados</span>
+              <span class="text-tertiary">14 Mesa KYC</span>
+              <span>150 Pré-Cad.</span>
+            </div>
+          </div>
+          <!-- Stat 2 -->
+          <div
+            class="bg-surface-container-low p-space-md rounded shadow-lg flex flex-col justify-between relative overflow-hidden group">
+            <div class="flex items-center justify-between">
+              <span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Volume Alocado Médio /
+                Usuário</span>
+              <div class="w-8 h-8 rounded bg-primary-container/20 flex items-center justify-center text-primary-fixed">
+                <span class="material-symbols-outlined text-lg">account_balance_wallet</span>
+              </div>
+            </div>
+            <div class="my-space-sm">
+              <div class="flex items-baseline gap-1">
+                <span class="font-label-caps text-body-sm text-outline">R$</span>
+                <span class="font-ticker-lg text-ticker-lg text-primary">114.460,00</span>
+              </div>
+              <div class="flex items-center gap-1.5 mt-2 text-on-surface-variant font-body-sm">
+                <span class="material-symbols-outlined text-xs text-primary">trending_up</span>
+                <span class="font-ticker-md text-xs text-on-surface">AUM TOTAL: R$ 161.617.520,00</span>
+              </div>
+            </div>
+            <div class="flex items-center justify-between text-body-sm font-body-sm text-outline pt-1">
+              <span>Fração Média: 18.4 cotas</span>
+              <span class="text-primary font-ticker-md">Ticket Max: R$ 5.4M</span>
+            </div>
+          </div>
+          <!-- Stat 3 -->
+          <div
+            class="bg-surface-container-low p-space-md rounded shadow-lg flex flex-col justify-between relative overflow-hidden group">
+            <div class="flex items-center justify-between">
+              <span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Investidores Black /
+                Titanium</span>
+              <div class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined text-lg">diamond</span>
+              </div>
+            </div>
+            <div class="my-space-sm">
+              <div class="flex items-baseline gap-2">
+                <span class="font-ticker-lg text-ticker-lg text-on-surface">94</span>
+                <span class="font-label-caps text-label-caps text-primary bg-primary/10 px-1.5 py-0.5 rounded">6.6%
+                  BASE</span>
+              </div>
+              <div class="flex items-center gap-2 mt-2">
+                <div class="flex -space-x-1.5 overflow-hidden">
+                  <span class="inline-block h-4 w-4 rounded-full bg-primary/40 ring-1 ring-surface"></span>
+                  <span class="inline-block h-4 w-4 rounded-full bg-primary-container ring-1 ring-surface"></span>
+                  <span class="inline-block h-4 w-4 rounded-full bg-surface-bright ring-1 ring-surface"></span>
+                </div>
+                <span class="font-body-sm text-body-sm text-on-surface-variant">Concierge Exclusivo Ativo</span>
+              </div>
+            </div>
+            <div class="flex items-center justify-between text-body-sm font-body-sm text-outline pt-1">
+              <span>Bunker Passes: 94</span>
+              <span class="text-primary">Direito a Voto ESG</span>
+            </div>
+          </div>
+          <!-- Stat 4 -->
+          <div
+            class="bg-surface-container-low p-space-md rounded shadow-lg flex flex-col justify-between relative overflow-hidden group">
+            <div class="flex items-center justify-between">
+              <span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Bloqueios &amp; Travas
+                Cautelares</span>
+              <div class="w-8 h-8 rounded bg-secondary-container/20 flex items-center justify-center text-secondary">
+                <span class="material-symbols-outlined text-lg">gavel</span>
+              </div>
+            </div>
+            <div class="my-space-sm">
+              <div class="flex items-baseline gap-2">
+                <span class="font-ticker-lg text-ticker-lg text-secondary">02</span>
+                <span
+                  class="font-label-caps text-label-caps text-secondary bg-secondary-container/30 px-1.5 py-0.5 rounded">QUARANTINE</span>
+              </div>
+              <div class="flex items-center gap-1.5 mt-2 text-outline font-body-sm">
+                <span class="w-2 h-2 rounded-full bg-secondary-container animate-ping"></span>
+                <span class="text-on-surface-variant">Compliance Flag: CVM Art. 32</span>
+              </div>
+            </div>
+            <div class="flex items-center justify-between text-body-sm font-body-sm text-outline pt-1">
+              <span class="text-secondary">Alçadas Congeladas</span>
+              <span class="underline cursor-pointer hover:text-on-surface">Ver Parecer</span>
+            </div>
+          </div>
+        </div>
+        <!-- SEARCH & GRANULAR FILTER TOOLBAR -->
+        <div class="flex flex-col gap-space-sm bg-surface-container-low p-space-md rounded shadow-lg">
+          <div class="flex flex-col xl:flex-row gap-space-md items-stretch xl:items-center justify-between">
+            <!-- Search Input with High-Tech Aesthetics -->
+            <div class="relative flex-1">
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-outline">
+                <span class="material-symbols-outlined text-lg">search</span>
+              </div>
+              <input
+                class="w-full bg-surface-container-lowest text-on-surface pl-10 pr-4 py-2.5 rounded font-body-md text-body-md placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary shadow-inner"
+                placeholder="Buscar por Nome do Investidor, CPF/CNPJ, ID Fiduciário (#APX-), Chave HSM ou E-mail corporativo..."
+                type="text" />
+              <div class="absolute inset-y-0 right-0 pr-3 flex items-center gap-1 pointer-events-none">
+                <kbd
+                  class="px-1.5 py-0.5 text-xs font-label-caps bg-surface-container text-outline rounded shadow-sm">⌘K</kbd>
+              </div>
+            </div>
+            <!-- Quick Status Selectors -->
+            <div class="flex items-center gap-space-xs overflow-x-auto pb-1 xl:pb-0">
+              <span class="font-label-caps text-label-caps text-outline shrink-0 pr-2">STATUS:</span>
+              <button
+                class="px-2.5 py-1.5 rounded bg-surface-container-high text-primary font-label-caps text-label-caps shrink-0">Todos
+                (1.412)</button>
+              <button
+                class="px-2.5 py-1.5 rounded bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps shrink-0">Ativos
+                (1.248)</button>
+              <button
+                class="px-2.5 py-1.5 rounded bg-surface-container-lowest text-tertiary hover:text-tertiary-fixed font-label-caps text-label-caps shrink-0">Em
+                Análise / KYC (14)</button>
+              <button
+                class="px-2.5 py-1.5 rounded bg-surface-container-lowest text-secondary hover:text-on-secondary font-label-caps text-label-caps shrink-0">Suspensos
+                / Travas (2)</button>
+            </div>
+          </div>
+          <!-- Secondary Role Filter Pills -->
+          <div class="flex items-center gap-2 overflow-x-auto pt-2 border-t border-surface-container">
+            <span class="font-label-caps text-label-caps text-outline shrink-0">SEGMENTO &amp; PAPEL:</span>
+            <button
+              class="px-2 py-1 rounded bg-primary/10 text-primary font-label-caps text-label-caps whitespace-nowrap shadow-sm">Todos
+              os Perfis</button>
+            <button
+              class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps whitespace-nowrap">Apex
+              Private (94)</button>
+            <button
+              class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps whitespace-nowrap">Profissionais
+              CVM (312)</button>
+            <button
+              class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps whitespace-nowrap">Qualificados
+              (842)</button>
+            <button
+              class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps whitespace-nowrap">Mesa
+              Compliance (6)</button>
+            <button
+              class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps whitespace-nowrap">Custodiantes
+              Bunker (4)</button>
+            <button
+              class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps whitespace-nowrap">Auditores
+              PwC (3)</button>
+            <button
+              class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-primary-fixed font-label-caps text-label-caps whitespace-nowrap">SuperAdmin
+              Root (2)</button>
+          </div>
+        </div>
+        <!-- MASTER USER MANAGEMENT DATA TABLE -->
+        <div class="bg-surface-container-low rounded shadow-xl overflow-hidden">
+          <div class="px-space-md py-space-sm bg-surface-container flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-sm text-primary">data_table</span>
+              <span class="font-label-caps text-label-caps text-on-surface font-semibold tracking-wider">LIVRO DE
+                USUÁRIOS &amp; MATRIZ DE ACESSO HSM</span>
+            </div>
+            <div class="flex items-center gap-space-md font-label-caps text-label-caps text-outline">
+              <span>EXIBINDO 6 DE 1.412 REGISTROS AUDITADOS</span>
+              <button class="text-primary hover:underline flex items-center gap-1">
+                <span class="material-symbols-outlined text-xs">tune</span> COLUNAS AVANÇADAS
+              </button>
+            </div>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left font-body-md text-body-md border-collapse">
+              <thead>
+                <tr
+                  class="bg-surface-container-lowest text-on-surface-variant font-label-caps text-label-caps uppercase">
+                  <th class="py-3 px-4 font-semibold">Usuário / ID Fiduciário</th>
+                  <th class="py-3 px-4 font-semibold">Categoria / Perfil CVM</th>
+                  <th class="py-3 px-4 font-semibold text-right">Patrimônio Apex (AUM)</th>
+                  <th class="py-3 px-4 font-semibold text-right">Limite Diário Aprovado</th>
+                  <th class="py-3 px-4 font-semibold text-center">Status da Conta</th>
+                  <th class="py-3 px-4 font-semibold text-center">2FA / Hardware HSM</th>
+                  <th class="py-3 px-4 font-semibold text-right">Ações Fiduciárias</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-surface-container/50">
+                <!-- ROW 1: Apex Private Regular -->
+                <tr class="hover:bg-surface-container/60 transition-colors group">
+                  <td class="py-3.5 px-4">
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-9 h-9 rounded bg-surface-container-highest flex items-center justify-center text-primary font-bold font-ticker-md text-sm shrink-0">
+                        RS
+                      </div>
+                      <div class="flex flex-col">
+                        <div class="flex items-center gap-2">
+                          <span class="font-headline-sm text-sm font-semibold text-on-surface">Rodrigo Sanches da
+                            Silva</span>
+                          <span class="material-symbols-outlined text-xs text-primary"
+                            title="Identidade Verificada">verified</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-outline font-ticker-md text-xs">
+                          <span>#APX-882190</span>
+                          <span>•</span>
+                          <span class="font-body-sm text-xs text-on-surface-variant">rsanches@sanchesasset.com.br</span>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <div class="flex flex-col">
+                      <span class="inline-flex items-center gap-1 text-primary font-label-caps text-label-caps">
+                        <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                        APEX PRIVATE / COLECIONADOR
+                      </span>
+                      <span class="text-xs text-outline font-body-sm">Membro Titular Coleção Vintage Ferrari</span>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-4 text-right font-ticker-md text-sm text-on-surface">
+                    R$ 164.820,00
+                    <span class="block text-xs text-outline font-body-sm">12 Ativos em Custódia</span>
+                  </td>
+                  <td class="py-3.5 px-4 text-right">
+                    <span class="font-ticker-md text-sm text-primary font-semibold">R$ 250.000,00</span>
+                    <span class="block text-xs text-outline font-body-sm">CVM 175 Art. 11</span>
+                  </td>
+                  <td class="py-3.5 px-4 text-center">
+                    <span
+                      class="inline-flex items-center px-2 py-0.5 rounded bg-primary/10 text-primary font-label-caps text-label-caps">
+                      ATIVO &amp; REGULAR
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-center">
+                    <div class="flex items-center justify-center gap-1.5">
+                      <span
+                        class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-xs font-ticker-md text-on-surface-variant">
+                        <span class="material-symbols-outlined text-xs text-primary">fingerprint</span> FaceID
+                      </span>
+                      <span
+                        class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-xs font-ticker-md text-primary">
+                        <span class="material-symbols-outlined text-xs">key</span> YubiKey
+                      </span>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-4 text-right">
+                    <div class="flex items-center justify-end gap-1">
+                      <button
+                        class="p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-primary transition-colors"
+                        title="Editar Limites &amp; Alçadas">
+                        <span class="material-symbols-outlined text-base">tune</span>
+                      </button>
+                      <button
+                        class="p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-primary transition-colors"
+                        title="Editar Permissões RBAC">
+                        <span class="material-symbols-outlined text-base">lock_open</span>
+                      </button>
+                      <button
+                        class="p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-secondary transition-colors"
+                        title="Suspender Acesso">
+                        <span class="material-symbols-outlined text-base">block</span>
+                      </button>
+                      <button
+                        class="p-1.5 rounded bg-surface-container hover:bg-surface-container-highest text-primary font-label-caps text-label-caps px-2 py-1"
+                        title="Impersonar para Auditoria">
+                        AUDITAR
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <!-- ROW 2: Aguardando Revisão de Limite -->
+                <tr class="bg-tertiary-container/5 hover:bg-tertiary-container/10 transition-colors">
+                  <td class="py-3.5 px-4">
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-9 h-9 rounded bg-tertiary-container/20 flex items-center justify-center text-tertiary font-bold font-ticker-md text-sm shrink-0">
+                        EV
+                      </div>
+                      <div class="flex flex-col">
+                        <div class="flex items-center gap-2">
+                          <span class="font-headline-sm text-sm font-semibold text-on-surface">Dr. Eduardo Prado
+                            Vianna</span>
+                          <span
+                            class="px-1.5 py-0.2 bg-tertiary-container/30 text-tertiary rounded text-[10px] font-label-caps">SOLICITAÇÃO
+                            PENDENTE</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-outline font-ticker-md text-xs">
+                          <span>#APX-771024</span>
+                          <span>•</span>
+                          <span class="font-body-sm text-xs text-on-surface-variant">eprado@viannawealth.ch</span>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <div class="flex flex-col">
+                      <span class="text-on-surface font-label-caps text-label-caps">PROFISSIONAL CVM // FAMILY
+                        OFFICE</span>
+                      <span class="text-xs text-outline font-body-sm">Registro CVM: #88391-B</span>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-4 text-right font-ticker-md text-sm text-on-surface font-semibold">
+                    R$ 3.000.000,00
+                    <span class="block text-xs text-outline font-body-sm">5 Frações F40 &amp; Senna LM</span>
+                  </td>
+                  <td class="py-3.5 px-4 text-right">
+                    <div class="flex flex-col items-end">
+                      <span class="font-ticker-md text-sm text-tertiary font-bold">R$ 1.000.000,00 / dia</span>
+                      <span class="text-[11px] font-label-caps text-outline line-through">Atual: R$ 300.000,00</span>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-4 text-center">
+                    <span
+                      class="inline-flex items-center px-2 py-0.5 rounded bg-tertiary-container/20 text-tertiary font-label-caps text-label-caps">
+                      REVISÃO DE LIMITE
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-center">
+                    <span
+                      class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-xs font-ticker-md text-tertiary">
+                      <span class="material-symbols-outlined text-xs">vpn_key</span> Key 5Ci Lightning
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-right">
+                    <div class="flex items-center justify-end gap-1.5">
+                      <button
+                        class="px-2.5 py-1 bg-primary text-on-primary font-label-caps text-label-caps font-bold rounded hover:bg-primary-fixed shadow-sm">
+                        APROVAR LIMITE
+                      </button>
+                      <button
+                        class="px-2 py-1 bg-surface-container-high text-secondary hover:bg-secondary-container hover:text-on-secondary font-label-caps text-label-caps rounded">
+                        RECUSAR
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <!-- ROW 3: Investidor Qualificado -->
+                <tr class="hover:bg-surface-container/60 transition-colors">
+                  <td class="py-3.5 px-4">
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-9 h-9 rounded bg-surface-container-highest flex items-center justify-center text-on-surface-variant font-bold font-ticker-md text-sm shrink-0">
+                        CM
+                      </div>
+                      <div class="flex flex-col">
+                        <span class="font-headline-sm text-sm font-semibold text-on-surface">Carlos Henrique
+                          Mendes</span>
+                        <div class="flex items-center gap-2 text-outline font-ticker-md text-xs">
+                          <span>#APX-553210</span>
+                          <span>•</span>
+                          <span class="font-body-sm text-xs text-on-surface-variant">carlos.mendes@mendescorp.com</span>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <span class="text-on-surface font-label-caps text-label-caps">INVESTIDOR QUALIFICADO</span>
+                    <span class="block text-xs text-outline font-body-sm">Atestado de Aptidão 2024 Válido</span>
+                  </td>
+                  <td class="py-3.5 px-4 text-right font-ticker-md text-sm text-on-surface">
+                    R$ 850.000,00
+                    <span class="block text-xs text-outline font-body-sm">Portfólio Hypercar Apex</span>
+                  </td>
+                  <td class="py-3.5 px-4 text-right font-ticker-md text-sm text-on-surface">
+                    R$ 500.000,00
+                  </td>
+                  <td class="py-3.5 px-4 text-center">
+                    <span
+                      class="inline-flex items-center px-2 py-0.5 rounded bg-primary/10 text-primary font-label-caps text-label-caps">
+                      ATIVO
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-center">
+                    <span
+                      class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-xs font-ticker-md text-on-surface-variant">
+                      <span class="material-symbols-outlined text-xs text-primary">key</span> YubiKey NFC
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-right">
+                    <button
+                      class="px-2.5 py-1 bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps rounded">
+                      GERENCIAR
+                    </button>
+                  </td>
+                </tr>
+                <!-- ROW 4: Apex Private Top Tier -->
+                <tr class="hover:bg-surface-container/60 transition-colors">
+                  <td class="py-3.5 px-4">
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-9 h-9 rounded bg-primary-container/30 flex items-center justify-center text-primary font-bold font-ticker-md text-sm shrink-0">
+                        RC
+                      </div>
+                      <div class="flex flex-col">
+                        <div class="flex items-center gap-1.5">
+                          <span class="font-headline-sm text-sm font-semibold text-on-surface">Roberto Civita Jr</span>
+                          <span class="material-symbols-outlined text-xs text-primary">verified</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-outline font-ticker-md text-xs">
+                          <span>#APX-994102</span>
+                          <span>•</span>
+                          <span class="font-body-sm text-xs text-on-surface-variant">rcivita@apexvault.vip</span>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <span class="text-primary font-label-caps text-label-caps">APEX PRIVATE // TITANIUM FOUNDER</span>
+                    <span class="block text-xs text-outline font-body-sm">Conselheiro de Aquisição de Carros</span>
+                  </td>
+                  <td class="py-3.5 px-4 text-right font-ticker-md text-sm text-primary font-bold">
+                    R$ 5.400.000,00
+                    <span class="block text-xs text-outline font-body-sm">Custódia F1 Ayrton Senna 1993</span>
+                  </td>
+                  <td class="py-3.5 px-4 text-right">
+                    <span
+                      class="font-ticker-md text-xs text-primary-fixed bg-primary-container/20 px-2 py-0.5 rounded uppercase">ILIMITADO
+                      (MASTER)</span>
+                  </td>
+                  <td class="py-3.5 px-4 text-center">
+                    <span
+                      class="inline-flex items-center px-2 py-0.5 rounded bg-primary/10 text-primary font-label-caps text-label-caps">
+                      ATIVO
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-center">
+                    <span
+                      class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-xs font-ticker-md text-primary">
+                      <span class="material-symbols-outlined text-xs">memory</span> HSM P-256
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-right">
+                    <button
+                      class="px-2.5 py-1 bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps rounded">
+                      GERENCIAR
+                    </button>
+                  </td>
+                </tr>
+                <!-- ROW 5: Bunker Custodian Operator -->
+                <tr class="hover:bg-surface-container/60 transition-colors">
+                  <td class="py-3.5 px-4">
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-9 h-9 rounded bg-surface-container-highest flex items-center justify-center text-outline font-bold font-ticker-md text-sm shrink-0">
+                        MS
+                      </div>
+                      <div class="flex flex-col">
+                        <div class="flex items-center gap-1.5">
+                          <span class="font-headline-sm text-sm font-semibold text-on-surface">Marcos F. Siqueira</span>
+                          <span
+                            class="px-1.5 py-0.2 bg-surface-container-highest text-outline rounded text-[10px] font-label-caps">OPERACIONAL</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-outline font-ticker-md text-xs">
+                          <span>#ADM-004</span>
+                          <span>•</span>
+                          <span class="font-body-sm text-xs text-on-surface-variant">marcos.custodia@apex.capital</span>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <span class="text-on-surface-variant font-label-caps text-label-caps">CUSTÓDIA FÍSICA &amp;
+                      TELEMETRIA</span>
+                    <span class="block text-xs text-outline font-body-sm">Operador Chefe de Bunker SP</span>
+                  </td>
+                  <td class="py-3.5 px-4 text-right font-ticker-md text-sm text-outline">
+                    R$ 0,00 (NÃO INVESTIDOR)
+                  </td>
+                  <td class="py-3.5 px-4 text-right font-ticker-md text-xs text-outline">
+                    SEM ALÇADA MONETÁRIA
+                  </td>
+                  <td class="py-3.5 px-4 text-center">
+                    <span
+                      class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-caps text-label-caps">
+                      ATIVO (COMERCIAL)
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-center">
+                    <span
+                      class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-xs font-ticker-md text-primary">
+                      <span class="material-symbols-outlined text-xs">badge</span> PKI Token L4
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-right">
+                    <div class="flex items-center justify-end gap-1">
+                      <button
+                        class="px-2 py-1 bg-secondary-container/20 text-secondary hover:bg-secondary-container hover:text-on-secondary font-label-caps text-label-caps rounded">
+                        REVOGAR
+                      </button>
+                      <button
+                        class="px-2 py-1 bg-surface-container text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps rounded">
+                        LOGS
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <!-- ROW 6: Alexandre Vance SuperAdmin Root -->
+                <tr class="bg-primary/5 hover:bg-primary/10 transition-colors">
+                  <td class="py-3.5 px-4">
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-9 h-9 rounded bg-primary text-on-primary flex items-center justify-center font-bold font-ticker-md text-sm shrink-0">
+                        AV
+                      </div>
+                      <div class="flex flex-col">
+                        <div class="flex items-center gap-1.5">
+                          <span class="font-headline-sm text-sm font-semibold text-primary">Dr. Alexandre Vance</span>
+                          <span class="material-symbols-outlined text-xs text-primary">verified_user</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-outline font-ticker-md text-xs">
+                          <span>#ROOT-001</span>
+                          <span>•</span>
+                          <span class="font-body-sm text-xs text-on-surface-variant">alexandre.vance@apex.capital</span>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <span class="text-primary font-label-caps text-label-caps">SUPERADMIN MASTER ROOT</span>
+                    <span class="block text-xs text-outline font-body-sm">Signatário de Chaves Fiduciárias CVM</span>
+                  </td>
+                  <td class="py-3.5 px-4 text-right font-ticker-md text-sm text-primary">
+                    MASTER PORTFOLIO AUM
+                  </td>
+                  <td class="py-3.5 px-4 text-right">
+                    <span class="font-ticker-md text-xs text-primary font-bold">CONTROLE TOTAL IRRESTRITO</span>
+                  </td>
+                  <td class="py-3.5 px-4 text-center">
+                    <span
+                      class="inline-flex items-center px-2 py-0.5 rounded bg-primary text-on-primary font-label-caps text-label-caps font-bold">
+                      ROOT ACTIVE
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-center">
+                    <span
+                      class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-xs font-ticker-md text-primary font-bold">
+                      <span class="material-symbols-outlined text-xs">security</span> HSM LVL 5
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-right">
+                    <span class="font-label-caps text-label-caps text-outline">PROTECTED ROOT</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- Table Pagination -->
+          <div class="px-space-md py-3 bg-surface-container-lowest flex items-center justify-between text-body-sm">
+            <div class="text-outline font-ticker-md text-xs">
+              PÁGINA 01 DE 118 // REGISTROS CRIPTOGRAFADOS E ASSINADOS POR HSM
+            </div>
+            <div class="flex items-center gap-1 font-ticker-md text-xs">
+              <button
+                class="px-2.5 py-1 bg-surface-container text-outline rounded hover:text-on-surface disabled:opacity-50"
+                disabled="">ANTERIOR</button>
+              <button class="px-2.5 py-1 bg-primary text-on-primary font-bold rounded">1</button>
+              <button
+                class="px-2.5 py-1 bg-surface-container text-on-surface rounded hover:bg-surface-container-high">2</button>
+              <button
+                class="px-2.5 py-1 bg-surface-container text-on-surface rounded hover:bg-surface-container-high">3</button>
+              <span class="text-outline px-1">...</span>
+              <button
+                class="px-2.5 py-1 bg-surface-container text-on-surface rounded hover:bg-surface-container-high">118</button>
+              <button
+                class="px-2.5 py-1 bg-surface-container text-on-surface rounded hover:bg-surface-container-high">PRÓXIMO</button>
+            </div>
+          </div>
+        </div>
+        <!-- BOTTOM MASTER ACTION PANEL & GRANULAR RBAC MATRIX (INSPECTOR DRAWER) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+          <!-- SELECTED USER INSPECTION & RBAC CONTROLS (8 COLS) -->
+          <div
+            class="lg:col-span-8 bg-surface-container-low p-space-lg rounded shadow-xl flex flex-col justify-between">
+            <div>
+              <div
+                class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-sm border-b border-surface-container gap-2">
+                <div class="flex items-center gap-space-sm">
+                  <div
+                    class="w-10 h-10 rounded bg-primary/20 flex items-center justify-center text-primary font-bold text-base">
+                    RS
+                  </div>
+                  <div>
+                    <div class="flex items-center gap-2">
+                      <h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Rodrigo Sanches da
+                        Silva</h3>
+                      <span class="px-2 py-0.5 rounded bg-primary/20 text-primary font-label-caps text-label-caps">ID
+                        #APX-882190</span>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Painel de Privilégios Granulares RBAC
+                      &amp; Diretrizes Fiduciárias</p>
+                  </div>
+                </div>
+                <span class="inline-flex items-center gap-1 font-label-caps text-label-caps text-outline">
+                  <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                  SESSÃO ATIVA EM IP: 187.52.190.12 (SP/BR)
+                </span>
+              </div>
+              <!-- PERMISSION SWITCHES GRID -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md mt-space-md">
+                <!-- Switch 1 -->
+                <label
+                  class="flex items-start justify-between p-space-sm bg-surface-container rounded cursor-pointer hover:bg-surface-container-high transition-colors">
+                  <div class="flex flex-col pr-4">
+                    <span class="font-headline-sm text-sm font-semibold text-on-surface">Pode Comprar Drops
+                      Primários</span>
+                    <span class="font-body-sm text-xs text-outline">Habilita alocação na emissão oficial de cotas de
+                      novos hipercarros.</span>
+                  </div>
+                  <input checked=""
+                    class="mt-1 h-4 w-4 rounded bg-surface-container-lowest text-primary focus:ring-0 focus:ring-offset-0 border-0 cursor-pointer accent-primary"
+                    type="checkbox" />
+                </label>
+                <!-- Switch 2 -->
+                <label
+                  class="flex items-start justify-between p-space-sm bg-surface-container rounded cursor-pointer hover:bg-surface-container-high transition-colors">
+                  <div class="flex flex-col pr-4">
+                    <span class="font-headline-sm text-sm font-semibold text-on-surface">Pode Negociar no Livro
+                      Secundário</span>
+                    <span class="font-body-sm text-xs text-outline">Permite ordens a mercado e a limite no orderbook
+                      peer-to-peer.</span>
+                  </div>
+                  <input checked=""
+                    class="mt-1 h-4 w-4 rounded bg-surface-container-lowest text-primary focus:ring-0 focus:ring-offset-0 border-0 cursor-pointer accent-primary"
+                    type="checkbox" />
+                </label>
+                <!-- Switch 3 -->
+                <label
+                  class="flex items-start justify-between p-space-sm bg-surface-container rounded cursor-pointer hover:bg-surface-container-high transition-colors">
+                  <div class="flex flex-col pr-4">
+                    <div class="flex items-center gap-1.5">
+                      <span class="font-headline-sm text-sm font-semibold text-on-surface">Acesso Físico ao Bunker
+                        Apex</span>
+                      <span class="material-symbols-outlined text-xs text-primary">lock</span>
+                    </div>
+                    <span class="font-body-sm text-xs text-outline">Agendamento de visita privativa e inspeção técnica
+                      com perito.</span>
+                  </div>
+                  <input checked=""
+                    class="mt-1 h-4 w-4 rounded bg-surface-container-lowest text-primary focus:ring-0 focus:ring-offset-0 border-0 cursor-pointer accent-primary"
+                    type="checkbox" />
+                </label>
+                <!-- Switch 4 -->
+                <label
+                  class="flex items-start justify-between p-space-sm bg-surface-container rounded cursor-pointer hover:bg-surface-container-high transition-colors">
+                  <div class="flex flex-col pr-4">
+                    <span class="font-headline-sm text-sm font-semibold text-on-surface">Operações OTC de Grande
+                      Porte</span>
+                    <span class="font-body-sm text-xs text-outline">Acesso direto ao balcão fechado para transações &gt;
+                      R$ 1.000.000.</span>
+                  </div>
+                  <input
+                    class="mt-1 h-4 w-4 rounded bg-surface-container-lowest text-primary focus:ring-0 focus:ring-offset-0 border-0 cursor-pointer accent-primary"
+                    type="checkbox" />
+                </label>
+                <!-- Switch 5 -->
+                <label
+                  class="flex items-start justify-between p-space-sm bg-surface-container rounded cursor-pointer hover:bg-surface-container-high transition-colors md:col-span-2">
+                  <div class="flex flex-col pr-4">
+                    <div class="flex items-center gap-1.5">
+                      <span class="font-headline-sm text-sm font-semibold text-secondary">Bypass de Limite CVM 175
+                        (Exceção Fiduciária)</span>
+                      <span
+                        class="px-1.5 py-0.5 rounded bg-secondary-container/20 text-secondary font-label-caps text-[10px]">REQUIRES
+                        HSM SIGN</span>
+                    </div>
+                    <span class="font-body-sm text-xs text-outline">Isenta o investidor da trava percentual máxima de
+                      10% por ativo colecionável.</span>
+                  </div>
+                  <input
+                    class="mt-1 h-4 w-4 rounded bg-surface-container-lowest text-secondary focus:ring-0 focus:ring-offset-0 border-0 cursor-pointer accent-secondary"
+                    type="checkbox" />
+                </label>
+              </div>
+            </div>
+            <!-- FOOTER BUTTONS IN INSPECTOR -->
+            <div
+              class="flex flex-wrap items-center justify-between gap-space-sm pt-space-md mt-space-md border-t border-surface-container">
+              <span class="font-label-caps text-label-caps text-outline">ÚLTIMA MODIFICAÇÃO: HOJE ÀS 10:44 POR AVANCE
+                (SUPERADMIN)</span>
+              <div class="flex items-center gap-2">
+                <button
+                  class="px-space-md py-2 bg-surface-container text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps rounded"
+                  type="button">
+                  DESCARTAR ALTERAÇÕES
+                </button>
+                <button
+                  class="px-space-md py-2 bg-primary text-on-primary font-label-caps text-label-caps font-bold rounded hover:bg-primary-fixed shadow-md"
+                  type="button">
+                  SALVAR PERMISSÕES NA LEDGER
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- SECURITY OVERRIDE & AUDIT CONTROLS (4 COLS) -->
+          <div
+            class="lg:col-span-4 bg-surface-container-low p-space-lg rounded shadow-xl flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 pb-space-sm border-b border-surface-container text-secondary">
+                <span class="material-symbols-outlined text-lg">admin_panel_settings</span>
+                <h3 class="font-headline-sm text-headline-sm font-semibold">AÇÕES CRÍTICAS DE SEGURANÇA</h3>
+              </div>
+              <div class="my-space-md flex flex-col space-y-3">
+                <div class="p-space-sm bg-surface-container rounded flex items-center justify-between">
+                  <div class="flex flex-col">
+                    <span class="font-label-caps text-label-caps text-on-surface font-semibold">STATUS DO HARDWARE
+                      HSM</span>
+                    <span class="font-body-sm text-xs text-outline">Chave P-256 Pareada com Sucesso</span>
+                  </div>
+                  <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                </div>
+                <div class="p-space-sm bg-surface-container rounded flex items-center justify-between">
+                  <div class="flex flex-col">
+                    <span class="font-label-caps text-label-caps text-on-surface font-semibold">DISPOSITIVOS
+                      ATIVOS</span>
+                    <span class="font-body-sm text-xs text-outline">1 MacBook Pro M3, 1 iPhone 16 Pro</span>
+                  </div>
+                  <button class="text-xs font-label-caps text-primary hover:underline">VER DETALHES</button>
+                </div>
+                <div class="p-space-sm bg-secondary-container/10 rounded">
+                  <span class="font-label-caps text-label-caps text-secondary font-semibold uppercase">Revogação
+                    Cautelar Imediata</span>
+                  <p class="font-body-sm text-xs text-on-surface-variant mt-1">
+                    Força o encerramento imediato de todos os tokens JWT, revoga acessos à API, cancela ordens ativas no
+                    book e bloqueia logins futuros.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- CIRCUIT BREAKER / EMERGENCY OVERRIDE BUTTON -->
+            <div class="pt-space-md border-t border-surface-container flex flex-col gap-2">
+              <button
+                class="w-full py-3 px-space-md bg-secondary-container text-on-secondary-container font-label-caps text-label-caps font-bold tracking-wider rounded hover:bg-on-secondary hover:text-white transition-all flex items-center justify-center gap-2 shadow-lg active:scale-98"
+                onclick="document.getElementById('security-modal').classList.remove('hidden')" type="button">
+                <span class="material-symbols-outlined text-base">power_settings_new</span>
+                <span>RESETAR CREDENCIAIS &amp; EXPULSAR SESSÕES</span>
+              </button>
+              <span class="font-label-caps text-center text-[10px] text-outline">REQUER CONFIRMAÇÃO HSM DO SUPERADMIN
+                ROOT</span>
+            </div>
+          </div>
+        </div>
+        <!-- SECURITY OVERRIDE CONFIRMATION MODAL (HIDDEN BY DEFAULT) -->
+        <div
+          class="hidden fixed inset-0 z-50 flex items-center justify-center bg-surface-container-lowest/80 backdrop-blur-md p-space-md"
+          id="security-modal">
+          <div
+            class="bg-surface-container-low max-w-md w-full p-space-lg rounded shadow-2xl flex flex-col gap-space-md relative">
+            <div class="flex items-center gap-3 text-secondary">
+              <div class="w-10 h-10 rounded bg-secondary-container/20 flex items-center justify-center">
+                <span class="material-symbols-outlined text-2xl">warning</span>
+              </div>
+              <div>
+                <h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">Confirmar Revogação Master?</h4>
+                <span class="font-label-caps text-label-caps text-secondary">PROTOCOLO DE EMERGÊNCIA FIDUCIÁRIA</span>
+              </div>
+            </div>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              Você está prestes a desconectar <strong>Rodrigo Sanches da Silva (#APX-882190)</strong> de todos os
+              terminais, cancelar 3 ordens ativas no livro e revogar o certificado HSM. Esta ação ficará gravada
+              indelevelmente na auditoria de conformidade CVM.
+            </p>
+            <div class="p-space-sm bg-surface-container rounded flex flex-col gap-1">
+              <span class="font-label-caps text-label-caps text-outline">DIGITE SUA CHAVE PIN DE MASTER ROOT:</span>
+              <input
+                class="bg-surface-container-lowest text-on-surface px-3 py-2 rounded font-ticker-md text-center tracking-widest focus:outline-none focus:ring-1 focus:ring-primary"
+                placeholder="••••••••" type="password" />
+            </div>
+            <div class="flex items-center justify-end gap-2 pt-2">
+              <button
+                class="px-space-md py-2 bg-surface-container text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps rounded"
+                onclick="document.getElementById('security-modal').classList.add('hidden')" type="button">
+                CANCELAR
+              </button>
+              <button
+                class="px-space-md py-2 bg-secondary-container text-on-secondary-container font-label-caps text-label-caps font-bold rounded hover:bg-on-secondary"
+                onclick="document.getElementById('security-modal').classList.add('hidden'); alert('Acesso revogado com sucesso!');"
+                type="button">
+                CONFIRMAR &amp; EXECUTAR
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
