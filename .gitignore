@@ -1,0 +1,34 @@
+# Dependências
+node_modules/
+.turbo/
+
+# Build outputs
+dist/
+.next/
+out/
+
+# Ambiente
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Expo
+.expo/
+android/
+ios/
+
+# Tests
+coverage/
