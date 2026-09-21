@@ -44,10 +44,10 @@ export class Subscription {
   @Column({ type: 'enum', enum: SubscriptionStatus, default: SubscriptionStatus.PENDING_PAYMENT })
   status: SubscriptionStatus;
 
-  @Column({ name: 'payment_method', length: 20, nullable: true })
+  @Column({ type: 'varchar', name: 'payment_method', length: 20, nullable: true })
   paymentMethod: string | null;
 
-  @Column({ name: 'payment_id', length: 255, nullable: true })
+  @Column({ type: 'varchar', name: 'payment_id', length: 255, nullable: true })
   paymentId: string | null; // ID do pagamento na Celcoin
 
   @Column({ name: 'pix_qr_code', type: 'text', nullable: true })

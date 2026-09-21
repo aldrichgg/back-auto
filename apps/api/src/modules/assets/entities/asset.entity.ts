@@ -66,10 +66,10 @@ export class Asset {
   })
   yieldTarget: number | null; // % a.a.
 
-  @Column({ name: 'investment_term_months', nullable: true })
+  @Column({ name: 'investment_term_months', type: 'int', nullable: true })
   investmentTermMonths: number | null;
 
-  @Column({ name: 'custody_location', length: 255, nullable: true })
+  @Column({ type: 'varchar', name: 'custody_location', length: 255, nullable: true })
   custodyLocation: string | null;
 
   @Column({ name: 'custody_temperature', type: 'decimal', scale: 1, nullable: true })
@@ -81,7 +81,7 @@ export class Asset {
   @Column({ name: 'insurance_value', type: 'decimal', precision: 15, scale: 2, nullable: true })
   insuranceValue: number | null;
 
-  @Column({ name: 'insurance_policy', length: 100, nullable: true })
+  @Column({ type: 'varchar', name: 'insurance_policy', length: 100, nullable: true })
   insurancePolicy: string | null;
 
   @Column({ name: 'thumbnail_url', type: 'text', nullable: true })

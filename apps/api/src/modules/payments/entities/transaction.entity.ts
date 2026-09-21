@@ -59,16 +59,16 @@ export class Transaction {
   @Column({ type: 'enum', enum: PaymentMethod, name: 'payment_method', nullable: true })
   paymentMethod: PaymentMethod | null;
 
-  @Column({ length: 255, nullable: true })
+  @Column({ type: 'varchar', length: 255, nullable: true })
   reference: string | null; // ID do PIX, TED, etc.
 
-  @Column({ name: 'external_id', length: 255, nullable: true })
+  @Column({ type: 'varchar', name: 'external_id', length: 255, nullable: true })
   externalId: string | null; // ID na Celcoin / banco
 
   @Column({ type: 'text', nullable: true })
   description: string | null;
 
-  @Column({ name: 'asset_id', nullable: true })
+  @Column({ type: 'uuid', name: 'asset_id', nullable: true })
   assetId: string | null; // Para compra/venda de cotas
 
   @Column({ name: 'ir_amount', type: 'decimal', precision: 15, scale: 2, default: 0 })

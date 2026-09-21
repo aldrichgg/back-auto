@@ -37,10 +37,10 @@ export class ProvenanceEntry {
   @Column({ length: 500 })
   event: string;
 
-  @Column({ length: 255, nullable: true })
+  @Column({ type: 'varchar', length: 255, nullable: true })
   owner: string | null;
 
-  @Column({ length: 255, nullable: true })
+  @Column({ type: 'varchar', length: 255, nullable: true })
   location: string | null;
 
   @Column({ default: false })
