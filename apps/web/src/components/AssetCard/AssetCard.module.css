@@ -1,0 +1,152 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: var(--margin-mobile);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.8), 0 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-color: var(--color-surface-container-highest);
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badgeContainer {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+}
+
+.badge {
+  font-family: var(--font-jetbrains);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 4px 8px;
+  border-radius: var(--rounded-sm);
+  text-transform: uppercase;
+}
+
+.badgeIpo {
+  background-color: var(--color-secondary-container);
+  color: var(--color-on-secondary-container);
+  animation: pulse 2s infinite;
+  box-shadow: var(--shadow-alert);
+}
+
+.badgeVerified {
+  background-color: rgba(24, 27, 34, 0.85);
+  backdrop-filter: blur(8px);
+  color: var(--color-on-surface);
+  border: 1px solid var(--color-primary-container);
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.4); }
+  70% { box-shadow: 0 0 0 6px rgba(225, 29, 72, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0); }
+}
+
+.content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.title {
+  font-family: var(--font-chivo);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-on-surface);
+}
+
+.vin {
+  font-family: var(--font-jetbrains);
+  font-size: 11px;
+  color: var(--color-aluminio-polido);
+  letter-spacing: 0.08em;
+}
+
+.metrics {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 4px;
+}
+
+.priceLabel {
+  font-size: 12px;
+  color: var(--color-on-surface-variant);
+}
+
+.priceValue {
+  font-family: var(--font-jetbrains);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-on-surface);
+}
+
+.yield {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-tertiary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.progressContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.progressBar {
+  height: 2px;
+  background-color: var(--color-surface-container-highest);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary-container), var(--color-primary-fixed));
+  border-radius: 2px;
+}
+
+.progressDetails {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-jakarta);
+  font-size: 11px;
+  color: var(--color-on-surface-variant);
+}
+
+.highlight {
+  color: var(--color-primary);
+  font-weight: 600;
+}

@@ -1,0 +1,110 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface-container);
+  border: 1px solid var(--color-surface-container-high);
+  border-radius: var(--rounded-lg);
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border-bottom: 1px solid var(--color-surface-container-high);
+}
+
+.thumbnail {
+  width: 64px;
+  height: 48px;
+  border-radius: var(--rounded-sm);
+  object-fit: cover;
+}
+
+.titleArea {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.title {
+  font-family: var(--font-chivo);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-on-surface);
+}
+
+.fractions {
+  font-family: var(--font-jakarta);
+  font-size: 12px;
+  color: var(--color-on-surface-variant);
+}
+
+.highlight {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.metricsRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.metricItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metricLabel {
+  font-family: var(--font-jakarta);
+  font-size: 11px;
+  color: var(--color-aluminio-polido);
+  text-transform: uppercase;
+}
+
+.metricValue {
+  font-family: var(--font-jetbrains);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-on-surface);
+}
+
+.positive {
+  color: var(--color-verde-liquidacao);
+}
+
+.negative {
+  color: var(--color-secondary);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sellButton {
+  padding: 10px 16px;
+  background: transparent;
+  border: 1px solid var(--color-outline-variant);
+  border-radius: var(--rounded-sm);
+  color: var(--color-on-surface);
+  font-family: var(--font-jakarta);
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.sellButton:hover {
+  background: var(--color-surface-container-highest);
+  border-color: var(--color-on-surface-variant);
+}

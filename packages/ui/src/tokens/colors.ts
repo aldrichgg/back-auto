@@ -1,0 +1,46 @@
+export const colors = {
+  background: '#111318',
+  surface: '#111318',
+  surfaceDim: '#111318',
+  surfaceContainerLowest: '#0c0e13',
+  surfaceContainerLow: '#1a1b21',
+  surfaceContainer: '#1e2025',
+  surfaceContainerHigh: '#282a2f',
+  surfaceContainerHighest: '#33353a',
+  surfaceBright: '#37393f',
+  surfaceVariant: '#33353a',
+  surfaceTint: '#e9c349',
+  
+  primary: '#f2ca50',
+  onPrimary: '#3c2f00',
+  primaryContainer: '#d4af37',
+  onPrimaryContainer: '#554300',
+  primaryFixed: '#ffe088',
+  primaryFixedDim: '#e9c349',
+  inversePrimary: '#735c00',
+
+  secondary: '#ffb3b6',
+  onSecondary: '#68001a',
+  secondaryContainer: '#cc003c',
+  onSecondaryContainer: '#ffdcdc',
+
+  tertiary: '#ffc37b',
+  onTertiary: '#472a00',
+  tertiaryContainer: '#f7a00f',
+  tertiaryFixedDim: '#ffb95f',
+
+  error: '#ffb4ab',
+  onError: '#690005',
+  errorContainer: '#93000a',
+
+  onSurface: '#e2e2e9',
+  onSurfaceVariant: '#d0c5af',
+  onBackground: '#e2e2e9',
+  outline: '#99907c',
+  outlineVariant: '#4d4635',
+
+  verdeLiquidacao: '#10B981',
+  platinaPuro: '#F8FAFC',
+  aluminioPolido: '#94A3B8',
+  acoFrio: '#64748B',
+};
