@@ -8,7 +8,7 @@ Este documento descreve o processo recomendado para implantar o backend (NestJS)
 
 1. Uma VPS com **Ubuntu 22.04 LTS ou 24.04 LTS** (Mínimo recomendado: 2 vCPUs, 4GB RAM).
 2. Acesso SSH via terminal à VPS como `root` ou usuário com privilégios `sudo`.
-3. Um **domínio** (ex: `api.apexcapital.com.br`) apontando para o IP público da sua VPS (Registro A no seu provedor de DNS).
+3. Um **domínio** (ex: `api.driveiin.com.br`) apontando para o IP público da sua VPS (Registro A no seu provedor de DNS).
 
 ## 2. Preparando o Servidor (Script Automático)
 
@@ -52,7 +52,7 @@ nano apps/api/.env
 **⚠️ Importante no `.env` de Produção:**
 - Mude `NODE_ENV=production`.
 - Defina `DB_PASS`, `REDIS_PASSWORD`, `JWT_SECRET` e `JWT_REFRESH_SECRET` para valores fortes.
-- Configure `CORS_ORIGINS` com os domínios finais do app web (ex: `https://admin.apexcapital.com.br`).
+- Configure `CORS_ORIGINS` com os domínios finais do app web (ex: `https://admin.driveiin.com.br`).
 
 ## 4. Iniciando os Serviços com Docker Compose
 
@@ -82,7 +82,7 @@ Para que a API fique acessível via porta 80/443 e não a 3000, precisamos do Ng
 
 Crie um arquivo de configuração para o seu domínio:
 ```bash
-sudo nano /etc/nginx/sites-available/api.apexcapital.com.br
+sudo nano /etc/nginx/sites-available/api.driveiin.com.br
 ```
 
 Cole o seguinte conteúdo (lembre-se de alterar o `server_name` para o seu domínio real):
@@ -90,7 +90,7 @@ Cole o seguinte conteúdo (lembre-se de alterar o `server_name` para o seu domí
 ```nginx
 server {
     listen 80;
-    server_name api.apexcapital.com.br;
+    server_name api.driveiin.com.br;
 
     location / {
         proxy_pass http://127.0.0.1:3000;
@@ -109,7 +109,7 @@ server {
 Ative a configuração e reinicie o Nginx:
 
 ```bash
-sudo ln -s /etc/nginx/sites-available/api.apexcapital.com.br /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/api.driveiin.com.br /etc/nginx/sites-enabled/
 sudo nginx -t   # Deve dizer "syntax is ok"
 sudo systemctl restart nginx
 ```
@@ -119,7 +119,7 @@ sudo systemctl restart nginx
 Com o DNS já propagado, gere o certificado SSL gratuito da Let's Encrypt:
 
 ```bash
-sudo certbot --nginx -d api.apexcapital.com.br
+sudo certbot --nginx -d api.driveiin.com.br
 ```
 
 O Certbot fará perguntas simples (seu e-mail) e configurará automaticamente o redirecionamento de HTTP para HTTPS no Nginx.
@@ -141,4 +141,5 @@ npm run typeorm -- schema:sync -d src/database/data-source.ts
 
 ## ✅ Pronto!
 
-Sua API do AutoEquity Apex Capital estará disponível segura e publicamente em `https://api.apexcapital.com.br/api/v1`. Os WebSockets também funcionarão perfeitamente devido às headers de `Upgrade` configuradas no Nginx!
+Sua API do AutoEquity Apex Capital estará disponível segura e publicamente em `https://api.driveiin.com.br/api/v1`. Os WebSockets também funcionarão perfeitamente devido às headers de `Upgrade` configuradas no Nginx!
+

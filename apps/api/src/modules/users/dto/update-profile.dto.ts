@@ -13,8 +13,9 @@ export class UpdateProfileDto {
   @IsMobilePhone('pt-BR')
   phone?: string;
 
-  @ApiPropertyOptional({ example: 'https://cdn.apexcapital.com.br/avatars/user.jpg' })
+  @ApiPropertyOptional({ example: 'https://cdn.driveiin.com.br/avatars/user.jpg' })
   @IsOptional()
   @IsUrl()
   avatarUrl?: string;
 }
+

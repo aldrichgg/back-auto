@@ -348,7 +348,7 @@ CREATE TABLE transactions (
 # API
 NODE_ENV=production
 PORT=3000
-API_URL=https://api.apexcapital.com.br
+API_URL=https://api.driveiin.com.br
 
 # Database
 DATABASE_URL=postgresql://user:password@localhost:5432/autoequity
@@ -384,3 +384,4 @@ FIREBASE_PRIVATE_KEY=
 HYPERLEDGER_CHANNEL=apex-custody
 HYPERLEDGER_CHAINCODE=asset-custody
 ```
+

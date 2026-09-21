@@ -12,7 +12,7 @@ export class ComplianceService {
     // TODO: Query all holdings, trades, distributions
     // TODO: Generate PDF report
     // TODO: Submit to CVM portal
-    // TODO: Send copy to compliance@apexcapital.com.br
+    // TODO: Send copy to compliance@driveiin.com.br
   }
 
   // ── AML: Monitoramento diário de transações suspeitas ─────
@@ -33,3 +33,4 @@ export class ComplianceService {
     // TODO: Make available in user profile
   }
 }
+

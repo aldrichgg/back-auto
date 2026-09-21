@@ -140,7 +140,7 @@
 - Finalidades declaradas: KYC, compliance regulatório, comunicações de serviço
 - Direito de portabilidade: exportação de dados em até **15 dias úteis** após solicitação
 - Direito ao esquecimento: encerramento de conta anonimiza dados em **30 dias** (exceto dados de transações, retidos por 10 anos por obrigação legal)
-- DPO: privacidade@apexcapital.com.br
+- DPO: privacidade@driveiin.com.br
 
 ### 6.4 Tributação (Investidor)
 - **Ganho de capital na venda de cotas:** alíquota de 15% (regressive table conforme prazo)
@@ -199,3 +199,4 @@
 - Labels `aria-*` em todos os elementos interativos
 - Suporte a `prefers-reduced-motion` (desabilitar animações pesadas)
 - Suporte a Dynamic Type (iOS) e Text Scaling (Android)
+

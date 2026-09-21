@@ -51,10 +51,11 @@ export class ConciergeService {
     return {
       name: 'Carlos Eduardo Fonseca',
       title: 'Diretor de Patrimônio & Relação com Investidores',
-      photoUrl: 'https://cdn.apexcapital.com.br/team/carlos.jpg',
+      photoUrl: 'https://cdn.driveiin.com.br/team/carlos.jpg',
       whatsapp: '+5511998765432',
-      email: 'carlos.fonseca@apexcapital.com.br',
+      email: 'carlos.fonseca@driveiin.com.br',
       calendlyUrl: 'https://calendly.com/apex-capital/reuniao',
     };
   }
 }
+

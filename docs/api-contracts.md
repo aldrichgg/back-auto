@@ -7,8 +7,8 @@
 ## Base URL
 
 ```
-Production:  https://api.apexcapital.com.br/api/v1
-Staging:     https://staging-api.apexcapital.com.br/api/v1
+Production:  https://api.driveiin.com.br/api/v1
+Staging:     https://staging-api.driveiin.com.br/api/v1
 Development: http://localhost:3000/api/v1
 ```
 
@@ -461,7 +461,7 @@ GET /concierge/manager
 ```typescript
 import { io } from 'socket.io-client';
 
-const socket = io('wss://api.apexcapital.com.br', {
+const socket = io('wss://api.driveiin.com.br', {
   auth: { token: accessToken },
   transports: ['websocket'],
 });
@@ -546,3 +546,4 @@ interface PaginatedResponse<T> {
   };
 }
 ```
+

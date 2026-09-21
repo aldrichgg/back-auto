@@ -49,7 +49,7 @@ Na aba **Env**, cole as variáveis que a API precisa para funcionar. Atualize os
 NODE_ENV=production
 PORT=3000
 API_PREFIX=api/v1
-CORS_ORIGINS=https://admin.apexcapital.com.br,https://app.apexcapital.com.br
+CORS_ORIGINS=https://admin.driveiin.com.br,https://app.driveiin.com.br
 
 # Banco de Dados (Use o nome do serviço Postgres criado no Easypanel como Host)
 DB_HOST=nome_do_servico_postgres
@@ -76,7 +76,7 @@ BCRYPT_ROUNDS=12
 
 ### Configurando os Domínios (Domains)
 Na aba **Domains**:
-- Adicione o domínio que você quer usar na API (ex: `api.apexcapital.com.br`).
+- Adicione o domínio que você quer usar na API (ex: `api.driveiin.com.br`).
 - Aponte o registro **A** ou **CNAME** no provedor do seu domínio (Cloudflare, Registro.br, etc.) para o IP da sua VPS.
 - Marque a opção **"Issue Let's Encrypt Certificate"** para gerar o SSL automaticamente.
 - Defina o **Port** como `3000` (que é a porta exposta pelo nosso Dockerfile).
@@ -104,6 +104,7 @@ Se o banco de dados foi configurado corretamente, o TypeORM irá conectar no Pos
 
 ## ✅ Conclusão
 
-Sua API da AutoEquity Apex Capital já deve estar acessível de forma segura, respondendo via HTTPS em `https://api.apexcapital.com.br/api/v1/health`. 
+Sua API da AutoEquity Apex Capital já deve estar acessível de forma segura, respondendo via HTTPS em `https://api.driveiin.com.br/api/v1/health`. 
 
 Toda vez que você enviar um código novo para a branch do GitHub, o Easypanel (se estiver configurado com Webhooks) fará o rebuild e deploy do novo código com *Zero Downtime*.
+
