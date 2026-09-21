@@ -51,8 +51,7 @@ import awsConfig from '@config/aws.config';
         migrations: [join(__dirname, 'database/migrations', '*.{ts,js}')],
         synchronize: config.get<boolean>('DB_SYNC', false),
         logging: config.get<boolean>('DB_LOGGING', false),
-        ssl:
-          config.get('NODE_ENV') === 'production'
+        ssl: config.get('DB_SSL') === 'true'
             ? { rejectUnauthorized: false }
             : false,
       }),
