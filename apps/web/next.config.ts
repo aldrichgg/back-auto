@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Frontend runs on port 3001 (backend is on 3000)
   // Start with: next dev -p 3001
+  output: "standalone",
 
   images: {
     remotePatterns: [

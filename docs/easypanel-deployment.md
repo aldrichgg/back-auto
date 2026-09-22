@@ -108,3 +108,37 @@ Sua API da AutoEquity Apex Capital já deve estar acessível de forma segura, re
 
 Toda vez que você enviar um código novo para a branch do GitHub, o Easypanel (se estiver configurado com Webhooks) fará o rebuild e deploy do novo código com *Zero Downtime*.
 
+---
+
+## 4. Implantando o Web App (Painel Admin)
+
+O processo para o painel de administração em Next.js é muito semelhante ao da API.
+
+1. No seu projeto do Easypanel, clique em **"+ Service"** -> aba **App**.
+2. Dê um nome para a aplicação (ex: `web` ou `admin`).
+
+### Configurando o Código Fonte
+Na aba **Source**, conecte o mesmo repositório e branch.
+
+### Configurando a Build
+Na aba **Build**:
+- Selecione a opção **Dockerfile**.
+- **Dockerfile Path:** `apps/web/Dockerfile`
+
+### Configurando as Variáveis de Ambiente
+Na aba **Env**, defina as variáveis que o frontend necessita:
+
+```env
+NODE_ENV=production
+PORT=3001
+# URL da API que configuramos no passo 2
+NEXT_PUBLIC_API_URL=https://api.driveiin.com.br
+```
+
+### Configurando os Domínios
+Na aba **Domains**:
+- Adicione o domínio do painel (ex: `admin.driveiin.com.br`).
+- Marque **"Issue Let's Encrypt Certificate"**.
+- Defina o **Port** como `3001` (porta exposta pelo nosso Dockerfile do frontend).
+
+Após salvar, clique em **Deploy**. O painel será construído e disponibilizado no seu domínio.
