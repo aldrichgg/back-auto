@@ -3,50 +3,13 @@
 import React, { useState } from 'react';
 import styles from './page.module.css';
 import { AssetCard } from '@/components/AssetCard/AssetCard';
-
-const MOCK_ASSETS = [
-  {
-    id: 'f40-1992',
-    name: 'Ferrari F40',
-    year: 1992,
-    vin: 'ZFFGJ34B000094***',
-    pricePerFraction: 8500,
-    yieldExpected: 14.2,
-    progressPercent: 78,
-    spotsRemaining: 44,
-    status: 'IPO_LIVE' as const,
-    imageUrl: 'https://images.unsplash.com/photo-1592853625601-bb11b629cb8e?auto=format&fit=crop&q=80&w=1200&h=675'
-  },
-  {
-    id: 'gt3-2018',
-    name: 'Porsche 911 GT3 RS',
-    year: 2018,
-    vin: 'WP0ZZZ99ZJS123***',
-    pricePerFraction: 5200,
-    yieldExpected: 11.8,
-    progressPercent: 100,
-    spotsRemaining: 0,
-    status: 'VERIFIED' as const,
-    imageUrl: 'https://images.unsplash.com/photo-1503376712344-6a0c20165e63?auto=format&fit=crop&q=80&w=1200&h=675'
-  },
-  {
-    id: 'mclaren-p1',
-    name: 'McLaren P1',
-    year: 2014,
-    vin: 'SBM11AAA6EW000***',
-    pricePerFraction: 12000,
-    yieldExpected: 16.5,
-    progressPercent: 32,
-    spotsRemaining: 170,
-    status: 'IPO_LIVE' as const,
-    imageUrl: 'https://images.unsplash.com/photo-1621245785023-eb56eb910bf1?auto=format&fit=crop&q=80&w=1200&h=675'
-  }
-];
+import { useAssets } from '@/lib/hooks/useApi';
 
 const CATEGORIES = ['Todos', 'IPO', 'Secundário', 'Clássicos', 'Hipercarros'];
 
 export default function GaragemPage() {
   const [activeCategory, setActiveCategory] = useState('Todos');
+  const { assets, isLoading, isError } = useAssets();
 
   return (
     <div className={styles.container}>
@@ -93,11 +56,22 @@ export default function GaragemPage() {
       <div>
         <h2 className={styles.sectionTitle}>
           Em Destaque
-          <span className={styles.titleCount}>3 ativos</span>
+          <span className={styles.titleCount}>
+            {isLoading ? '...' : `${assets.length} ativos`}
+          </span>
         </h2>
         
         <div>
-          {MOCK_ASSETS.map((asset) => (
+          {isLoading && <p style={{ color: 'var(--color-on-surface-variant)', textAlign: 'center', margin: '20px' }}>Carregando ativos...</p>}
+          {isError && <p style={{ color: '#ef4444', textAlign: 'center', margin: '20px' }}>Erro ao carregar ativos.</p>}
+          
+          {!isLoading && !isError && assets.length === 0 && (
+            <p style={{ color: 'var(--color-on-surface-variant)', textAlign: 'center', margin: '20px' }}>
+              Nenhum ativo disponível no momento.
+            </p>
+          )}
+
+          {!isLoading && assets.map((asset: any) => (
             <AssetCard key={asset.id} {...asset} />
           ))}
         </div>

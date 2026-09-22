@@ -57,12 +57,18 @@ export function persistSession(auth: AuthResponse) {
   localStorage.setItem('apex_access_token', auth.accessToken);
   localStorage.setItem('apex_refresh_token', auth.refreshToken);
   localStorage.setItem('apex_user', JSON.stringify(auth.member));
+
+  // Salvar em Cookie para o Middleware do Next.js poder ler
+  const maxAge = auth.expiresIn || 86400 * 7; // 7 dias
+  document.cookie = `apex_access_token=${auth.accessToken}; path=/; max-age=${maxAge}; samesite=lax`;
 }
 
 export function clearSession() {
   localStorage.removeItem('apex_access_token');
   localStorage.removeItem('apex_refresh_token');
   localStorage.removeItem('apex_user');
+
+  document.cookie = `apex_access_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT`;
 }
 
 export function getStoredUser(): AuthResponse['member'] | null {

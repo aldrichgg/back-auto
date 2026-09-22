@@ -142,3 +142,36 @@ Na aba **Domains**:
 - Defina o **Port** como `3001` (porta exposta pelo nosso Dockerfile do frontend).
 
 Após salvar, clique em **Deploy**. O painel será construído e disponibilizado no seu domínio.
+
+---
+
+## 5. Implantando o Aplicativo Principal / Investidor (Frontend Web)
+
+O aplicativo voltado para os investidores (feito com Expo/React Native) também pode ser compilado para Web e servido como um PWA de alta performance pelo Easypanel.
+
+1. No seu projeto do Easypanel, clique em **"+ Service"** -> aba **App**.
+2. Dê um nome para a aplicação (ex: `app` ou `front`).
+
+### Configurando o Código Fonte
+Na aba **Source**, conecte o mesmo repositório e branch.
+
+### Configurando a Build
+Na aba **Build**:
+- Selecione a opção **Dockerfile**.
+- **Dockerfile Path:** `apps/mobile/Dockerfile`
+
+### Configurando as Variáveis de Ambiente
+Na aba **Env**, defina a variável da API:
+
+```env
+# URL da API para o app cliente se comunicar
+EXPO_PUBLIC_API_URL=https://api.driveiin.com.br
+```
+
+### Configurando os Domínios
+Na aba **Domains**:
+- Adicione o domínio do app principal (ex: `app.driveiin.com.br`).
+- Marque **"Issue Let's Encrypt Certificate"**.
+- Defina o **Port** como `80` (porta padrão do Nginx que configuramos no Dockerfile do mobile).
+
+Após salvar, clique em **Deploy**. O Nginx servirá os arquivos estáticos do aplicativo perfeitamente!

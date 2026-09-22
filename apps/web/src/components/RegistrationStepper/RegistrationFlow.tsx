@@ -2,10 +2,46 @@
 
 import React, { useState } from 'react';
 import styles from './RegistrationFlow.module.css';
+import { useRouter } from 'next/navigation';
+import { register } from '@/lib/api/auth';
 
 export const RegistrationFlow: React.FC = () => {
   const [step, setStep] = useState(1);
   const totalSteps = 5;
+  const router = useRouter();
+
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    password: '',
+    cpf: '',
+    phone: '',
+  });
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleNext = () => {
+    if (step < totalSteps) setStep(step + 1);
+  };
+
+  const handleSubmit = async () => {
+    setError('');
+    setIsLoading(true);
+    try {
+      await register(formData);
+      // Pós cadastro, mandar pro login
+      router.push('/login');
+    } catch (err: any) {
+      setError(err.response?.data?.message || 'Erro ao realizar cadastro.');
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <div className={styles.container}>
@@ -18,6 +54,8 @@ export const RegistrationFlow: React.FC = () => {
       </div>
 
       <div className={styles.formContent}>
+        {error && <div style={{color: '#ef4444', marginBottom: '16px', textAlign: 'center'}}>{error}</div>}
+
         {step === 1 && (
           <div className={styles.section}>
             <h2 className={styles.sectionTitle}>Credenciais de Acesso</h2>
@@ -25,17 +63,17 @@ export const RegistrationFlow: React.FC = () => {
             
             <div className={styles.inputGroup}>
               <label className={styles.label}>Nome Completo</label>
-              <input type="text" className={styles.input} placeholder="Ex: Rodrigo Almeida" />
+              <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} className={styles.input} placeholder="Ex: Rodrigo Almeida" />
             </div>
             
             <div className={styles.inputGroup}>
               <label className={styles.label}>E-mail Corporativo</label>
-              <input type="email" className={styles.input} placeholder="nome@empresa.com.br" />
+              <input type="email" name="email" value={formData.email} onChange={handleChange} className={styles.input} placeholder="nome@empresa.com.br" />
             </div>
 
             <div className={styles.inputGroup}>
               <label className={styles.label}>Senha Mestra</label>
-              <input type="password" className={styles.input} placeholder="••••••••••••" />
+              <input type="password" name="password" value={formData.password} onChange={handleChange} className={styles.input} placeholder="••••••••••••" />
               <div className={styles.strengthMeter}>
                 <div className={styles.strengthBar} data-level="3"></div>
                 <span className={styles.strengthText}>Forte</span>
@@ -51,7 +89,7 @@ export const RegistrationFlow: React.FC = () => {
             
             <div className={styles.inputGroup}>
               <label className={styles.label}>CPF / CNPJ</label>
-              <input type="text" className={styles.input} placeholder="000.000.000-00" />
+              <input type="text" name="cpf" value={formData.cpf} onChange={handleChange} className={styles.input} placeholder="000.000.000-00" />
             </div>
 
             <div className={styles.inputGroup}>
@@ -61,7 +99,7 @@ export const RegistrationFlow: React.FC = () => {
 
             <div className={styles.inputGroup}>
               <label className={styles.label}>Telefone Celular</label>
-              <input type="tel" className={styles.input} placeholder="+55 (11) 99999-9999" />
+              <input type="tel" name="phone" value={formData.phone} onChange={handleChange} className={styles.input} placeholder="+55 (11) 99999-9999" />
             </div>
           </div>
         )}
@@ -111,10 +149,10 @@ export const RegistrationFlow: React.FC = () => {
             
             <div className={styles.summaryBox}>
               <div className={styles.summaryRow}>
-                <span>Nome:</span> <strong>Rodrigo Almeida</strong>
+                <span>Nome:</span> <strong>{formData.fullName || 'Não informado'}</strong>
               </div>
               <div className={styles.summaryRow}>
-                <span>E-mail:</span> <strong>rodrigo@apex.com</strong>
+                <span>E-mail:</span> <strong>{formData.email || 'Não informado'}</strong>
               </div>
               <div className={styles.summaryRow}>
                 <span>Status:</span> <strong style={{color: 'var(--color-verde-liquidacao)'}}>Investidor Qualificado</strong>
@@ -134,9 +172,11 @@ export const RegistrationFlow: React.FC = () => {
           <button className={styles.backBtn} onClick={() => setStep(step - 1)}>Voltar</button>
         )}
         {step < totalSteps ? (
-          <button className={styles.nextBtn} onClick={() => setStep(step + 1)}>Continuar</button>
+          <button className={styles.nextBtn} onClick={handleNext}>Continuar</button>
         ) : (
-          <button className={styles.submitBtn}>Assinar e Concluir</button>
+          <button className={styles.submitBtn} onClick={handleSubmit} disabled={isLoading}>
+            {isLoading ? 'Processando...' : 'Assinar e Concluir'}
+          </button>
         )}
       </div>
 

@@ -8,6 +8,17 @@
   gap: var(--space-lg);
 }
 
+.errorMessage {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  padding: 12px;
+  border-radius: var(--rounded-md);
+  font-family: var(--font-jakarta);
+  font-size: 13px;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  text-align: center;
+}
+
 .inputGroup {
   display: flex;
   flex-direction: column;

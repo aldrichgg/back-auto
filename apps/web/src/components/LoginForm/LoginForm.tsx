@@ -3,27 +3,47 @@
 import React, { useState } from 'react';
 import styles from './LoginForm.module.css';
 import { useRouter } from 'next/navigation';
+import { login, persistSession } from '@/lib/api/auth';
 
 export const LoginForm: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    router.push('/portfolio');
+    setError('');
+    setIsLoading(true);
+
+    try {
+      const response = await login({ email, password });
+      persistSession(response);
+      router.push('/');
+    } catch (err: any) {
+      setError(err.response?.data?.message || 'Erro ao realizar login. Verifique suas credenciais.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
     <div className={styles.container}>
       <form className={styles.form} onSubmit={handleLogin}>
         
+        {error && <div className={styles.errorMessage}>{error}</div>}
+
         <div className={styles.inputGroup}>
           <label className={styles.label}>E-mail Corporativo ou ID</label>
           <input 
             type="text" 
             className={styles.input} 
-            placeholder="#APX-XXXXXX"
-            defaultValue="#APX-0982-BR"
+            placeholder="admin@autoequity.com.br"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
           />
         </div>
 
@@ -37,7 +57,9 @@ export const LoginForm: React.FC = () => {
               type={showPassword ? "text" : "password"} 
               className={styles.input} 
               placeholder="••••••••••••"
-              defaultValue="apex-master-key"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
             />
             <button 
               type="button" 
@@ -61,8 +83,8 @@ export const LoginForm: React.FC = () => {
           <a href="#" className={styles.forgotLink}>Esqueceu a chave?</a>
         </div>
 
-        <button type="submit" className={styles.ctaBtn}>
-          <span className={styles.ctaText}>Iniciar Sessão no Terminal</span>
+        <button type="submit" className={styles.ctaBtn} disabled={isLoading}>
+          <span className={styles.ctaText}>{isLoading ? 'Iniciando...' : 'Iniciar Sessão no Terminal'}</span>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 12a10 10 0 1 0-20 0"/><path d="M12 17v-5"/><path d="M12 8h.01"/><path d="M16 14.5a4 4 0 0 0-8 0"/></svg>
         </button>
 
@@ -78,7 +100,7 @@ export const LoginForm: React.FC = () => {
         </button>
 
         <div className={styles.registerPrompt}>
-          Ainda não é membro Apex? <a href="#" className={styles.registerLink}>Solicitar Convite</a>
+          Ainda não é membro Apex? <a href="/cadastro" className={styles.registerLink}>Solicitar Convite</a>
         </div>
       </form>
     </div>
