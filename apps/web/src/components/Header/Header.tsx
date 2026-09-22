@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 export const Header = () => {
   const pathname = usePathname();
   
-  if (pathname === '/portfolio') return null;
+  if (pathname === '/portfolio' || pathname.startsWith('/garagem/ativos/') || pathname === '/mercado') return null;
 
   return (
     <header className={styles.header}>

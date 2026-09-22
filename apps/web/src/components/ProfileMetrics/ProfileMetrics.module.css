@@ -1,0 +1,67 @@
+.container {
+  margin: var(--space-lg) var(--gutter-mobile);
+}
+
+.title {
+  font-family: var(--font-chivo);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-on-surface);
+  margin-bottom: var(--space-md);
+  padding-left: 4px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+}
+
+.metricCard {
+  background-color: var(--color-surface-module);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--rounded-lg);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  font-family: var(--font-jakarta);
+  font-size: 11px;
+  color: var(--color-on-surface-variant);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.currency {
+  font-size: 12px;
+  color: var(--color-on-surface-variant);
+  margin-right: 4px;
+  font-weight: 500;
+}
+
+.valueMonetary {
+  font-family: var(--font-jetbrains);
+  font-variant-numeric: tabular-nums;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-on-surface);
+}
+
+.valueYield {
+  font-family: var(--font-jetbrains);
+  font-variant-numeric: tabular-nums;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-verde-liquidacao);
+}
+
+.valueText {
+  font-family: var(--font-jakarta);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-top: 2px;
+}

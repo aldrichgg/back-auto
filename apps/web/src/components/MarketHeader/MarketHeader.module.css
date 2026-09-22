@@ -1,0 +1,74 @@
+.headerContainer {
+  background-color: var(--color-surface-module); /* Nível 1 - Módulos */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: var(--space-md) var(--gutter-mobile);
+  padding-top: calc(var(--space-md) + env(safe-area-inset-top, 0px));
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+
+.backButton, .iconButton {
+  background: none;
+  border: none;
+  color: #e2e2e9; /* on-surface */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.assetSelector {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 6px 12px;
+  border-radius: var(--rounded-full);
+  cursor: pointer;
+}
+
+.assetName {
+  font-family: var(--font-chivo);
+  font-size: 16px;
+  font-weight: 700;
+  color: #e2e2e9;
+}
+
+.toggleContainer {
+  display: flex;
+  background-color: var(--color-background); /* Canvas level for inner inset */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--rounded-sm); /* 4px per DS */
+  overflow: hidden;
+}
+
+.toggleBtn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: var(--space-sm) 0;
+  font-family: var(--font-jetbrains);
+  font-size: 12px;
+  font-weight: 600;
+  color: #94A3B8; /* Alumínio Polido */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.05em;
+}
+
+.buyActive {
+  background-color: var(--color-verde-liquidacao);
+  color: var(--color-background);
+}
+
+.sellActive {
+  background-color: var(--color-secondary-container); /* Destrutivo */
+  color: var(--color-platina-puro);
+}

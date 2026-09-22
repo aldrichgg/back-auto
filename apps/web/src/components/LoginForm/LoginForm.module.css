@@ -1,0 +1,195 @@
+.container {
+  margin: var(--space-xl) var(--gutter-mobile);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.labelRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.label {
+  font-family: var(--font-jakarta);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-on-surface);
+}
+
+.chipEd25519 {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--color-verde-liquidacao);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  font-family: var(--font-jetbrains);
+  font-size: 9px;
+  padding: 2px 6px;
+  border-radius: var(--rounded-sm);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.passwordWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  background-color: var(--color-surface-module);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--rounded-md);
+  padding: 14px var(--space-md);
+  color: var(--color-on-surface);
+  font-family: var(--font-jetbrains);
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px rgba(242, 202, 80, 0.3);
+}
+
+.input::placeholder {
+  color: var(--color-on-surface-variant);
+  opacity: 0.5;
+}
+
+.toggleBtn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: var(--color-on-surface-variant);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.toggleBtn:hover {
+  color: var(--color-on-surface);
+}
+
+.optionsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -8px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-jakarta);
+  font-size: 12px;
+  color: var(--color-on-surface-variant);
+  cursor: pointer;
+}
+
+.checkbox {
+  accent-color: var(--color-primary);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.forgotLink {
+  font-family: var(--font-jakarta);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.ctaBtn {
+  margin-top: var(--space-md);
+  background: linear-gradient(135deg, #F2CA50 0%, #D4A936 100%);
+  color: #0b0d11; /* Canvas color for high contrast */
+  border: none;
+  border-radius: var(--rounded-md);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  font-family: var(--font-chivo);
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 4px 14px rgba(242, 202, 80, 0.25);
+}
+
+.ctaBtn:active {
+  transform: scale(0.98);
+}
+
+.biometricDivider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin: var(--space-sm) 0;
+}
+
+.dividerLine {
+  flex: 1;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dividerText {
+  font-family: var(--font-jakarta);
+  font-size: 12px;
+  color: var(--color-on-surface-variant);
+}
+
+.bioBtn {
+  background-color: var(--color-surface-container);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--color-on-surface);
+  border-radius: var(--rounded-md);
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  font-family: var(--font-jakarta);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.bioBtn:hover {
+  background-color: var(--color-surface-container-high);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.registerPrompt {
+  text-align: center;
+  font-family: var(--font-jakarta);
+  font-size: 13px;
+  color: var(--color-on-surface-variant);
+  margin-top: var(--space-md);
+}
+
+.registerLink {
+  color: var(--color-primary);
+  font-weight: 700;
+  text-decoration: none;
+}

@@ -1,0 +1,85 @@
+.historyContainer {
+  margin: var(--space-lg) var(--gutter-mobile);
+}
+
+.title {
+  font-family: var(--font-chivo);
+  font-size: 16px;
+  font-weight: 700;
+  color: #e2e2e9;
+  margin-bottom: var(--space-md);
+}
+
+.headerRow {
+  display: flex;
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: var(--space-xs);
+}
+
+.colHeader {
+  flex: 1;
+  font-family: var(--font-jakarta);
+  font-size: 11px;
+  color: #64748B; /* Aço Frio */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.colHeaderCenter {
+  flex: 1;
+  font-family: var(--font-jakarta);
+  font-size: 11px;
+  color: #64748B;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.colHeaderRight {
+  flex: 1;
+  font-family: var(--font-jakarta);
+  font-size: 11px;
+  color: #64748B;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: right;
+}
+
+.tradeList {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  padding: 6px 0;
+  font-family: var(--font-jetbrains);
+  font-variant-numeric: tabular-nums;
+  font-size: 13px;
+}
+
+.time {
+  flex: 1;
+  color: #94A3B8; /* Alumínio Polido */
+}
+
+.price {
+  flex: 1;
+  text-align: center;
+  font-weight: 600;
+}
+
+.buyColor {
+  color: var(--color-verde-liquidacao);
+}
+
+.sellColor {
+  color: var(--color-secondary-container);
+}
+
+.amount {
+  flex: 1;
+  text-align: right;
+  color: #e2e2e9;
+}

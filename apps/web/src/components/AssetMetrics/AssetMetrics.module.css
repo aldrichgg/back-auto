@@ -1,0 +1,93 @@
+.metricsContainer {
+  padding: var(--space-lg) var(--gutter-mobile);
+  background-color: #111318;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+}
+
+.label {
+  display: block;
+  font-family: var(--font-jakarta);
+  font-size: 12px;
+  color: var(--color-on-surface-variant);
+  margin-bottom: var(--space-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.price {
+  font-family: var(--font-jetbrains);
+  font-variant-numeric: tabular-nums;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-on-surface);
+}
+
+.yieldSection {
+  text-align: right;
+}
+
+.yieldValue {
+  font-family: var(--font-jetbrains);
+  font-variant-numeric: tabular-nums;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-tertiary-container);
+}
+
+.progressSection {
+  margin-bottom: var(--space-lg);
+}
+
+.progressLabels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-sm);
+}
+
+.progressPercent {
+  font-family: var(--font-jetbrains);
+  font-size: 14px;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.fractionsLeft {
+  font-family: var(--font-jakarta);
+  font-size: 12px;
+  color: var(--color-on-surface-variant);
+}
+
+.progressBarBg {
+  height: 4px;
+  background-color: var(--color-surface-container-high);
+  border-radius: var(--rounded-full);
+  overflow: hidden;
+}
+
+.progressBarFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary-container), var(--color-primary));
+  border-radius: var(--rounded-full);
+}
+
+.termSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space-md);
+  border-top: 1px dashed var(--color-outline-variant);
+}
+
+.termValue {
+  font-family: var(--font-jakarta);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-on-surface);
+}

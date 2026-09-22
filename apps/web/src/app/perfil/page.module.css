@@ -1,0 +1,47 @@
+.main {
+  background-color: var(--color-background);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.scrollArea {
+  flex: 1;
+  overflow-y: auto;
+  padding-top: calc(72px + var(--space-md)); /* Space for global header */
+  padding-bottom: calc(80px + var(--space-lg)); /* Space for bottom nav */
+}
+
+.logoutWrapper {
+  margin: var(--space-xl) var(--gutter-mobile) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.logoutBtn {
+  width: 100%;
+  padding: var(--space-md);
+  border-radius: var(--rounded-lg);
+  background-color: transparent;
+  border: 1px solid var(--color-secondary-container);
+  color: var(--color-secondary-container);
+  font-family: var(--font-jakarta);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.logoutBtn:hover {
+  background-color: rgba(225, 29, 72, 0.1);
+}
+
+.version {
+  font-family: var(--font-jetbrains);
+  font-size: 10px;
+  color: var(--color-on-surface-variant);
+  opacity: 0.5;
+  letter-spacing: 0.05em;
+}

@@ -1,0 +1,101 @@
+.cardContainer {
+  background-color: var(--color-surface-card);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--rounded-lg);
+  padding: var(--space-lg);
+  margin: var(--space-md) var(--gutter-mobile);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  box-shadow: var(--shadow-default);
+}
+
+.avatarWrapper {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--rounded-full);
+  border: 2px solid var(--color-primary);
+  padding: 4px;
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--rounded-full);
+  object-fit: cover;
+}
+
+.avatarPlaceholder {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--rounded-full);
+  background-color: var(--color-surface-container-high);
+  color: var(--color-on-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-chivo);
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.info {
+  flex: 1;
+}
+
+.nameRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: 2px;
+}
+
+.name {
+  font-family: var(--font-chivo);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--color-on-surface);
+}
+
+.verifiedBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category {
+  font-family: var(--font-jakarta);
+  font-size: 14px;
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+  font-weight: 600;
+}
+
+.idBox {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-background);
+  padding: 4px 10px;
+  border-radius: var(--rounded-sm);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.idLabel {
+  font-family: var(--font-jakarta);
+  font-size: 10px;
+  color: var(--color-on-surface-variant);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.idValue {
+  font-family: var(--font-jetbrains);
+  font-size: 12px;
+  color: var(--color-on-surface);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}

@@ -1,0 +1,12 @@
+.main {
+  background-color: var(--color-background);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.scrollArea {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 24px; /* Some padding above the bottom nav */
+}

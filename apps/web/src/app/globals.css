@@ -1,9 +1,12 @@
 :root {
   /* Monza Design System Tokens */
 
-  /* Cores Base & Superfícies */
-  --color-background: #111318;
-  --color-surface: #111318;
+  /* Cores Base & Superfícies (Tonal Layers) */
+  --color-background: #0b0d11; /* Nível 0 - Canvas */
+  --color-surface: #0b0d11;
+  --color-surface-module: #111318; /* Nível 1 - Módulos */
+  --color-surface-card: rgba(24, 27, 34, 0.85); /* Nível 2 - Cards */
+  --color-surface-modal: rgba(34, 38, 49, 0.95); /* Nível 3 - Modais */
   --color-surface-dim: #111318;
   --color-surface-container-lowest: #0c0e13;
   --color-surface-container-low: #1a1b21;

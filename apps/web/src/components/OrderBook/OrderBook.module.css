@@ -1,0 +1,113 @@
+.bookContainer {
+  background-color: var(--color-surface-module); /* Nível 1 - Módulos */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--rounded-lg);
+  padding: var(--space-sm) 0;
+  margin: var(--space-md) var(--gutter-mobile);
+}
+
+.headerRow {
+  display: flex;
+  padding: 0 var(--space-md) var(--space-xs);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.colHeader {
+  flex: 1;
+  font-family: var(--font-jakarta);
+  font-size: 11px;
+  color: #94A3B8; /* Alumínio Polido */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.colHeaderRight {
+  flex: 1;
+  font-family: var(--font-jakarta);
+  font-size: 11px;
+  color: #94A3B8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: right;
+}
+
+.orderList {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  position: relative;
+  padding: 4px var(--space-md);
+  font-family: var(--font-jetbrains);
+  font-variant-numeric: tabular-nums;
+  font-size: 13px;
+  align-items: center;
+}
+
+.row:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.price {
+  flex: 1;
+  font-weight: 600;
+}
+
+.buyColor {
+  color: var(--color-verde-liquidacao);
+}
+
+.sellColor {
+  color: var(--color-secondary-container); /* Destrutivo/Vermelho */
+}
+
+.amount {
+  flex: 1;
+  color: #e2e2e9;
+  text-align: right;
+  padding-right: var(--space-md);
+}
+
+.total {
+  flex: 1;
+  color: #d0c5af; /* on-surface-variant */
+  text-align: right;
+  z-index: 1;
+}
+
+.depthBar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  /* width and backgroundColor set via inline style */
+}
+
+.currentPriceRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) var(--space-md);
+  margin: var(--space-xs) 0;
+  background-color: rgba(242, 202, 80, 0.05); /* very light primary tint */
+  border-top: 1px dashed rgba(242, 202, 80, 0.2);
+  border-bottom: 1px dashed rgba(242, 202, 80, 0.2);
+}
+
+.currentPriceValue {
+  font-family: var(--font-jetbrains);
+  font-variant-numeric: tabular-nums;
+  font-size: 18px;
+  font-weight: 700;
+  color: #f2ca50; /* Primary - Ouro Titânio Champanhe */
+  text-shadow: 0 0 8px rgba(242, 202, 80, 0.4);
+}
+
+.spread {
+  font-family: var(--font-jakarta);
+  font-size: 11px;
+  color: #94A3B8;
+}

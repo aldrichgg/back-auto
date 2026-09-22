@@ -23,8 +23,7 @@ const jetbrainsMono = JetBrains_Mono({
   display: 'swap',
 });
 
-import { Header } from '@/components/Header/Header';
-import { BottomNav } from '@/components/BottomNav/BottomNav';
+import { ClientLayoutWrapper } from '@/components/ClientLayoutWrapper';
 
 export const metadata: Metadata = {
   title: 'AutoEquity | Apex Capital',
@@ -39,13 +38,9 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${chivo.variable} ${plusJakartaSans.variable} ${jetbrainsMono.variable}`}>
       <body>
-        <main style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-          <Header />
-          <div style={{ flex: 1, paddingBottom: '64px' }}>
-            {children}
-          </div>
-          <BottomNav />
-        </main>
+        <ClientLayoutWrapper>
+          {children}
+        </ClientLayoutWrapper>
       </body>
     </html>
   );

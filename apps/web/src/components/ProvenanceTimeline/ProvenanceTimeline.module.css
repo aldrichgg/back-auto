@@ -1,0 +1,81 @@
+.timelineContainer {
+  padding: var(--space-lg) var(--gutter-mobile);
+}
+
+.sectionTitle {
+  font-family: var(--font-chivo);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-on-surface);
+  margin-bottom: var(--space-lg);
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.eventRow {
+  display: flex;
+  min-height: 80px;
+}
+
+.yearColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: var(--space-md);
+  width: 50px;
+}
+
+.year {
+  font-family: var(--font-jetbrains);
+  font-size: 14px;
+  color: var(--color-on-surface-variant);
+  margin-bottom: var(--space-sm);
+}
+
+.timelineLine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--rounded-full);
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-surface);
+  box-shadow: 0 0 8px rgba(242, 202, 80, 0.8);
+  z-index: 2;
+}
+
+.line {
+  width: 2px;
+  background-color: var(--color-outline-variant);
+  flex: 1;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.contentColumn {
+  flex: 1;
+  padding-bottom: var(--space-lg);
+}
+
+.title {
+  font-family: var(--font-jakarta);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-on-surface);
+  margin-bottom: var(--space-xs);
+}
+
+.description {
+  font-family: var(--font-jakarta);
+  font-size: 14px;
+  color: var(--color-on-surface-variant);
+  line-height: 1.5;
+}

@@ -1,0 +1,36 @@
+.ctaContainer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-md) var(--gutter-mobile);
+  padding-bottom: calc(var(--space-md) + env(safe-area-inset-bottom, 0px));
+  background: rgba(17, 19, 24, 0.85); /* surface with opacity */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--color-surface-container-highest);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+}
+
+.ctaButton {
+  width: 100%;
+  max-width: 400px;
+  background: linear-gradient(180deg, #D4AF37 0%, #B89326 100%);
+  color: #0B0D11;
+  font-family: var(--font-jakarta);
+  font-weight: 700;
+  font-size: 16px;
+  padding: var(--space-md) 0;
+  border: none;
+  border-radius: var(--rounded-sm); /* Using 4px border radius for primary button */
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.ctaButton:active {
+  transform: scale(0.98);
+  opacity: 0.9;
+}

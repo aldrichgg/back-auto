@@ -26,6 +26,8 @@ const NAV_ITEMS = [
 export const BottomNav = () => {
   const pathname = usePathname();
 
+  if (pathname.startsWith('/garagem/ativos/')) return null;
+
   return (
     <nav className={styles.nav}>
       <div className={styles.container}>

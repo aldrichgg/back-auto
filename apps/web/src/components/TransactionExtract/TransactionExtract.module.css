@@ -1,0 +1,117 @@
+.container {
+  background-color: var(--color-surface-module);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--rounded-lg);
+  padding: var(--space-lg);
+  margin: var(--space-md) var(--gutter-mobile);
+}
+
+.title {
+  font-family: var(--font-chivo);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-on-surface);
+  margin-bottom: var(--space-md);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  gap: var(--space-md);
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.iconCol {
+  flex-shrink: 0;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--rounded-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconIn {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--color-verde-liquidacao);
+}
+
+.iconOut {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--color-on-surface-variant);
+}
+
+.infoCol {
+  flex: 1;
+}
+
+.desc {
+  font-family: var(--font-jakarta);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-on-surface);
+  margin-bottom: 2px;
+}
+
+.date {
+  font-family: var(--font-jakarta);
+  font-size: 12px;
+  color: var(--color-on-surface-variant);
+}
+
+.amountCol {
+  text-align: right;
+}
+
+.amount {
+  font-family: var(--font-jetbrains);
+  font-variant-numeric: tabular-nums;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.amountIn {
+  color: var(--color-verde-liquidacao);
+}
+
+.amountOut {
+  color: var(--color-on-surface);
+}
+
+.status {
+  font-family: var(--font-jakarta);
+  font-size: 11px;
+  color: var(--color-on-surface-variant);
+}
+
+.viewMoreBtn {
+  width: 100%;
+  padding: var(--space-sm) 0;
+  margin-top: var(--space-md);
+  background: none;
+  border: none;
+  font-family: var(--font-jakarta);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.viewMoreBtn:hover {
+  opacity: 0.8;
+}

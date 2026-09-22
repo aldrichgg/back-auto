@@ -1,0 +1,117 @@
+.container {
+  padding: var(--space-md) var(--gutter-mobile);
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-xl);
+}
+
+.backBtn {
+  color: var(--color-on-surface);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logoIcon {
+  background: var(--color-primary);
+  color: var(--color-background);
+  font-family: var(--font-chivo);
+  font-weight: 800;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.logoText {
+  font-family: var(--font-chivo);
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--color-on-surface);
+  letter-spacing: 0.05em;
+}
+
+.placeholder {
+  width: 24px;
+}
+
+.badges {
+  margin-bottom: var(--space-md);
+}
+
+.cvmBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--color-verde-liquidacao);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 4px 10px;
+  border-radius: var(--rounded-sm);
+  font-family: var(--font-jakarta);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.titles {
+  margin-bottom: var(--space-lg);
+}
+
+.mainTitle {
+  font-family: var(--font-chivo);
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--color-on-surface);
+  margin-bottom: var(--space-xs);
+  line-height: 1.2;
+}
+
+.subTitle {
+  font-family: var(--font-jakarta);
+  font-size: 14px;
+  color: var(--color-on-surface-variant);
+  font-weight: 500;
+}
+
+.statusBar {
+  background-color: var(--color-surface-module);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--rounded-md);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.statusLabel {
+  font-family: var(--font-jakarta);
+  font-size: 10px;
+  color: var(--color-on-surface-variant);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.statusValue {
+  font-family: var(--font-jetbrains);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-primary);
+  font-variant-numeric: tabular-nums;
+}

@@ -1,0 +1,118 @@
+.chartContainer {
+  background-color: var(--color-surface-module); /* Nível 1 - Módulos */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--rounded-lg);
+  padding: var(--space-md);
+  margin: var(--space-md) var(--gutter-mobile);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-lg);
+}
+
+.title {
+  font-family: var(--font-jakarta);
+  font-size: 14px;
+  font-weight: 600;
+  color: #e2e2e9;
+}
+
+.periodSelector {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.periodBtn {
+  background: transparent;
+  border: none;
+  font-family: var(--font-jetbrains);
+  font-size: 11px;
+  color: #64748B; /* Aço Frio */
+  padding: 4px 8px;
+  border-radius: var(--rounded-sm);
+  cursor: pointer;
+}
+
+.periodBtn.active {
+  background-color: rgba(242, 202, 80, 0.1);
+  color: #f2ca50; /* Primary */
+  font-weight: 600;
+}
+
+.chartArea {
+  position: relative;
+  height: 200px;
+  width: 100%;
+}
+
+.gridLines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.gridLine {
+  width: 100%;
+  border-top: 1px dashed rgba(255, 255, 255, 0.05);
+  position: relative;
+}
+
+.yLabel {
+  position: absolute;
+  right: 0;
+  top: -8px;
+  font-family: var(--font-jetbrains);
+  font-size: 10px;
+  color: #64748B;
+  background-color: #111318;
+  padding-left: 4px;
+}
+
+.candlesWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 40px; /* space for yLabel */
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 10px; /* buffer */
+  padding-bottom: 10px; /* buffer */
+}
+
+.candleGroup {
+  position: relative;
+  width: 10px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.wick {
+  position: absolute;
+  width: 1px;
+}
+
+.body {
+  position: absolute;
+  width: 6px;
+  border-radius: 1px;
+}
+
+.bullWick, .bullBody {
+  background-color: var(--color-verde-liquidacao);
+}
+
+.bearWick, .bearBody {
+  background-color: var(--color-secondary-container); /* Destrutivo/Vermelho */
+}

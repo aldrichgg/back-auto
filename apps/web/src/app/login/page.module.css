@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-background);
+  background-image: radial-gradient(circle at top right, rgba(242, 202, 80, 0.05), transparent 40%),
+                    radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.02), transparent 40%);
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: var(--space-xl);
+}
+
+.footer {
+  padding: var(--space-lg) var(--gutter-mobile);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.securityBadges {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-jakarta);
+  font-size: 11px;
+  color: var(--color-on-surface-variant);
+  font-weight: 500;
+}
+
+.dot {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 10px;
+}

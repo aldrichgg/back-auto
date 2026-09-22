@@ -1,0 +1,81 @@
+.container {
+  margin: var(--space-lg) var(--gutter-mobile);
+}
+
+.title {
+  font-family: var(--font-chivo);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-on-surface);
+  margin-bottom: var(--space-md);
+  padding-left: 4px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.docItem {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-surface-module);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--rounded-lg);
+  padding: var(--space-md);
+  gap: var(--space-md);
+  transition: background-color 0.2s ease;
+}
+
+.docItem:hover {
+  background-color: var(--color-surface-container);
+}
+
+.iconBox {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--rounded-sm);
+  background-color: rgba(255, 255, 255, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-on-surface-variant);
+  flex-shrink: 0;
+}
+
+.info {
+  flex: 1;
+}
+
+.docTitle {
+  font-family: var(--font-jakarta);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-on-surface);
+  margin-bottom: 2px;
+}
+
+.docDate {
+  font-family: var(--font-jakarta);
+  font-size: 12px;
+  color: var(--color-on-surface-variant);
+}
+
+.downloadBtn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  cursor: pointer;
+  border-radius: var(--rounded-full);
+  transition: background-color 0.2s ease;
+}
+
+.downloadBtn:hover {
+  background-color: rgba(242, 202, 80, 0.1);
+}
