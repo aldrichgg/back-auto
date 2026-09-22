@@ -4,8 +4,13 @@
  */
 import axios, { AxiosInstance, AxiosError } from 'axios';
 
-const BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+const isServer = typeof window === 'undefined';
+
+// No navegador, usamos o path relativo para bater no proxy/rewrites do Next.js.
+// No lado do servidor (SSR), precisamos da URL absoluta.
+const BASE_URL = isServer 
+  ? (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000') 
+  : '';
 
 export const apiClient: AxiosInstance = axios.create({
   baseURL: `${BASE_URL}/api/v1`,
