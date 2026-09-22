@@ -1,0 +1,178 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 280px;
+  background-color: var(--color-surface-container-high);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  z-index: 50;
+  transform: translateX(-100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.header {
+  height: 64px;
+  padding: 0 var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoIcon {
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  font-family: var(--font-chivo);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.logoText {
+  font-family: var(--font-chivo);
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--color-on-surface);
+  letter-spacing: 0.05em;
+}
+
+.logoHighlight {
+  color: var(--color-primary);
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  color: var(--color-on-surface-variant);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.nav {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-lg) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.navSection {
+  font-family: var(--font-jakarta);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-on-surface-variant);
+  letter-spacing: 0.1em;
+  padding: var(--space-sm) var(--space-md);
+  margin-bottom: var(--space-xs);
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: 12px var(--space-md);
+  border-radius: var(--rounded-sm);
+  color: var(--color-on-surface-variant);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.navItem:hover {
+  background-color: var(--color-surface-container-highest);
+  color: var(--color-on-surface);
+}
+
+.navItem.active {
+  background-color: rgba(242, 202, 80, 0.1);
+  color: var(--color-primary);
+}
+
+.navIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navLabel {
+  font-family: var(--font-jakarta);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.footer {
+  padding: var(--space-lg);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.userProfile {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-surface-module);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--rounded-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-chivo);
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.userName {
+  font-family: var(--font-jakarta);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-on-surface);
+}
+
+.userRole {
+  font-family: var(--font-jakarta);
+  font-size: 11px;
+  color: var(--color-verde-liquidacao);
+  font-weight: 600;
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .sidebar {
+    transform: translateX(0);
+    position: sticky;
+  }
+  
+  .closeBtn {
+    display: none;
+  }
+}

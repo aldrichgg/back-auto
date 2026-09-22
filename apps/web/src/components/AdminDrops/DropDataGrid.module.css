@@ -1,0 +1,239 @@
+.gridContainer {
+  width: 100%;
+}
+
+.mobileView {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.desktopView {
+  display: none;
+}
+
+/* Card Styles (Mobile) */
+.card {
+  background-color: var(--color-surface-module);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--rounded-md);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropId {
+  font-family: var(--font-jetbrains);
+  font-size: 12px;
+  color: var(--color-on-surface-variant);
+}
+
+.badge {
+  padding: 4px 8px;
+  border-radius: var(--rounded-sm);
+  font-family: var(--font-jakarta);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badgeFinalizado {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-on-surface-variant);
+}
+
+.badgeAtivo {
+  background-color: rgba(56, 176, 0, 0.1);
+  color: var(--color-verde-liquidacao);
+  border: 1px solid rgba(56, 176, 0, 0.3);
+}
+
+.badgeAgendado {
+  background-color: rgba(242, 202, 80, 0.1);
+  color: var(--color-primary);
+  border: 1px solid rgba(242, 202, 80, 0.3);
+}
+
+.assetName {
+  font-family: var(--font-chivo);
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--color-on-surface);
+}
+
+.cardDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detailRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.detailLabel {
+  font-family: var(--font-jakarta);
+  color: var(--color-on-surface-variant);
+}
+
+.detailValue {
+  font-family: var(--font-jetbrains);
+  color: var(--color-on-surface);
+}
+
+.progressSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.progressHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.progressLabel {
+  font-family: var(--font-jakarta);
+  color: var(--color-on-surface-variant);
+}
+
+.progressValue {
+  font-family: var(--font-jetbrains);
+  color: var(--color-primary);
+}
+
+.progressBar {
+  height: 6px;
+  background-color: var(--color-surface-container);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #D4A936 0%, #F2CA50 100%);
+  border-radius: 3px;
+}
+
+.cardActions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--space-xs);
+}
+
+.actionBtn {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--color-on-surface);
+  border-radius: var(--rounded-sm);
+  padding: 8px 16px;
+  font-family: var(--font-jakarta);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.actionBtn:hover {
+  background-color: var(--color-surface-container);
+}
+
+/* Desktop Table Styles */
+@media (min-width: 1024px) {
+  .mobileView {
+    display: none;
+  }
+  
+  .desktopView {
+    display: block;
+    background-color: var(--color-surface-module);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--rounded-md);
+    overflow: hidden;
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+
+  .table th {
+    padding: 16px;
+    font-family: var(--font-jakarta);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-on-surface-variant);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: var(--color-surface-container);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .table td {
+    padding: 16px;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .table tbody tr:hover {
+    background-color: var(--color-surface-container);
+  }
+
+  .monoText {
+    font-family: var(--font-jetbrains);
+    color: var(--color-on-surface-variant);
+  }
+  
+  .boldText {
+    font-family: var(--font-chivo);
+    font-weight: 700;
+    color: var(--color-on-surface);
+  }
+
+  .tableProgress {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .tableProgressBar {
+    flex: 1;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+  }
+
+  .tableProgressFill {
+    height: 100%;
+    background: linear-gradient(90deg, #D4A936 0%, #F2CA50 100%);
+    border-radius: 2px;
+  }
+
+  .tableActionBtn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--color-on-surface);
+    border-radius: var(--rounded-sm);
+    padding: 6px 12px;
+    font-family: var(--font-jakarta);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .tableActionBtn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+}

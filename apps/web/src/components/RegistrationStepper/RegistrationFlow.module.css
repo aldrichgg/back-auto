@@ -1,0 +1,263 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.stepperHeader {
+  padding: var(--space-md) var(--gutter-mobile);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.progressText {
+  font-family: var(--font-jakarta);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.progressBar {
+  height: 4px;
+  background-color: var(--color-surface-container);
+  border-radius: var(--rounded-full);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: var(--color-primary);
+  transition: width 0.3s ease;
+}
+
+.formContent {
+  padding: var(--space-xl) var(--gutter-mobile);
+  flex: 1;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.sectionTitle {
+  font-family: var(--font-chivo);
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--color-on-surface);
+  line-height: 1.2;
+}
+
+.sectionDesc {
+  font-family: var(--font-jakarta);
+  font-size: 14px;
+  color: var(--color-on-surface-variant);
+  margin-top: -12px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.label {
+  font-family: var(--font-jakarta);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-on-surface);
+}
+
+.input, .select {
+  width: 100%;
+  background-color: var(--color-surface-module);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--rounded-md);
+  padding: 14px var(--space-md);
+  color: var(--color-on-surface);
+  font-family: var(--font-jakarta);
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.input:focus, .select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.strengthMeter {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: 4px;
+}
+
+.strengthBar {
+  flex: 1;
+  height: 4px;
+  background-color: var(--color-surface-container);
+  border-radius: var(--rounded-full);
+  position: relative;
+  overflow: hidden;
+}
+
+.strengthBar[data-level="3"]::after {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; height: 100%; width: 75%;
+  background-color: var(--color-verde-liquidacao);
+}
+
+.strengthText {
+  font-family: var(--font-jakarta);
+  font-size: 11px;
+  color: var(--color-verde-liquidacao);
+  font-weight: 600;
+}
+
+.checkboxWrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  cursor: pointer;
+}
+
+.checkbox {
+  accent-color: var(--color-primary);
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+}
+
+.checkboxLabel {
+  font-family: var(--font-jakarta);
+  font-size: 13px;
+  color: var(--color-on-surface);
+  line-height: 1.5;
+}
+
+.uploadBox {
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border-radius: var(--rounded-md);
+  padding: var(--space-xl) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  color: var(--color-on-surface-variant);
+  font-family: var(--font-jakarta);
+  font-size: 13px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.02);
+  transition: all 0.2s ease;
+}
+
+.uploadBox:hover {
+  background-color: rgba(242, 202, 80, 0.05);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.summaryBox {
+  background-color: var(--color-surface-module);
+  border-radius: var(--rounded-md);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-jakarta);
+  font-size: 13px;
+  color: var(--color-on-surface-variant);
+}
+
+.summaryRow strong {
+  color: var(--color-on-surface);
+}
+
+.signatureBox {
+  margin-top: var(--space-md);
+}
+
+.signatureLabel {
+  font-family: var(--font-jakarta);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-on-surface);
+  margin-bottom: var(--space-xs);
+}
+
+.signatureArea {
+  height: 120px;
+  background-color: var(--color-background);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--rounded-md);
+  position: relative;
+}
+
+.signatureArea::after {
+  content: '';
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+.footerActions {
+  padding: var(--space-md) var(--gutter-mobile);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  gap: var(--space-md);
+  background-color: var(--color-surface-module);
+}
+
+.backBtn {
+  flex: 1;
+  padding: 14px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--rounded-md);
+  color: var(--color-on-surface);
+  font-family: var(--font-jakarta);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nextBtn, .submitBtn {
+  flex: 2;
+  padding: 14px;
+  border-radius: var(--rounded-md);
+  font-family: var(--font-chivo);
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  border: none;
+}
+
+.nextBtn {
+  background-color: var(--color-surface-container-high);
+  color: var(--color-on-surface);
+}
+
+.submitBtn {
+  background: linear-gradient(135deg, #F2CA50 0%, #D4A936 100%);
+  color: #0b0d11;
+}

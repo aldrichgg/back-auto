@@ -10,6 +10,8 @@ import { BottomCTA } from '@/components/BottomCTA/BottomCTA';
 import Link from 'next/link';
 
 export default function AssetDetailsPage({ params }: { params: { id: string } }) {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const _id = params.id;
   // Mock data for the specific asset (Ferrari F40)
   const mockImages = [
     'https://images.unsplash.com/photo-1592853625511-adbc62214b6d?auto=format&fit=crop&q=80&w=800&h=600',

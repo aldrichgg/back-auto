@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './MemberCard.module.css';
+import Image from 'next/image';
 
 interface MemberCardProps {
   name: string;
@@ -14,7 +15,7 @@ export const MemberCard: React.FC<MemberCardProps> = ({ name, category, memberId
     <div className={styles.cardContainer}>
       <div className={styles.avatarWrapper}>
         {avatarUrl ? (
-          <img src={avatarUrl} alt={name} className={styles.avatar} />
+          <Image src={avatarUrl} alt={name} className={styles.avatar} width={48} height={48} />
         ) : (
           <div className={styles.avatarPlaceholder}>
             {name.charAt(0).toUpperCase()}

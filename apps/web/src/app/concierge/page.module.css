@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-background);
+  padding-bottom: var(--space-xl);
+}
+
+.header {
+  padding: var(--space-xl) var(--gutter-mobile) var(--space-lg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: var(--color-surface-container);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-family: var(--font-chivo);
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--color-on-surface);
+}
+
+.badge {
+  background-color: rgba(242, 202, 80, 0.1);
+  color: var(--color-primary);
+  border: 1px solid rgba(242, 202, 80, 0.2);
+  padding: 4px 10px;
+  border-radius: var(--rounded-sm);
+  font-family: var(--font-jakarta);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.mainContent {
+  padding: var(--space-lg) var(--gutter-mobile);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './CandlestickChart.module.css';
 
 const PERIODS = ['24H', '7D', '30D', 'TUDO'];
@@ -15,16 +15,26 @@ interface Candle {
 export const CandlestickChart: React.FC = () => {
   const [activePeriod, setActivePeriod] = useState('24H');
 
-  // Randomize some mock data for the chart depending on the period
-  const candles: Candle[] = Array.from({ length: 24 }).map(() => {
-    const base = 8000 + Math.random() * 1000;
-    const isBull = Math.random() > 0.5;
-    const open = isBull ? base : base + Math.random() * 200;
-    const close = isBull ? open + Math.random() * 200 : open - Math.random() * 200;
-    const high = Math.max(open, close) + Math.random() * 50;
-    const low = Math.min(open, close) - Math.random() * 50;
-    return { high, low, open, close };
-  });
+  const [candles, setCandles] = useState<Candle[]>([]);
+
+  useEffect(() => {
+    // Randomize some mock data for the chart depending on the period
+    const newCandles: Candle[] = Array.from({ length: 24 }).map(() => {
+      const base = 8000 + Math.random() * 1000;
+      const isBull = Math.random() > 0.5;
+      const open = isBull ? base : base + Math.random() * 200;
+      const close = isBull ? open + Math.random() * 200 : open - Math.random() * 200;
+      const high = Math.max(open, close) + Math.random() * 50;
+      const low = Math.min(open, close) - Math.random() * 50;
+      return { high, low, open, close };
+    });
+    
+    setTimeout(() => {
+      setCandles(newCandles);
+    }, 0);
+  }, [activePeriod]);
+
+  if (candles.length === 0) return null;
 
   const minPrice = Math.min(...candles.map(c => c.low));
   const maxPrice = Math.max(...candles.map(c => c.high));

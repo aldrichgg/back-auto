@@ -1,0 +1,130 @@
+.container {
+  background-color: var(--color-surface-module);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--rounded-md);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+
+.title {
+  font-family: var(--font-chivo);
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--color-on-surface);
+}
+
+.spread {
+  font-family: var(--font-jakarta);
+  font-size: 12px;
+  color: var(--color-on-surface-variant);
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 4px 8px;
+  border-radius: var(--rounded-sm);
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-family: var(--font-jakarta);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-on-surface-variant);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 8px;
+}
+
+.tableHeader span:nth-child(2),
+.tableHeader span:nth-child(3) {
+  text-align: right;
+}
+
+.bookArea {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.asks, .bids {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.asks {
+  margin-bottom: 8px;
+}
+
+.bids {
+  margin-top: 8px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-family: var(--font-jetbrains);
+  font-size: 12px;
+  color: var(--color-on-surface);
+  position: relative;
+  padding: 4px 0;
+  z-index: 1;
+}
+
+.row span:nth-child(3),
+.row span:nth-child(4) {
+  text-align: right;
+}
+
+.depthBar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 2px;
+}
+
+.askPrice {
+  color: var(--color-vermelho-alerta);
+  font-weight: 600;
+}
+
+.bidPrice {
+  color: var(--color-verde-liquidacao);
+  font-weight: 600;
+}
+
+.currentPriceArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.currentPrice {
+  font-family: var(--font-jetbrains);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-verde-liquidacao);
+}
+
+.priceDirection {
+  color: var(--color-verde-liquidacao);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -8,8 +8,9 @@ import { BottomNav } from '@/components/BottomNav/BottomNav';
 export const ClientLayoutWrapper = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
   const isAuthPage = pathname === '/login' || pathname === '/cadastro';
+  const isAdminPage = pathname.startsWith('/admin');
 
-  if (isAuthPage) {
+  if (isAuthPage || isAdminPage) {
     return (
       <main style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
         <div style={{ flex: 1 }}>

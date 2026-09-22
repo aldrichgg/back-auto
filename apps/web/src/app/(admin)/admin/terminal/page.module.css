@@ -1,0 +1,122 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  height: 100%;
+}
+
+.pageHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.title {
+  font-family: var(--font-chivo);
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--color-on-surface);
+}
+
+.subtitle {
+  font-family: var(--font-jakarta);
+  font-size: 14px;
+  color: var(--color-on-surface-variant);
+  margin-top: 4px;
+}
+
+.assetSelector {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  background-color: var(--color-surface-container);
+  padding: 8px 16px;
+  border-radius: var(--rounded-md);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.select {
+  background: transparent;
+  border: none;
+  color: var(--color-on-surface);
+  font-family: var(--font-jakarta);
+  font-size: 14px;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+}
+
+.select option {
+  background-color: var(--color-surface-container-high);
+  color: var(--color-on-surface);
+}
+
+.assetPrice {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding-left: var(--space-md);
+}
+
+.priceValue {
+  font-family: var(--font-jetbrains);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-on-surface);
+}
+
+.priceChange {
+  font-family: var(--font-jetbrains);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-verde-liquidacao);
+  background-color: rgba(56, 176, 0, 0.1);
+  padding: 2px 6px;
+  border-radius: var(--rounded-sm);
+}
+
+.terminalLayout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  flex: 1;
+}
+
+.chartSection {
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+}
+
+.sideSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .pageHeader {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .terminalLayout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+  
+  .chartSection {
+    height: 100%;
+    min-height: 600px;
+  }
+  
+  .sideSection {
+    display: grid;
+    grid-template-rows: auto auto;
+  }
+}
