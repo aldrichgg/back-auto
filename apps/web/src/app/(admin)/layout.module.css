@@ -15,22 +15,26 @@
 
 .mainContent {
   flex: 1;
-  padding: var(--space-md) var(--gutter-mobile);
+  padding: var(--space-lg) var(--space-md);
   overflow-y: auto;
 }
 
 .overlay {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
   z-index: 40;
 }
 
-/* Desktop Styles */
+/* Desktop: sidebar always open, push content */
 @media (min-width: 1024px) {
+  .mainWrapper {
+    margin-left: 288px;
+  }
+
   .mainContent {
-    padding: var(--space-xl) var(--space-2xl);
+    padding: var(--space-xl) var(--space-xl);
   }
   
   .overlay {
